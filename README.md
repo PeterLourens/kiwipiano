@@ -84,6 +84,13 @@ The site uses white color for the background and black color for the text. The b
 
 ## Database ERD
 
+ER diagram was created using Lucidchar that maps the database structure for creating models in Django. The ERD helps me to visualize the relationships between the tables which gives me better idea on how the database works for the project development.
+
+![ERD](media/readme-pics/booking%20ERD.png)
+
+[Back to top](#kiwi-piano-studio)
+
+
 # Exsiting Features
 
 ## Home Page
