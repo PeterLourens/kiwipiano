@@ -51,7 +51,44 @@ The website provides different user interface. User can register an account, log
 
 ## Wireframes
 
-I used Balsamiq to create the project’s wireframes that displays an overview of how the site looks like. However, the end result might be slightly different than the initial design due to the development of the project. 
+I used Balsamiq to create the project’s wireframes that displays an overview of how the site looks like. However, the end result might be slightly different than the initial design due to the development of the project.
+
+  * Home page
+  ![Wireframe home page](media/readme-pics/wframe-home.png)
+
+    [Back to top](#kiwi-piano-studio)
+
+
+* Sign Up page
+![Sign up](media/readme-pics/wframe-signup.png)
+
+  [Back to top](#kiwi-piano-studio)
+
+* Sign up feedback page
+  
+  ![Sign up feedback page](media/readme-pics/wframe-signup-feedback.png)
+
+  [Back to top](#kiwi-piano-studio)
+
+* Login page
+  
+  ![Login page](media/readme-pics/wframe-login.png)
+
+  [Back to top](#kiwi-piano-studio)
+
+* Booking page
+  
+  ![Booking page](media/readme-pics/wframe-booking.png)
+
+  [Back to top](#kiwi-piano-studio)
+
+* Booking confirmation page
+  
+  ![Booking confirmation page](media/readme-pics/wframe-booking-confirmation.png)
+
+  [Back to top](#kiwi-piano-studio)
+
+* 
 
 ## Agile Project Management
 
