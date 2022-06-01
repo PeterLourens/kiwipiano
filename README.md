@@ -31,8 +31,23 @@ The website provides different user interface. User can register an account, log
   * [#14]() As a **user** I can **contact the studio** so that **I can ask any questions regarding my bookings or other things**.
   * [#15]() As a **registered user** I can **edit my profile** so that **I can edit and manage my own account as I wish**.
 
+[Back to top](#kiwi-piano-studio)
 
 ## Site Owner Stories
+
+* The website is accessible and responsive. It targets the user who would like to learn to play piano or other activities using the studio.
+
+* The site offers different user interface that user can sign up an account, log in and log out as well as edit the user profile. 
+
+* The site has a booking system that user can book a piano session according to user’s interests.
+
+* The site offers user a platform that user can create and post a review about their experience with the piano studio. 
+
+* The site offers many different contact methods that user can make contact easily to the piano studio.
+
+* The site has an admin functionality that admin can manage the site.
+
+[Back to top](#kiwi-piano-studio)
 
 ## Wireframes
 
