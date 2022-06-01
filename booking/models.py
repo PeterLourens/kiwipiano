@@ -14,4 +14,3 @@ class Booking(models.Model):
         return f'{self.user} on {self.date} from {self.start_time} to {self.end_time}'
 
 
-
