@@ -123,6 +123,8 @@ The site uses white color for the background and black color for the text. The b
 
 ### Typography
 
+The site uses the main font-family ```Lato``` for the content and ```Open-sans``` for the fall back. The logo uses a special font ```Ultra``` that makes the logo text bold. 
+
 ## Database ERD
 
 ER diagram was created using Lucidchar that maps the database structure for creating models in Django. The ERD helps me to visualize the relationships between the tables which gives me better idea on how the database works for the project development.
