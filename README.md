@@ -87,6 +87,33 @@ The website provides different user interface. User can register an account, log
 
 # Technologies Used
 
+* [HTML5]()
+* [CSS]() 
+* [JavaScript]() 
+* [Python]() 
+
+* [Bootstrap]() - used to style the websie.
+* [Django]() - used to create the project.
+* [Heroku]() - used to deploy and host the project's live site.
+* [Heroku]() PostgreSQL - used to connect the project to the database.
+* [Cloudinary]() - used to store project's static and media files.
+* [Summernote]() - used to add the editor with full feature.
+  
+* [GitHub]() - used to host the project's code and make deployment.
+* [GitPod]() - used to write the code for the project.
+* [Balsamiq]() - used to create project's wireframes.
+* [Chrome Dev Tools]() - used to debug and light house testing.
+* [Am I Responsive]() - used to generate the responsive preview screens.
+* [Responsive Design Checker]() - used to check responsiveness.
+* [Lucidchart]() - used to create the database ER diagram.
+* [Font Awesome]() - used to download the icons.
+* [Google Fonts]() - used to style the text.
+* [JSHint]() - used to validate the JavaScript code.
+* [Pep8]() - used to validate the Python code.
+* [W3C Markup Validation Service]() - used to validate the HTML code.
+* [W3C CSS Validation Service]() - used to validate CSS code.
+* [Compressor.io]() - used to compress the images and screenshots.
+
 # Testing
 
 ## Code Validation
