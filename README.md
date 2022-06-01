@@ -92,6 +92,10 @@ I used Balsamiq to create the project’s wireframes that displays an overview o
 
 ## Agile Project Management
 
+I used GitHub’s agile project management methodology for managing the work flow of the project. The user stories were created using the Issues. With the ```MoSCoW``` techniques, the user stories were listed on Projects’ Kanban board and were labeled to prioritize the requirements. They would be moved across the board from ```To do```, ```In progress``` and ```Done``` in the end when all the tasks are completed.
+
+Combine with the project’s scope, personal learning progress, I set the Issues with ```Must have``` label just under half of the total Issues. This helps me managing the time and the workload. Learning to use Agile in the first time to create the project.
+
 ## Data Model
 
 ## Design
@@ -131,14 +135,6 @@ ER diagram was created using Lucidchar that maps the database structure for crea
 # Exsiting Features
 
 ## Home Page
-
-## About Page
-
-## Offers Page
-
-## Contact Page
-
-## Reviews Page
 
 ## Sign Up Page
 
