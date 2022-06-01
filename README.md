@@ -66,9 +66,19 @@ The site uses white color for the background and black color for the text. The b
 * Color source image
   <details><summary>The color theme was extracted from this image.</summary>
 
-  ![Image]()
+  ![Image](media/images/piano4.jpg)
 
   </detials>
+
+* Colors for the site
+
+![Color Theme](media/readme-pics/colortheme.png)
+
+* Color contrast grid
+  
+![Color contrast grid](media/readme-pics/contrast-grid.png)
+
+[Back to top](#kiwi-piano-studio)
 
 ### Typography
 
