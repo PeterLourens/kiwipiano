@@ -61,6 +61,15 @@ I used Balsamiq to create the project’s wireframes that displays an overview o
 
 ### Color Scheme
 
+The site uses white color for the background and black color for the text. The bright colors are used for the buttons and links.
+
+* Color source image
+  <details><summary>The color theme was extracted from this image.</summary>
+
+  ![Image]()
+
+  </detials>
+
 ### Typography
 
 ## Database ERD
