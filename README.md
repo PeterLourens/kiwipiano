@@ -138,6 +138,28 @@ I used Balsamiq to create the project’s wireframes that displays an overview o
 
 # Deployment
 
+1. I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
+
+2. Logged in to Heroku account and created an app named kiwipiano.
+Attached the database to the app and set up the Config vars.
+
+3. Created ```env.py``` file and ```Procfile```, updated ```settings.py``` file and then made migrations to the database for all the changes.
+
+4. Commands to deploy ```kiwipiano``` project in GitPod terminal:
+   
+    * ```heroku login -i``` ---login to my Heroku account.
+    * ```heroku apps``` ---get the names of Heroku apps.
+    * ```heroku git:remote -a kiwipiano``` ---set the Heroku remote.
+    * ```git add . && git commit -m "Deploy project to Heroku via CLI."``` ---add and commit.
+    * ```git push origin main``` ---push to GitHub repository.
+    * ```git push heroku main```---push to Heroku.
+
+5. Deployment successful. Here is the site's URL: https://kiwipiano.herokuapp.com/
+   
+   ![Kiwi Piano](media/readme-pics/deployment-heroku.png)
+
+[Back to top](#kiwi-piano-studio)
+
 # Credits
 
 ## Content
