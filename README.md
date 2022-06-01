@@ -51,6 +51,8 @@ The website provides different user interface. User can register an account, log
 
 ## Wireframes
 
+I used Balsamiq to create the project’s wireframes that displays an overview of how the site looks like. However, the end result might be slightly different than the initial design due to the development of the project.
+
 ## Agile Project Management
 
 ## Data Model
