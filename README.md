@@ -96,6 +96,63 @@ I used GitHub’s agile project management methodology for managing the work flo
 
 Combine with the project’s scope, personal learning progress, I set the Issues with ```Must have``` label just under half of the total Issues. This helps me managing the time and the workload. Learning to use Agile in the first time to create the project.
 
+
+* ### Sprint 1:
+
+  * Explore Design Thinking into the project’s scope. Ask myself and families why one wants to be a member and book a session with the piano studio.
+  
+  * Make notes about a list of project’s features to be included and the amount of pages to be made which are Home page, Reviews page, Sign up page, Login page, Bookings page, confirmation page, payment page. 
+  
+  * List the technologies would be used for the project.
+  
+  * Sketch the design on paper, modify and adjust the features, then create project’s wireframes.
+  
+  * Prepare the content for the site which I download images on the internet and make reference about the resources. Write the content of the reviews with author’s names and dates etc.
+  
+  * Determine the image to extract the color theme and create the color contrast and select the typography for the site. 
+
+  **Note**: Some features and pages would not be implemented for this project due to the limitation of my current knowledge and skills. 
+
+* ### Sprint 2:
+      
+  * Create GitHub repository, Project and Issues. Use the agile project management MoSCow techniques to prioritize the project’s approximate workload for each sprint. 
+  
+  * Create Entity Relational Diagram (ERD) and collect the information to help me better understand how database works. 
+  
+  * Create the README.md file to document the project’s development by adding a basic structure and the completed work until this point.
+  
+  * Install Django and the required packages. Create a Django project and a super user /admin account. Complete the user stories #1 Admin CRUD-1.
+  
+  * Create Heroku app and attach the PostgreSQL to the app. Deploy the project to Heroku via CLI and test Django and deploy the app to see the result.
+
+* ### Sprint 3:
+  * Create a new app on Gitpod.
+  * Install Django Summernote and set up Admin account.
+  * Complete the user stories #2 Admin CRUD-2 tasks.
+  * Create a basic template base.html to render the view. 
+  * Building the Models and connect URLs.
+  * Add Bootstrap to style the template.
+
+* ### Sprint 4:
+  * Set up basic authentication using allauth.
+  * Create the landing page with hero image and content.
+  * Target the user stories Access the site, Navigate the site, View the lesson details, Sign up an account.
+  * Create sign up app.
+  
+
+* ### Sprint 5:
+  * Target the user stories 
+  * Create lesson details page.
+  
+* ### Sprint 6:
+  * Target the user stories Log in / Log out.
+  * Create login app.
+
+* ### Sprint 7:
+  * Target the user storeis book a lesson.
+  * Create the booking form page.
+  
+
 ## Data Model
 
 ## Design
