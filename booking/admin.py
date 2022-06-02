@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking, Lesson
+from .models import Booking
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -12,14 +12,10 @@ class BookingAdmin(SummernoteModelAdmin):
 
 
 
-    # def confirmed_booking(self):
-    #     return confirmed
+    def confirmed_booking(self, queryset):
+        queryset.update(confirmed=True)
 
 
 
 
 
-
-#admin.site.register(Booking)
-
-admin.site.register(Lesson)

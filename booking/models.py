@@ -11,13 +11,11 @@ class Booking(models.Model):
     """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    #email = models.EmailField()
+    email = models.EmailField()
     lesson_name = models.CharField(max_length=30, blank=True)
-    date = models.DateField(blank=False)
-    #time = models.CharField(max_length=30)
+    date = models.DateField()
     start_time = models.TimeField(auto_now_add=False)
-    #end_time = models.TimeField(auto_now_add=False)
-    #booked_date = models.DateTimeField(default=timezone.now)
+    end_time = models.TimeField(auto_now_add=False)
     booked_date = models.DateTimeField(auto_now_add=True)
     confirmed = models.BooleanField(default=True)
    
@@ -25,20 +23,5 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.user} on {self.date} at {self.start_time}'
 
-
-STATUS = [(0, 'Available'), (1, 'Unavailable')]
-class Lesson(models.Model):
-    """
-    The sigle lesson is to be booked by one user.
-    """
-
-    lesson_name = models.CharField(max_length=30, blank=True)
-    #time = models.TimeField(auto_now_add=False)
-    #date = models.DateField(blank=False)
-
-    lesson_status = models.IntegerField(choices=STATUS, default=0)
-
-    def __str__(self):
-        return f'{self.lesson_status}'
 
 
