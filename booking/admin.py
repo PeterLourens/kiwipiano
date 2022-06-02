@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking
+from .models import Booking, Lesson
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -17,5 +17,10 @@ class BookingAdmin(SummernoteModelAdmin):
 
 
 
+@admin.register(Lesson)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = ('lesson_name', 'lesson_date', 'start_time', 'lesson_status')
+    list_filter = ('lesson_date', 'lesson_name')
+    search_fields = ('lesson_status', 'lesson_name')
 
 
