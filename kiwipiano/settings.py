@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'django_summernote',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'booking',
 ]
 

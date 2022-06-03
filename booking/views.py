@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Lesson
+from django.contrib.auth.forms import UserCreationForm
 
 
 # class LessonView(generic.ListView):
@@ -21,5 +22,6 @@ def home(request):
 
 
 def register(request):
+    form = UserCreationForm()
     return render(request, 'register.html', {'title': 'Register'})
 
