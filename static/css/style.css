@@ -2,18 +2,32 @@
 
 body {
 
+    font-size: Lato, "Open Sans" sans-serif;
+    font-weight: 400;
+   
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     border: none;
-    
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    letter-spacing: 1.5px;
 }
 
 /*--------------------------------navbar */
 #logo-text {
     font-family: Ultra;
-    margin-left: 50px;
+    margin-left: 40px;
     font-size: 30px;
-    color: rgb(13, 19, 140);
+   
 }
 
