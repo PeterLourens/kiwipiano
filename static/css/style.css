@@ -31,3 +31,25 @@ a {
    
 }
 
+#nav-menu ul li {
+    
+    display: flex;
+    margin: 0 10px 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-item a {
+    font-size: 100%;
+   
+}
+
+.active {
+    border-bottom: 2px solid #191cf3;
+   
+}
+
+.nav-item a:hover {
+    opacity: 1;
+}
+
