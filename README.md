@@ -17,7 +17,7 @@ The website provides different user interface. User can register an account, log
 * ### New and unregistered User
   * [#3]() As a **first time user** I can **access the site easily** so that **I can view the site on any media screens with different browsers.**
   * [#4]() As a **first time user** I can **navigate the site easily** so that **I know what the site is about and decide if I am interested or not.**
-  * [#5]() As a **user** I can **view the lesson details** so that **I can choose a lesson that it is suitable for me**.
+  * [#5]() As a **user** I can **view the range of lessons** so that **I can choose a lesson that it is suitable for me**.
   * [#6]() As a **user** I can **view the lesson schedule** so that **I can book a lesson available to fit into my own schedule**.
   * [#7]() As a **user** I can **sign up an account** so that **I can manage my activities with the studio.**
 
