@@ -2,15 +2,61 @@
 
 {% block content %}
 
-<h1>Lessons</h1>
+<!-- <h1>Lessons</h1>
 
 
 {% for lesson in lessons %}
 <h1>{{ lesson.lesson_name }} at {{ lesson.lesson_time }} on {{ lesson.lesson_date }}</h1>
 
+{% endfor %} -->
 
+<section class="bg-light mt-6">
+    <div class="container-lg pb-3">
+        <div class="text-center pt-5">
+            <p>"It's easy to play any musical instrument: <br> all you have to do is touch the right
+                key at the right time and the instrument will play itself." <br><br>--Johann Sebastian Bach</p>
+        </div>
+        <div class="row my-5 align-items-center justify-content-center">
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="card-body text-center py-3">
+                        <h5 class="card-title fw-bold fs-5 p-2">1-on-1 lessons </h5>
+                        <p class="text-muted">One hour per lesson</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Beginners</li>
+                            <li class="list-group-item">Intermediate</li>
+                            <li class="list-group-item">Advanced</li>
+                            <li class="list-group-item">Exams traing</li>
+                            <li class="list-group-item">Competition training</li>
+                        </ul>
 
-{% endfor %}
+                        <a href="#" id="btn-buy-now" class="btn bg-primary btn-lg my-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="card-body text-center py-3">
+                        <h5 class="card-title fw-bold fs-5 p-2">Piano recital</h5>
+                        <p class="text-muted">We tailor your needs</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Live recital</li>
+                            <li class="list-group-item">Virtual performance</li>
+                            <li class="list-group-item">Repertoire recording</li>
+                            <li class="list-group-item">Online recital training</li>
+                            <li class="list-group-item">End of year concert</li>
+                        </ul>
+
+                        <a href="#" id="btn-buy-now" class="btn bg-success btn-lg my-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 {% endblock content %}
 
