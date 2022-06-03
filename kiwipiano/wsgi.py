@@ -11,6 +11,15 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+from whitenoise import WhiteNoise
+
+from kiwipiano import MyWSGIApp
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kiwipiano.settings')
 
 application = get_wsgi_application()
+
+application = MyWSGIApp()
+application = WhiteNoise(application, root="/path/static/css")
+application.add_files("/path/static/JS", prefix="JS/")
+
