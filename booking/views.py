@@ -3,7 +3,6 @@ from django.views import generic
 from .models import Lesson
 
 
-
 # class LessonView(generic.ListView):
 #     model = Lesson
 #     queryset = Lesson.objects.filter(status=1).order_by('-start_time')
