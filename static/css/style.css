@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Ultra&display=swap');
+
+body {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    
+}
+
+/*--------------------------------navbar */
+#logo-text {
+    font-family: Ultra;
+    margin-left: 50px;
+    font-size: 30px;
+    color: rgb(13, 19, 140);
+}
+
