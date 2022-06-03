@@ -29,6 +29,6 @@ def register(request):
             username = form.cleaned_data.get('username')
     else:
         form = UserCreationForm()
-        
+
     return render(request, 'register.html', {'title': 'Register'})
 
