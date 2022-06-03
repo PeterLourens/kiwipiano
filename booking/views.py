@@ -25,10 +25,10 @@ def register(request):
 
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
-        if form.is_multipart():
+        if form.is_valid():
             username = form.cleaned_data.get('username')
     else:
         form = UserCreationForm()
 
-    return render(request, 'register.html', {'title': 'Register'})
+    return render(request, 'register.html', {'form': form})
 

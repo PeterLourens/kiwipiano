@@ -9,10 +9,14 @@
             <form action="" method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group">
-                    <p class="border-bottom">Register for free</p>
+                    <h3 class="border-bottom">Register for free</h3>
                     {{ form.as_p }}
 
                 </fieldset>
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                
                 <div class="form-group">
                     <button class="btn btn-outline-primary" type="submit">Register</button>
 
@@ -22,7 +26,7 @@
             <div class="border-top pt-3">
                 <small class="text-muted">Already a member?
                     <span>Please</span>
-                    <a class="ml-2" href="#">Login</a>
+                    <a class="ml-3" href="#">Login</a>
                 </small>
 
             </div>

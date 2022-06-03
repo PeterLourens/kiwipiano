@@ -3,9 +3,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth.froms import UserCreationForm
 
 
-class UserCreationForm(forms.ModelForm):
+class UserRegisterForm(forms.ModelForm):
     """ 
-    The register form is to be filled in with user information for account registration.
+    The register form is to be filled in with 
+    user information for account registration.
     """
 
     email = forms.EmailField()
