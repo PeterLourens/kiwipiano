@@ -21,6 +21,6 @@ def home(request):
 
 
 
-def signup(request):
-    return render(request, 'signup.html', {'title': 'Sign Up'})
+def register(request):
+    return render(request, 'register.html', {'title': 'Register'})
 
