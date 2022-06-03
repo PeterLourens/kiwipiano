@@ -19,3 +19,8 @@ def home(request):
     }
     return render(request, 'index.html', context)
 
+
+
+def signup(request):
+    return render(request, 'signup.html', {'title': 'Sign Up'})
+
