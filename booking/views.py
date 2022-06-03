@@ -22,6 +22,13 @@ def home(request):
 
 
 def register(request):
-    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_multipart():
+            username = form.cleaned_data.get('username')
+    else:
+        form = UserCreationForm()
+        
     return render(request, 'register.html', {'title': 'Register'})
 
