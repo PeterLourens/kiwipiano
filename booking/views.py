@@ -4,6 +4,7 @@ from .models import Lesson
 from django.contrib.auth.forms import UserCreationForm
 
 
+
 # class LessonView(generic.ListView):
 #     model = Lesson
 #     queryset = Lesson.objects.filter(status=1).order_by('-start_time')
@@ -21,14 +22,13 @@ def home(request):
 
 
 
-# def register(request):
+def register(request):
 
-#     if request.method == 'POST':
-#         form = UserCreationForm(request.POST)
-#         if form.is_valid():
-#             username = form.cleaned_data.get('username')
-#     else:
-#         form = UserCreationForm()
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+    else:
+        form = UserCreationForm()
 
-#     return render(request, 'register.html', {'form': form})
-
+    return render(request, 'register.html', {'form': form})
