@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Lesson
-from django.contrib.auth.forms import UserCreationForm
+#from django.contrib.auth.forms import UserCreationForm
+from .forms import UserRegisterForm
 
 
 
@@ -25,10 +26,10 @@ def home(request):
 def register(request):
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegisterForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
     else:
-        form = UserCreationForm()
+        form = UserRegisterForm()
 
     return render(request, 'register.html', {'form': form})
