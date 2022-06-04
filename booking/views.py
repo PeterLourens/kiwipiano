@@ -1,16 +1,9 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Lesson
-#from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm
 from .forms import UserRegisterForm
-
-
-
-# class LessonView(generic.ListView):
-#     model = Lesson
-#     queryset = Lesson.objects.filter(status=1).order_by('-start_time')
-#     template_name = 'index.html'
-#     paginate_by = 2
+from django.contrib import messages
 
 
 
@@ -28,7 +21,10 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data.get('username')
+            messages.success(request, f'Your account registration is successful!')
+            
     else:
         form = UserRegisterForm()
 

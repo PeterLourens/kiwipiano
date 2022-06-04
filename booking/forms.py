@@ -9,7 +9,9 @@ class UserRegisterForm(forms.ModelForm):
     user information for account registration.
     """
 
+   
     email = forms.EmailField()
+    password = forms.PasswordInput()
 
     class Meta:
         model = User
