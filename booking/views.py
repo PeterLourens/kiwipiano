@@ -6,18 +6,19 @@ from .forms import UserRegisterForm
 from django.contrib import messages
 
 
-# render the home page
 def home(request):
+    """
+    To render the home view.
+    """
+   
+    return render(request, 'index.html')
 
-    context = {
-        'lessons': Lesson.objects.all()
-    }
-    return render(request, 'index.html', context)
 
 
-
-# render the account register page
 def register(request):
+    """
+    To render the register view.
+    """
 
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -35,5 +36,9 @@ def register(request):
 
 
 def feedback(request):
+    """
+    To render the registration feedback view after 
+    user registered on the register view.
+    """
     return render(request, 'account/register_feedback.html')
 
