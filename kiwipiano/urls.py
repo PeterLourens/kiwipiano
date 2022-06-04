@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('booking.urls')),
     path('register/', user_views.register, name='register'),
     path('feedback/', user_views.feedback, name='feedback'),
+    path('login/', user_views.login, name='login'),
 ]
