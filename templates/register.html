@@ -7,7 +7,7 @@
 
 <main class="register-container container">
     <div class="row align-items-center justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 bg-light">
             <form action="" method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group my-3">
@@ -21,15 +21,15 @@
                 {% endif %}
                 
                 <div class="form-group my-3">
-                    <button class="btn btn-outline-primary" type="submit">Register</button>
+                    <button class="btn btn-primary" type="submit">Register</button>
 
                 </div>
 
             </form>
-            <div class="border-top pt-3">
-                <small class="text-muted">Already a member?
+            <div class="border-top pb-3">
+                <small class="text-muted pt-3">Already a member?
                     <span>Please</span>
-                    <a class="ml-3" href="#">Login</a>
+                    <a class="my-3" href="#">Login</a>
                 </small>
 
             </div>
