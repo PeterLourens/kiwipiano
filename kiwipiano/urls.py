@@ -20,7 +20,12 @@ from booking import views as user_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('booking.urls')),
-    path('register/', user_views.register, name='register'),
-    path('feedback/', user_views.feedback, name='feedback'),
-    path('login/', user_views.login, name='login'),
+    path('summernote/', include('django_summernote.urls')),
+    path("accounts/", include("allauth.urls")),
+
+
+
+    # path('register/', user_views.register, name='register'),
+    # path('feedback/', user_views.feedback, name='feedback'),
+    # path('login/', user_views.login, name='login'),
 ]

@@ -19,3 +19,7 @@ class UserRegisterForm(forms.ModelForm):
         fields = ['username', 'email', 'password']
 
 
+
+
+
+   

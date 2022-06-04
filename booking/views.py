@@ -54,6 +54,7 @@ def login(request):
     """
     To render the login page.
     """
-    return render(request, 'account/login.html')
 
-    
+    return render(request, 'account/login.html')
+   
+
