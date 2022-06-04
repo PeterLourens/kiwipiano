@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from django.views import generic
+from django.views import generic, View
 from .models import Lesson
 from django.contrib.auth.forms import UserCreationForm
 from .forms import UserRegisterForm
 from django.contrib import messages
+
 
 
 def home(request):
@@ -12,6 +13,12 @@ def home(request):
     """
    
     return render(request, 'index.html')
+
+# class Home(View):
+
+#     def get(self, request):
+#         return render(request, 'index.html')
+
 
 
 
@@ -42,3 +49,11 @@ def feedback(request):
     """
     return render(request, 'account/register_feedback.html')
 
+
+def login(request):
+    """
+    To render the login page.
+    """
+    return render(request, 'account/login.html')
+
+    
