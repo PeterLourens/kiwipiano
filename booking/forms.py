@@ -12,6 +12,7 @@ class UserRegisterForm(forms.ModelForm):
    
     email = forms.EmailField()
     password = forms.PasswordInput()
+   
 
     class Meta:
         model = User

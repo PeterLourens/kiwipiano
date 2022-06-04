@@ -26,9 +26,14 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account registration is successful!')
 
-            return redirect('login')
+            return redirect('feedback')
             
     else:
         form = UserRegisterForm()
 
     return render(request, 'register.html', {'form': form})
+
+
+def feedback(request):
+    return render(request, 'register_feedback.html')
+
