@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Lesson
 from django.contrib.auth.forms import UserCreationForm
@@ -6,7 +6,7 @@ from .forms import UserRegisterForm
 from django.contrib import messages
 
 
-
+# render the home page
 def home(request):
 
     context = {
@@ -16,6 +16,7 @@ def home(request):
 
 
 
+# render the account register page
 def register(request):
 
     if request.method == 'POST':
@@ -24,6 +25,8 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account registration is successful!')
+
+            return redirect('login')
             
     else:
         form = UserRegisterForm()
