@@ -39,7 +39,7 @@ def register(request):
     else:
         form = UserRegisterForm()
 
-    return render(request, 'account/register.html', {'form': form})
+    return render(request, 'accounts/register.html', {'form': form})
 
 
 def feedback(request):
@@ -47,7 +47,7 @@ def feedback(request):
     To render the registration feedback view after 
     user registered on the register view.
     """
-    return render(request, 'account/register_feedback.html')
+    return render(request, 'accounts/register_feedback.html')
 
 
 def login(request):
@@ -55,7 +55,7 @@ def login(request):
     To render the login page.
     """
 
-    return render(request, 'account/login.html')
+    return render(request, 'accounts/login.html')
    
 
 def logout(request):
@@ -63,7 +63,7 @@ def logout(request):
     To render the logout page.
     """
 
-    return render(request, 'account/logout.html')
+    return render(request, 'accounts/logout.html')
    
 
 
