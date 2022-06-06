@@ -31,11 +31,11 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account registration is successful!')
 
-            login(request, user)
+            #login(request, user)
 
             return redirect('feedback')
             
@@ -58,12 +58,12 @@ def login_view(request):
     To render the login page to log user in the account.
     """
 
-    if request.method == 'GET':
+    if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
 
-            user = form.get_user()
-            login(request, user)
+            form.get_user()
+            #login(request, user)
 
             return redirect('home')
 
@@ -77,14 +77,6 @@ def logout_view(request):
     """
     To render the logout page.
     """
-
-    if request.method == 'POST':
-        form = AuthenticationForm(request.POST)
-        if form.is_valid():
-            user = form.get_user()
-            logout(request, user)
-
-            return redirect('login')
 
     return render(request, 'accounts/logout.html')
    
