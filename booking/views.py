@@ -58,7 +58,7 @@ def login_view(request):
     To render the login page to log user in the account.
     """
 
-    if request.method == 'POST':
+    if request.method == 'GET':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
 
@@ -73,10 +73,18 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'form': form})
    
 
-def logout(request):
+def logout_view(request):
     """
     To render the logout page.
     """
+
+    if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            logout(request, user)
+
+            return redirect('login')
 
     return render(request, 'accounts/logout.html')
    
