@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import generic, View
 from .models import Lesson
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
 from django.contrib import messages
 
@@ -55,7 +55,16 @@ def login(request):
     To render the login page.
     """
 
-    return render(request, 'accounts/login.html')
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+
+            return redirect('home')
+
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'accounts/login.html', {'form': form})
    
 
 def logout(request):
