@@ -4,6 +4,7 @@ from .models import Lesson
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
 from django.contrib import messages
+from django.contrib.auth import login
 
 
 
@@ -50,7 +51,7 @@ def feedback(request):
     return render(request, 'accounts/register_feedback.html')
 
 
-def login(request):
+def login_view(request):
     """
     To render the login page.
     """
