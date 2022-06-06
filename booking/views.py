@@ -58,5 +58,13 @@ def login(request):
     return render(request, 'account/login.html')
    
 
+def logout(request):
+    """
+    To render the logout page.
+    """
+
+    return render(request, 'account/logout.html')
+   
+
 
 
