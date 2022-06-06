@@ -52,7 +52,7 @@ def feedback(request):
 
 def login(request):
     """
-    To render the login page.ss
+    To render the login page.
     """
 
     return render(request, 'account/login.html')
