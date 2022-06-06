@@ -31,9 +31,11 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account registration is successful!')
+
+            login(request, user)
 
             return redirect('feedback')
             
@@ -53,12 +55,15 @@ def feedback(request):
 
 def login_view(request):
     """
-    To render the login page.
+    To render the login page to log user in the account.
     """
 
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
+
+            user = form.get_user()
+            login(request, user)
 
             return redirect('home')
 
