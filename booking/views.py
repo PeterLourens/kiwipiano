@@ -4,7 +4,7 @@ from .models import Lesson
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 
@@ -70,14 +70,7 @@ def login_view(request):
         form = AuthenticationForm()
 
     return render(request, 'accounts/login.html', {'form': form})
-   
 
-def logout_view(request):
-    """
-    To render the logout page.
-    """
-
-    return render(request, 'accounts/logout.html')
 
 
 def profile(request):
@@ -86,6 +79,19 @@ def profile(request):
     """
 
     return render(request, 'accounts/profile.html')
+   
+
+def logout_view(request):
+    """
+    To render the logout page.
+    """
+
+    logout(request)
+
+    return render(request, 'accounts/logout.html')
+
+
+
    
 
 
