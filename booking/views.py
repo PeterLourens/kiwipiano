@@ -1,10 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import Lesson
+from .models import Profile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
+from .forms import UserProfileForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -73,13 +77,27 @@ def login_view(request):
 
 
 
+@login_required
 def profile(request):
     """
     To render the user profile page.
     """
 
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Your profile!')
+        else:
+            messages.error(request, f'Make sure all info is correct')
+
+    else:
+        form = UserProfileForm()
+
+
     return render(request, 'accounts/profile.html')
    
+
 
 def logout_view(request):
     """
@@ -89,10 +107,6 @@ def logout_view(request):
     logout(request)
 
     return render(request, 'accounts/logout.html')
-
-
-
-   
 
 
 
