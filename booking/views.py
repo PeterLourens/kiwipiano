@@ -61,8 +61,8 @@ def login_view(request):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
 
-            form.get_user()
-
+            user = form.get_user()
+            login(request, user)
 
             return redirect('home')
 
