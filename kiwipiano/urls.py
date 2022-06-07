@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.urls import path, include
+from django.urls import path, include, reverse_lazy
 from booking import views as user_views
 
 
@@ -25,6 +25,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
     #path('login', auth_views.LoginView.as_view('accounts/login.html'), name='login'),
-    # path('logout', auth_views.LogoutView.as_view('accounts/logout.html')),
+    #path('logout', auth_views.logout_then_login, name='logout'),
 
 ]

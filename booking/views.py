@@ -4,7 +4,7 @@ from .models import Lesson
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
 from django.contrib import messages
-from django.contrib.auth import login
+from django.contrib.auth import authenticate, login
 
 
 
@@ -35,7 +35,6 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account registration is successful!')
 
-            #login(request, user)
 
             return redirect('feedback')
             
@@ -63,7 +62,7 @@ def login_view(request):
         if form.is_valid():
 
             form.get_user()
-            #login(request, user)
+
 
             return redirect('home')
 
