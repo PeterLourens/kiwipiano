@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
+from .models import Profile
 
 
 class UserRegisterForm(UserCreationForm):
@@ -21,6 +22,14 @@ class UserRegisterForm(UserCreationForm):
 
 
 
+class UserProfileForm():
+    """
+    The profile form is for user to edit user's profile information."
+    """
 
+    class Meta:
+        model = Profile
+        fields = ['image', 'first_name', 'last_name', 'email_address', 'phone_number', 'password']
 
    
+
