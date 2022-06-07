@@ -2,16 +2,44 @@
 
 {% block content %}
 
-<main class="register-container container">
-    <div class="row align-items-center justify-content-center">
+<main class="profile-container container">
+    <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
+            <div class="row">
+                <img class="user-profile-img" src="{{ user.profile.image.url }}" alt="">
+
+            </div>
             
-            
-            <div class="text-center">
-                <h1 class="my-3">User profile</h1>
+            <div class="row text-center">
+                <h3 class="my-3">{{ user.username }}</h3>
+                <p>{{ user.email }}</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn" id="edit-btn">Edit Profile</button>
+                </div>
             </div>
            
         </div>
+        <!-- <div class="col-md-5 border-right">
+            <div class="py-5">
+                <div class="d-flex align-items-center">
+                    <h3>Profile</h3>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels">First name</label>
+                        <input type="text" class="form-control" placeholder="firstname" value="firstname">
+                            
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Last name</label>
+                        <input type="text" class="form-control" value="lastname" placeholder="lastname">
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
     </div>
 </main>
 
