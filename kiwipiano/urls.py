@@ -26,8 +26,10 @@ urlpatterns = [
     path('', include('booking.urls')),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
-    #path('login', auth_views.LoginView.as_view('accounts/login.html'), name='login'),
-    #path('logout', auth_views.logout_then_login, name='logout'),
+   
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
