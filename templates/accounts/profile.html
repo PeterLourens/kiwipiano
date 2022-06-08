@@ -15,6 +15,7 @@
             {% if user.is_authenticated %}
             <div class="row text-center">
                 <h3 class="my-3">{% block title %} Profile {% endblock %}</h3>
+                <img class="rounded-circle" src="{{ user.profile.profile_image.url }}" alt="">
                 <p>Username: {{ user }}</p>
                 <p>Email: {{ user.email }}</p>
             </div>
