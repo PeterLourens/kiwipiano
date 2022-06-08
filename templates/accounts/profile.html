@@ -10,12 +10,13 @@
         <div class="col-md-6 bg-light">
             <div class="row">
                 <img class="user-profile-img" src="" alt="">
+                
 
             </div>
             {% if user.is_authenticated %}
             <div class="row text-center">
                 <div class="col-12">
-                    <h3 class="my-3">{% block title %} {{ user }} Profile {% endblock %}</h3>
+                    <h3 class="my-3">{% block title %} {{ user.profile }} {% endblock %}</h3>
                     <img class="rounded-circle" src="{{ user.profile.profile_image.url }}" alt="">
 
                 </div>

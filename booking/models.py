@@ -57,7 +57,7 @@ class Profile(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     #date_of_birth = models.DateField()
-    profile_image = models.ImageField(default='default_profile_image.jpg', upload_to='profile_image')
+    profile_image = models.ImageField(default='default.jpg', upload_to='profile_image')
     first_name = models.CharField(max_length=30, null=True, blank=True)
     last_name = models.CharField(max_length=30, null=True, blank=True)
     email_address = models.EmailField()
@@ -66,5 +66,6 @@ class Profile(models.Model):
 
 
     def __str__(self):
-        return f'{self.first_name} Profile'
+        # return f'{self.first_name} Profile'
+        return self.user.username
 
