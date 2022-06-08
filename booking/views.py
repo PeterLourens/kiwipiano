@@ -4,7 +4,7 @@ from .models import Lesson
 from .models import Profile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
-from .forms import UserProfileForm
+#from .forms import UserProfileForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -83,19 +83,12 @@ def profile(request):
     To render the user profile page.
     """
 
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, f'Your profile!')
-        else:
-            messages.error(request, f'Make sure all info is correct')
+    context = {
+        'user': request.user
+    }
 
-    else:
-        form = UserProfileForm()
-
-
-    return render(request, 'accounts/profile.html')
+   
+    return render(request, 'accounts/profile.html', context)
    
 
 
