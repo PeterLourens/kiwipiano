@@ -30,10 +30,9 @@ class LessonAdmin(admin.ModelAdmin):
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
 
-    def save_model(self, request, obj, form, change):
-        obj.user.first_name = form.cleaned_data['first_name']
-        obj.user.last_name = form.cleaned_data['last_name']
-       
-       
+    list_display = ('user', 'email_address')
+    list_filter = ('user', 'email_address')
+    search_fields = ('user', 'email_address')
+
 
 
