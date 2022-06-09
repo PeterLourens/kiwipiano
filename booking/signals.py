@@ -18,10 +18,11 @@ def create_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_profile(sender, instance, **kwargs):
     """
-    To create user profile everytime a new user is saved.
+    To save user profile everytime a new user is created.
     """
     try:
         instance.profile.save()
+
     except ObjectDoesNotExist:
         Profile.objects.create(user=instance)
 

@@ -17,21 +17,19 @@
 
                 </div>
 
-                {% for profile in profiles %}
+              
 
-                
-
-                <!-- <div>
-                     <p>Username: {{ user.username }}</p>
-                     <p>First name: {{ user.first_name }}</p>
-                     <p>Last name: {{ user.last_name }}</p>
-                     <p>Email: {{ user.email }}</p>
+                <div>
+                     <p>Username: {{ request.user.username }}</p>
+                     <p>First Name: {{ request.user.first_name }}</p>
+                     <p>Last Name: {{ profile_model.last_name }}</p>
+                     <p>Email: {{ request.user.email }}</p>
                      <p>Phone: {{ user.phone_number }}</p>
                      <p>Password: {{ password }}</p>
 
-                </div> -->
+                </div>
+                
 
-                {% endfor %}
                
            
                
