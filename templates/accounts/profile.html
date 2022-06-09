@@ -8,11 +8,7 @@
 <main class="profile-container container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
-            <div class="row">
-                <img class="user-profile-img" src="" alt="">
-                
-
-            </div>
+            
             {% if user.is_authenticated %}
             <div class="row text-center">
                 <div class="col-12">
@@ -21,7 +17,7 @@
 
                 </div>
            
-                <p>Username: {{ user }}</p>
+                <p>Username: {{ user.username }}</p>
                 <p>First name: {{ user.first_name }}</p>
                 <p>Last name: {{ user.last_name }}</p>
                 <p>Email: {{ user.email }}</p>
@@ -51,7 +47,7 @@
 
             </div> -->
             {% else %}
-             <div class="col-sm-12 col-md-8 profile">
+             <!-- <div class="col-sm-12 col-md-8 profile">
                  <div class="row">
                      <form method="post">
                          {{ form | crispy}}
@@ -61,7 +57,7 @@
                         </button>
                      </form>
                  </div>
-             </div>
+             </div> -->
             <div>
                 <p>Login to view your account details.</p>
 
