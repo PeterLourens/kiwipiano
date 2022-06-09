@@ -83,27 +83,14 @@ def profile(request):
     To render the user profile page.
     """
 
-    # if request.method == "POST":
-    #     form = UserProfileForm(request.POST)
-
-    #     if form.is_valid():
-    #         form.save()
-    #         messages.success(request, 'Saved!')
-
-    #     else:
-    #         messages.error(request, 'Please make sure to enter corrrect data!')
-
-    # else:
-    #     form = UserProfileForm()
-        
-
 
     context = {
-        'user': request.user,
-        'profile': profile,
-        # 'form': form
+        #'user': request.user,
+        'profile': Profile.objects.all(),
+        #'user': Profile.objects.get(user=request.user),
+        #'profile': Profile.objects.get(user=request.user),
+       
     }
-
    
     return render(request, 'accounts/profile.html', context)
    

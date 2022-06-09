@@ -16,13 +16,25 @@
                     <img class="rounded-circle" src="{{ user.profile.profile_image.url }}" alt="">
 
                 </div>
+
+                {% for profile in profiles %}
+
+                
+
+                <!-- <div>
+                     <p>Username: {{ user.username }}</p>
+                     <p>First name: {{ user.first_name }}</p>
+                     <p>Last name: {{ user.last_name }}</p>
+                     <p>Email: {{ user.email }}</p>
+                     <p>Phone: {{ user.phone_number }}</p>
+                     <p>Password: {{ password }}</p>
+
+                </div> -->
+
+                {% endfor %}
+               
            
-                <p>Username: {{ user.username }}</p>
-                <p>First name: {{ user.first_name }}</p>
-                <p>Last name: {{ user.last_name }}</p>
-                <p>Email: {{ user.email }}</p>
-                <p>Phone: {{ user.phone_number }}</p>
-                <p>Password: {{ password }}</p>
+               
                 
             </div>
 

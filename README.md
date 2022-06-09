@@ -282,8 +282,23 @@ Attached the database to the app and set up the Config vars.
 
 ## Content
 
+* The code for the admin panel features and functions are taken from [Code Institute]()'s walk through project ```I Think Therefore I Blog```.
+
 ## Media
 
+* [Unsplash]() - used to download the images for free.
+* [Pexels]() - used to download the images for free.
+* [Adobe Color]() - used to extract the site's color theme.
+* [Eighshapes]() -used to make the contrast grid.
+* [Compressor.io]() - used to compress images and screenshots.
+* [MDN Web Docs]() - used to get reference materials.
+* [Stack Overflow]() - used to search for code related errors and bugs.
+* [Slack]() - used to connect with fellow coders and get help whenever I am stuck.
+
 ## Code
+
+* The site's login / logout were inspired by [Corey Schafer]() that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django.
+
+* The codes of signals.py are taken from here [Django signals](https://dev.to/earthcomfy/django-user-profile-3hik).
 
 # Acknowledgement

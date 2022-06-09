@@ -20,6 +20,9 @@ def save_profile(sender, instance, **kwargs):
     """
     To create user profile everytime a new user is saved.
     """
-    
-    instance.profile.save()
+    try:
+        instance.profile.save()
+    except ObjectDoesNotExist:
+        Profile.objects.create(user=instance)
+
 
