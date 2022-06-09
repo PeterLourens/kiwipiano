@@ -86,9 +86,9 @@ def profile(request):
 
     context = {
         #'user': request.user,
-        'profile': Profile.objects.all()
-        #'user': Profile.objects.get(user=request.user),
-        # 'profile': Profile.objects.get(user=request.user),
+        #'profile': Profile.objects.all()
+        #'user': User.objects.get(user=request.user),
+        'profile': Profile.objects.get(user=request.user),
        
     }
    

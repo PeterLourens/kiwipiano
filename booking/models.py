@@ -66,6 +66,7 @@ class Profile(models.Model):
 
 
     def __str__(self):
-        # return f'{self.first_name} Profile'
-        return self.user.username
+        return f'{self.user} profile'
+        #return self.user.username
+
 
