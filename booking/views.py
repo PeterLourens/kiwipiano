@@ -4,7 +4,7 @@ from .models import Lesson
 from .models import Profile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm
-#from .forms import UserProfileForm
+from .forms import UserProfileForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -83,12 +83,25 @@ def profile(request):
     To render the user profile page.
     """
 
+    profile = get_object_or_404(Profile, user=request.user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile has been updated.')
+        else:
+            messages.error(request, 'Please enter the correct information.')
+
+    else:
+        form = UserProfileForm(instance=profile)
 
     context = {
         #'user': request.user,
         #'profile': Profile.objects.all()
         #'user': User.objects.get(user=request.user),
         'profile': Profile.objects.get(user=request.user),
+        'form': form
        
     }
    

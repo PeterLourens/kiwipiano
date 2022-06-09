@@ -14,29 +14,9 @@
                 <div class="col-12">
                     <h3 class="my-3">{% block title %} {{ user.profile }} {% endblock %}</h3>
                     <img class="rounded-circle" src="{{ user.profile.profile_image.url }}" alt="">
-
-                </div>
-
-              
-
-                <div>
-                     <p>Username: {{ request.user.username }}</p>
-                     <p>First Name: {{ request.profile.first_name }}</p>
-                     <p>Last Name: {{ profile_model.last_name }}</p>
-                     <p>Email: {{ request.user.email }}</p>
-                     <p>Phone: {{ user.phone_number }}</p>
-                     <p>Password: {{ password }}</p>
-
-                </div> 
-                
-
-               
-           
-               
-                
+                </div>  
             </div>
 
-            
             <!-- <div class="row">
                 <div class="col-md-4">
                     <p>Username:</p>
@@ -44,41 +24,40 @@
                     <p>Lastname:</p>
                     <p>Email:</p>
                     <p>Phone:</p>
-                    <p>Username:</p>
+                    <p>Password:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p> {{ request.user.username }}</p>
+                    <p>{{ profile.first_name }}</p>
+                    <p>{{ profile.last_name }}</p>
+                    <p>{{ request.user.email }}</p>
+                    <p>{{ profile.phone_number }}</p>
+                    <p>{{ profile.password }}</p>
+                </div> 
+            </div>  -->
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group my-3">
+                    <!-- {{ form.as_p }} -->
+                    {{ form|crispy }}
+
                 </div>
 
-                <div class="col-md-4">
-                    <p>{{ user }}</p>
-                    <p>{{ user.first_name }}</p>
-                    <p>{{ user.last_name }}</p>
-                    <p>{{ user.email }}</p>
-                    <p>{{ user.phone_number }}</p>
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+
+                
+                <div class="form-group my-3 text-center">
+                    <button class="btn btn-primary" type="submit">Update Profile</button>
+
                 </div>
 
-            </div> -->
-            {% else %}
-             <!-- <div class="col-sm-12 col-md-8 profile">
-                 <div class="row">
-                     <form method="post">
-                         {{ form | crispy}}
-                         {% csrf_token %}
-                         <button type="submit" class="btn" id="update-btn">
-                            Update
-                        </button>
-                     </form>
-                 </div>
-             </div> -->
-            <div>
-                <p>Login to view your account details.</p>
-
-            </div>
+            </form>
+            
+           
             {% endif %}
-
-            <!-- <div class="row">
-                <div class="col-12">
-                    <button class="btn" id="edit-btn">Edit Profile</button>
-                </div>
-            </div> -->
            
         </div>
 
