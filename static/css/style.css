@@ -53,3 +53,10 @@ a {
     opacity: 1;
 }
 
+
+/*-------------------------------profile page */
+#profile-image {
+    width: 180px;
+    height: 180px;
+}
+
