@@ -85,6 +85,7 @@ def profile(request):
 
     profile = get_object_or_404(Profile, user=request.user)
 
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST)
         if form.is_valid():
@@ -101,8 +102,8 @@ def profile(request):
         #'profile': Profile.objects.all()
         #'user': User.objects.get(user=request.user),
         'profile': Profile.objects.get(user=request.user),
-        'form': form
-       
+        'form': form,
+
     }
    
     return render(request, 'accounts/profile.html', context)

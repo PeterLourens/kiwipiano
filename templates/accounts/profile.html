@@ -17,14 +17,14 @@
                 </div>  
             </div>
 
-            <!-- <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-4">
                     <p>Username:</p>
                     <p>Firstname:</p>
                     <p>Lastname:</p>
                     <p>Email:</p>
                     <p>Phone:</p>
-                    <p>Password:</p>
+                    <!-- <p>Password:</p> -->
                 </div>
                 <div class="col-md-4 text-center">
                     <p> {{ request.user.username }}</p>
@@ -32,14 +32,22 @@
                     <p>{{ profile.last_name }}</p>
                     <p>{{ request.user.email }}</p>
                     <p>{{ profile.phone_number }}</p>
-                    <p>{{ profile.password }}</p>
+                    <!-- <p>{{ profile.password }}</p> -->
                 </div> 
-            </div>  -->
+            </div> 
 
-            <form action="" method="POST">
+             <div class="border-top my-3 py-3 text-center">
+                 <p class="pt-3">
+                     <a class="my-3" href="{% url 'login' %}"><strong>Update profile</strong></a>
+                     <span>here.</span>
+                 </p>
+
+             </div>
+
+            <!-- <form action="" method="POST">
                 {% csrf_token %}
                 <div class="form-group my-3">
-                    <!-- {{ form.as_p }} -->
+                    {{ form.as_p }}
                     {{ form|crispy }}
 
                 </div>
@@ -55,7 +63,7 @@
                 </div>
 
             </form>
-            
+             -->
            
             {% endif %}
            
