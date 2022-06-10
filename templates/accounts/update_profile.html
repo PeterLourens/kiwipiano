@@ -11,12 +11,12 @@
             {% if user.is_authenticated %}
             <div class="row text-center">
                 <div class="col-12">
-                    <h3 class="my-3">{% block title %} {{ user.profile }} {% endblock %}</h3>
+                    <h3 class="my-5">{% block title %} {{ user.profile }} {% endblock %}</h3>
                     <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="">
                 </div>
             </div>
 
-            <form action="" method="POST">
+            <form action="" method="POST" class="my-5">
                 {% csrf_token %}
                 <div class="form-group my-3">
                     {{ form.as_p }}
@@ -27,7 +27,7 @@
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
 
-                <div class="form-group my-3 text-center">
+                <div class="form-group my-3 text-center my-5">
                     <button class="btn btn-primary" type="submit">Update Profile</button>
                 </div>
             </form>
