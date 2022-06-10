@@ -29,7 +29,7 @@ The website provides different user interface. User can register an account, log
   * [#12]() As a **register user** I can **view my booking history** so that **I have a clear view about my study**.
   * [#13]() As a **registered user** I can **post a review** so that **I can share my opinion about my experience with the studio**.
   * [#14]() As a **user** I can **contact the studio** so that **I can ask any questions regarding my bookings or other things**.
-  * [#15]() As a **registered user** I can **edit my profile** so that **I can edit and manage my own account as I wish**.
+  * [#15]() As a **registered user** I can **view and edit my profile** so that **I know my account details and I can edit and manage my own account as I wish**.
 
 [Back to top](#kiwi-piano-studio)
 
@@ -42,6 +42,8 @@ The website provides different user interface. User can register an account, log
 * The site has a booking system that user can book a piano session according to user’s interests.
 
 * The site offers user a platform that user can create and post a review about their experience with the piano studio. 
+  
+* The site offers registered user to view and edit their account profile.
 
 * The site offers many different contact methods that user can make contact easily to the piano studio.
 
