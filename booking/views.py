@@ -83,26 +83,13 @@ def profile(request):
     To render the user profile page.
     """
 
-    profile = get_object_or_404(Profile, user=request.user)
-
-
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Your profile has been updated.')
-        else:
-            messages.error(request, 'Please enter the correct information.')
-
-    else:
-        form = UserProfileForm(instance=profile)
-
+   
     context = {
         #'user': request.user,
         #'profile': Profile.objects.all()
         #'user': User.objects.get(user=request.user),
         'profile': Profile.objects.get(user=request.user),
-        'form': form,
+        
 
     }
    
@@ -115,7 +102,20 @@ def update_profile(request):
     To render the update profile page.
     """
 
-    return render(request, 'accounts/update_profile.html')
+    profile = get_object_or_404(Profile, user=request.user)
+    
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile has been updated.')
+        else:
+            messages.error(request, 'Please enter the correct information.')
+
+    else:
+        form = UserProfileForm(instance=profile)
+
+    return render(request, 'accounts/update_profile.html', {'form': form})
 
 
 

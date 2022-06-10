@@ -4,7 +4,6 @@
 {% block content %}
 
 
-
 <main class="profile-container container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
@@ -17,43 +16,27 @@
                 </div>
             </div>
 
-            <div class="border-top my-3 py-3 text-center">
-                <p class="pt-3">
-                    <a class="my-3" href="{% url 'update_profile' %}"><strong>Update profile</strong></a>
-                    <span>here.</span>
-                </p>
-
-            </div>
-
             <form action="" method="POST">
                 {% csrf_token %}
                 <div class="form-group my-3">
                     {{ form.as_p }}
-                    {{ form|crispy }}
-
+                    <!-- {{ form|crispy }} -->
                 </div>
 
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
 
-                
-                <!-- <div class="form-group my-3 text-center">
+                <div class="form-group my-3 text-center">
                     <button class="btn btn-primary" type="submit">Update Profile</button>
-
-                </div> -->
-
+                </div>
             </form>
             
-
             {% endif %}
 
         </div>
-
-
     </div>
 </main>
-
 
 
 {% endblock content %}
