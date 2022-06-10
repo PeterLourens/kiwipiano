@@ -56,7 +56,6 @@ class Profile(models.Model):
     Create user profile page after user login to user's account.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    #date_of_birth = models.DateField()
     profile_image = models.ImageField(default='default_bxixmd.jpg', upload_to='profile_image')
     first_name = models.CharField(max_length=30, null=True, blank=True)
     last_name = models.CharField(max_length=30, null=True, blank=True)
@@ -67,6 +66,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user} profile'
-        #return self.user.username
+       
 
 

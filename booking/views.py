@@ -3,8 +3,7 @@ from django.views import generic, View
 from .models import Lesson
 from .models import Profile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import UserRegisterForm
-from .forms import UserProfileForm
+from .forms import UserRegisterForm, UserProfileForm, ProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -82,14 +81,35 @@ def profile(request):
     """
     To render the user profile page.
     """
+    
+    
+    if request.method == 'POST':
+        user_profile_form = UserProfileForm(request.POST, instance=request.user)
+        profile_update_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+
+        if user_profile_form.is_valid() and profile_update_form.is_valid():
+            user_profile_form.save()
+            profile_update_form.save()
+
+            messages.success(request, f'Your profile has been updated.')
+
+            return redirect('profile')
+
+        else:
+            messages.error(request, f'Please try again.')
+
+    else:
+        user_profile_form = UserProfileForm(instance=request.user)
+        profile_update_form = ProfileUpdateForm(instance=request.user.profile)
 
    
     context = {
         #'user': request.user,
         #'profile': Profile.objects.all()
         #'user': User.objects.get(user=request.user),
-        'profile': Profile.objects.get(user=request.user),
-        
+        #'profile': Profile.objects.get(user=request.user),
+        'user_profile_form': user_profile_form,
+        'profile_update_form':  profile_update_form
 
     }
    
@@ -105,17 +125,21 @@ def update_profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     
     if request.method == 'POST':
-        form = UserProfileForm(request.POST)
+        form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
         if form.is_valid():
             form.save()
+
             messages.success(request, 'Your profile has been updated.')
+
+            return redirect('profile')
+
         else:
-            messages.error(request, 'Please enter the correct information.')
+            messages.error(request, 'Please try again.')
 
     else:
-        form = UserProfileForm(instance=profile)
+        form = ProfileUpdateForm(instance=request.user.profile)
 
-    return render(request, 'accounts/update_profile.html', {'form': form})
+    return render(request, 'accounts/profile.html', {'form': form})
 
 
 

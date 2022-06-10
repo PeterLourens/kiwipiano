@@ -11,10 +11,7 @@ class UserRegisterForm(UserCreationForm):
     user information for account registration.
     """
 
-   
     email = forms.EmailField()
-    #password = forms.PasswordInput()
-   
 
     class Meta:
         model = User
@@ -27,19 +24,21 @@ class UserProfileForm(forms.ModelForm):
     The profile form is for user to edit user's profile information."
     """
 
+    email = forms.EmailField()
+
     class Meta:
-        model = Profile
-        fields = ['user', 'profile_image', 'first_name', 'last_name', 'email_address', 'phone_number', 'password']
+        model = User
+        fields = ['username', 'email']
       
 
 
 class ProfileUpdateForm(forms.ModelForm):
     """
-    To update user profile.
+    To update user profile image.
     """
 
     class Meta:
         model = Profile
-        fields = ['profile_image', 'first_name', 'last_name', 'email_address', 'phone_number', 'password']
+        fields = ['profile_image']
 
 
