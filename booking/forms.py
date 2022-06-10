@@ -33,6 +33,13 @@ class UserProfileForm(forms.ModelForm):
       
 
 
+class ProfileUpdateForm(forms.ModelForm):
+    """
+    To update user profile.
+    """
 
+    class Meta:
+        model = Profile
+        fields = ['profile_image', 'first_name', 'last_name', 'email_address', 'phone_number', 'password']
 
 
