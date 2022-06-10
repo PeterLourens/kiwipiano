@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 import datetime
 
-
 class Booking(models.Model):
 
     """
@@ -66,6 +65,5 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user} profile'
-       
 
 
