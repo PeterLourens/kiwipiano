@@ -110,6 +110,15 @@ def profile(request):
    
 
 
+def update_profile(request):
+    """
+    To render the update profile page.
+    """
+
+    return render(request, 'accounts/update_profile.html')
+
+
+
 def logout_view(request):
     """
     To render the logout page.
