@@ -22,27 +22,12 @@
                 
             </div> 
 
-            <form action="" method="POST" enctype="multipart/form-data" class="my-5">
-                {% csrf_token %}
-                <div class="form-group my-3">
-                    {{ user_profile_form|crispy }}
-                    {{ profile_update_form|crispy }}
-                </div>
-
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-
-                <div class="form-group my-3 text-center my-5">
-                    <button class="btn btn-primary" type="submit">Update Profile</button>
-                </div>
-            </form>
-             <!-- <div class="border-top my-3 py-3 text-center">
+             <div class="border-top my-3 py-3 text-center">
                  <p class="pt-3">
                      <a class="my-3" href="{% url 'update_profile' %}"><strong>Update</strong></a>
                      <span>your profile here.</span>
                  </p>
-             </div> -->
+             </div>
             {% endif %}
         </div>
     </div>

@@ -10,19 +10,12 @@ from django.contrib.auth.decorators import login_required
 
 
 
-
 def home(request):
     """
     To render the home view.
     """
    
     return render(request, 'index.html')
-
-# class Home(View):
-
-#     def get(self, request):
-#         return render(request, 'index.html')
-
 
 
 
@@ -47,12 +40,14 @@ def register(request):
     return render(request, 'accounts/register.html', {'form': form})
 
 
+
 def feedback(request):
     """
     To render the registration feedback view after 
     user registered on the register view.
     """
     return render(request, 'accounts/register_feedback.html')
+
 
 
 def login_view(request):
@@ -81,8 +76,16 @@ def profile(request):
     """
     To render the user profile page.
     """
-    
-    
+   
+    return render(request, 'accounts/profile.html')
+   
+
+
+def update_profile(request):
+    """
+    To render the update profile page.
+    """
+
     if request.method == 'POST':
         user_profile_form = UserProfileForm(request.POST, instance=request.user)
         profile_update_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
@@ -114,33 +117,7 @@ def profile(request):
 
     }
    
-    return render(request, 'accounts/profile.html', context)
-   
-
-
-def update_profile(request):
-    """
-    To render the update profile page.
-    """
-
-    profile = get_object_or_404(Profile, user=request.user)
-    
-    if request.method == 'POST':
-        form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-        if form.is_valid():
-            form.save()
-
-            messages.success(request, 'Your profile has been updated.')
-
-            return redirect('profile')
-
-        else:
-            messages.error(request, 'Please try again.')
-
-    else:
-        form = ProfileUpdateForm(instance=request.user.profile)
-
-    return render(request, 'accounts/profile.html', {'form': form})
+    return render(request, 'accounts/update_profile.html', context)
 
 
 
