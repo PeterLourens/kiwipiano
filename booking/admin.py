@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Booking)
 class BookingAdmin(SummernoteModelAdmin):
 
-    list_display = ('user', 'date', 'start_time', 'lesson_name')
+    list_display = ('user', 'date')
     list_filter = ('user', 'date')
     search_fields = ['lesson_name', 'user']
 
@@ -30,9 +30,9 @@ class LessonAdmin(admin.ModelAdmin):
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
 
-    list_display = ('user', 'first_name', 'last_name')
-    list_filter = ('user', 'first_name')
-    search_fields = ('user', 'first_name')
+    list_display = ('user',)
+    list_filter = ('user',)
+    search_fields = ('user',)
 
 
 
