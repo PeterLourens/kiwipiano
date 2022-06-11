@@ -132,3 +132,11 @@ def logout_view(request):
 
 
 
+def booking_login(request):
+    """
+    To render the booking form page.
+    """
+
+
+    return render(request, 'accounts/booking_login.html')
+
