@@ -3,31 +3,30 @@
 
 {% block content %}
 
-<main class="profile-container container">
+<main class="profile-container container" id="bg-image">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
             {% if user.is_authenticated %}
             <div class="row text-center">
                 <div class="col-12">
-                    <h3 class="my-5">{% block title %} {{ user.profile }} {% endblock %}</h3>
+                    <h3 class="my-5 fw-bold">{% block title %} {{ user.profile }} {% endblock %}</h3>
                     <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="">
                 </div>  
             </div>
 
             <div class="row justify-content-center my-5">
                 <div class="col-sm-12 col-lg-8 text-center">
-                    <p>Username: {{ user.username }}</p>
-                    <p>Email: {{ user.email }}</p>
-                    <p>First Name: {{ user.first_name }}</p>
-                    <p>Last Name: {{ user.last_name }}</p>
-                    <p>Phone: {{ user.profile.phone_number }}</p>
+                    <p><span class="fw-bold">Username:</span> {{ user.username }}</p>
+                    <p><span class="fw-bold">Email:</span> {{ user.email }}</p>
+                    <p><span class="fw-bold">First Name:</span> {{ user.first_name }}</p>
+                    <p><span class="fw-bold">Last Name:</span> {{ user.last_name }}</p>
+                    <p><span class="fw-bold">Phone:</span> {{ user.profile.phone_number }}</p>
                 </div>
-                
             </div> 
 
              <div class="border-top my-3 py-3 text-center">
                  <p class="pt-3">
-                     <a class="my-3" href="{% url 'update_profile' %}"><strong>Update</strong></a>
+                     <a class="my-3 fw-bold" href="{% url 'update_profile' %}"><strong>Update</strong></a>
                      <span>your profile here.</span>
                  </p>
              </div>
