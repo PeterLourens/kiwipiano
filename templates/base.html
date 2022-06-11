@@ -60,8 +60,20 @@
             </div>
         </nav>   
     </header>
-    
 
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12 my-3">
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="alert alert-info text-center" role="alert">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    
     {% block content %}
 
     {% endblock content %}

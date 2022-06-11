@@ -113,7 +113,7 @@ def update_profile(request):
         #'profile': Profile.objects.get(user=request.user),
         'user_profile_form': user_profile_form,
         'profile_update_form': profile_update_form,
-        'messages': messages
+      
 
     }
    
