@@ -30,9 +30,9 @@ class LessonAdmin(admin.ModelAdmin):
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
 
-    list_display = ('user',)
+    list_display = ('user','phone_number')
     list_filter = ('user',)
-    search_fields = ('user',)
+    search_fields = ('user', 'phone_number')
 
 
 
