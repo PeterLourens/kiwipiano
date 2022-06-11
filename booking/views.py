@@ -146,8 +146,10 @@ def booking_form(request):
     """
     form = BookingForm(request.POST)
     if form.is_valid():
-        booking_form.save()
-        #messages.success(request, f'Your booking is sucssesful.')
+        form.save()
+        booking.user =request.user
+
+        messages.success(request, f'Your booking is sucssesful.')
 
         return redirect('home')
 
