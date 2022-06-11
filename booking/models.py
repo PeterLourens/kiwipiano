@@ -10,7 +10,6 @@ class Booking(models.Model):
     """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    email = models.EmailField()
     lesson_name = models.CharField(max_length=30, blank=True)
     date = models.DateField()
     start_time = models.TimeField(auto_now_add=False)
@@ -58,7 +57,6 @@ class Profile(models.Model):
     profile_image = models.ImageField(default='default_bxixmd.jpg', upload_to='profile_image')
     first_name = models.CharField(max_length=30, null=True, blank=True)
     last_name = models.CharField(max_length=30, null=True, blank=True)
-    email_address = models.EmailField()
     phone_number = models.CharField(max_length=30, null=True, blank=True)
     password = models.CharField(max_length=50, null=True, blank=True)
 
