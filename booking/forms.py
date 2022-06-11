@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
-from .models import Profile
+from .models import Profile, Booking
 
 
 class UserRegisterForm(UserCreationForm):
@@ -40,5 +40,16 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['profile_image', 'phone_number']
+
+
+
+class BookingForm(forms.ModelForm):
+    """
+    The booking form is for user to fill in certain information for booking a secssion.
+    """
+
+    class Meta:
+        model = Booking
+        fields = ['user', 'lesson_name', 'date', 'start_time']
 
 
