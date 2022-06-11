@@ -3,7 +3,7 @@ from django.views import generic, View
 from .models import Lesson
 from .models import Profile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import UserRegisterForm, UserProfileForm, ProfileUpdateForm
+from .forms import UserRegisterForm, UserProfileForm, ProfileUpdateForm, BookingForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -62,7 +62,7 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
 
-            return redirect('profile')
+            return redirect('home')
 
     else:
         form = AuthenticationForm()
@@ -107,14 +107,10 @@ def update_profile(request):
 
    
     context = {
-        #'user': request.user,
-        #'profile': Profile.objects.all()
-        #'user': User.objects.get(user=request.user),
-        #'profile': Profile.objects.get(user=request.user),
+    
         'user_profile_form': user_profile_form,
         'profile_update_form': profile_update_form,
       
-
     }
    
     return render(request, 'accounts/update_profile.html', context)
@@ -134,9 +130,24 @@ def logout_view(request):
 
 def booking_login(request):
     """
-    To render the booking form page.
+    To render the booking login alert page. When user clicks the booking btn,
+    it asks user to login or register an account first.
     """
 
 
     return render(request, 'accounts/booking_login.html')
+
+
+
+@login_required
+def booking_form(request):
+    """
+    To render the booking form after user logged in.
+    """
+    # form = BookingForm(request.POST)
+
+
+
+    return render(request, 'accounts/booking_form.html')
+
 
