@@ -144,10 +144,14 @@ def booking_form(request):
     """
     To render the booking form after user logged in.
     """
-    # form = BookingForm(request.POST)
+    form = BookingForm(request.POST)
+    if form.is_valid():
+        booking_form.save()
+        #messages.success(request, f'Your booking is sucssesful.')
+
+        return redirect('home')
 
 
-
-    return render(request, 'accounts/booking_form.html')
+    return render(request, 'accounts/booking_form.html', {'form': form})
 
 
