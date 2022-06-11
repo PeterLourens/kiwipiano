@@ -25,7 +25,7 @@ The website provides different user interface. User can register an account, log
   * [#8]() As a **registered user** I can **login / logout** so that **I can book or cancel a lesson as well as managing my own account profile.**
   * [#9]() As a **registered user** I can **book a lesson** so that **I can select a lesson suitable for me.**
   * [#10]() As a **registered user** I can **cancel a booking** so that **I can manage my schedule in case I am not available**.
-  * [#11]() As a **user** I can **receive feedback** so that **I know whether my registration is successful or not as well as my booking status**.
+  * [#11]() As a **user** I can **receive feedback** so that **I know whether my registration is successful or not, whether my profile is updated or not, and my booking status**.
   * [#12]() As a **register user** I can **view my booking history** so that **I have a clear view about my study**.
   * [#13]() As a **registered user** I can **post a review** so that **I can share my opinion about my experience with the studio**.
   * [#14]() As a **user** I can **contact the studio** so that **I can ask any questions regarding my bookings or other things**.
