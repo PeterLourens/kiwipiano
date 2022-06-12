@@ -21,7 +21,7 @@ def home(request):
 
 def sign_up(request):
 
-    return render(request, 'accounts/signup.html')
+    return render(request, 'account/signup.html')
 
 
 
@@ -30,7 +30,7 @@ def feedback(request):
     To render the registration feedback view after 
     user registered on the register view.
     """
-    return render(request, 'accounts/register_feedback.html')
+    return render(request, 'account/register_feedback.html')
 
 
 
@@ -40,7 +40,7 @@ def profile(request):
     To render the user profile page.
     """
    
-    return render(request, 'accounts/profile.html')
+    return render(request, 'account/profile.html')
    
 
 
@@ -76,7 +76,7 @@ def update_profile(request):
       
     }
    
-    return render(request, 'accounts/update_profile.html', context)
+    return render(request, 'account/update_profile.html', context)
 
 
 
@@ -87,7 +87,7 @@ def logout_view(request):
 
     logout(request)
 
-    return render(request, 'accounts/logout.html')
+    return render(request, 'account/logout.html')
 
 
 
@@ -98,7 +98,7 @@ def booking_login(request):
     """
 
 
-    return render(request, 'accounts/booking_login.html')
+    return render(request, 'account/booking_login.html')
 
 
 
@@ -117,7 +117,7 @@ def booking_form(request):
         return redirect('home')
 
 
-    return render(request, 'accounts/booking_form.html', {'form': form})
+    return render(request, 'account/booking_form.html', {'form': form})
 
 
 
