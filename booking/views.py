@@ -144,7 +144,7 @@ def booking_form(request):
     """
     To render the booking form after user logged in.
     """
-    form = BookingForm(request.POST)
+    form = BookingForm(request.POST, instance=request.user)
     if form.is_valid():
         form.save()
         booking.user =request.user
@@ -155,5 +155,25 @@ def booking_form(request):
 
 
     return render(request, 'accounts/booking_form.html', {'form': form})
+
+
+
+
+def booking_session(request):
+    """
+    To book a session and store the booking information in the database and on the user's profile.
+    """
+
+    user = request.POST.get('user')
+    session = request.POST.get('session_name')
+
+
+    if request.method == 'POST':
+        booking_session = Booking()
+        
+
+
+
+
 
 

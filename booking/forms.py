@@ -43,6 +43,16 @@ class ProfileUpdateForm(forms.ModelForm):
 
 
 
+class DatePicker(forms.DateInput):
+    """
+    To use the datepicker for the booking form.
+    """
+    input_type = 'date'
+    date = forms.DateTimeField(input_formats=['%d/%m/%Y %H:%M'])
+
+
+
+
 class BookingForm(forms.ModelForm):
     """
     The booking form is for user to fill in certain information for booking a secssion.
@@ -51,5 +61,9 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['user', 'session_name', 'date', 'start_time']
+
+        widgets = {
+            'date': DatePicker()
+        }
 
 
