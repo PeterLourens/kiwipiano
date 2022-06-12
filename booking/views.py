@@ -41,6 +41,7 @@ def register(request):
 
 
 
+
 def feedback(request):
     """
     To render the registration feedback view after 

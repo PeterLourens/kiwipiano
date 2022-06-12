@@ -52,6 +52,23 @@ class DatePicker(forms.DateInput):
 
 
 
+class TimePicker(forms.TimeInput):
+    """
+    The time picker is to provide a range of time slot for user to choose.
+    """
+
+    input_type = 'time'
+
+
+
+class DateTimePicker(forms.DateTimeInput):
+    """
+    The datetime picker is to display the booking date and time.
+    """
+    
+    input_type = 'datetime'
+   
+
 
 class BookingForm(forms.ModelForm):
     """
@@ -63,7 +80,13 @@ class BookingForm(forms.ModelForm):
         fields = ['user', 'session_name', 'date', 'start_time']
 
         widgets = {
-            'date': DatePicker()
+            'date': DatePicker(),
+            'start_time': TimePicker(),
+            'booked_date': DateTimePicker()
         }
+
+    # def __init__(self):
+    #     self.fields['date'].widgets = forms.widgets.DateInput()
+    #     self.fields['start_time'].widgets = forms.widgets.TimeInput()
 
 
