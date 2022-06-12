@@ -15,9 +15,13 @@
     <!--CSS style sheet-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-   
 
-    <title>Kiwi Piano Studio</title>
+    {% if title %}
+        <title>Kiwi Piano Studio {{ title }}</title>
+    {% else %}
+        <title>Kiwi Piano Studio</title>
+    {% endif %}
+
 </head>
 
 <body>
