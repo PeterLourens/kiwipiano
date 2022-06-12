@@ -20,8 +20,33 @@ def home(request):
 
 
 def sign_up(request):
+    """
+    To render the signup page.
+    """
 
     return render(request, 'account/signup.html')
+
+
+
+def login(request):
+
+    """
+    To render the login page.
+    """
+
+    return render(request, 'account/login.html')
+
+
+
+def logout_view(request):
+    """
+    To render the logout page.
+    """
+
+    logout(request)
+
+    return render(request, 'account/logout.html')
+
 
 
 
@@ -78,16 +103,6 @@ def update_profile(request):
    
     return render(request, 'account/update_profile.html', context)
 
-
-
-def logout_view(request):
-    """
-    To render the logout page.
-    """
-
-    logout(request)
-
-    return render(request, 'account/logout.html')
 
 
 
