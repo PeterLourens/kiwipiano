@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from .models import Lesson
+from .models import Session
 from .models import Profile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import UserRegisterForm, UserProfileForm, ProfileUpdateForm, BookingForm

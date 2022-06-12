@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking, Lesson, Profile
+from .models import Booking, Session, Profile
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -17,15 +17,13 @@ class BookingAdmin(SummernoteModelAdmin):
 
 
 
-@admin.register(Lesson)
-class LessonAdmin(admin.ModelAdmin):
-    list_display = ('lesson_name', 'lesson_date', 'start_time', 'lesson_status')
-    list_filter = ('lesson_date', 'lesson_name')
-    search_fields = ('lesson_status', 'lesson_name')
+@admin.register(Session)
+class SessionAdmin(admin.ModelAdmin):
+    list_display = ('session_name', 'session_date', 'start_time', 'session_status')
+    list_filter = ('session_date', 'session_name')
+    search_fields = ('session_status', 'session_name')
 
 
-
-# admin.site.register(Profile)
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):

@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
-from .models import Profile, Booking
+from .models import Profile, Booking, Session
 
 
 class UserRegisterForm(UserCreationForm):
@@ -50,6 +50,6 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['user', 'lesson_name', 'date', 'start_time']
+        fields = ['user', 'session_name', 'date', 'start_time']
 
 
