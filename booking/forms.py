@@ -65,7 +65,7 @@ class DateTimePicker(forms.DateTimeInput):
     """
     The datetime picker is to display the booking date and time.
     """
-    
+
     input_type = 'datetime'
    
 
@@ -77,7 +77,7 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['user', 'session_name', 'date', 'start_time']
+        fields = ['session_name', 'date', 'start_time']
 
         widgets = {
             'date': DatePicker(),

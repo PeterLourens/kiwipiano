@@ -19,26 +19,9 @@ def home(request):
 
 
 
-def register(request):
-    """
-    To render the register view.
-    """
+def sign_up(request):
 
-    if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Your account registration is successful!')
-
-
-            return redirect('feedback')
-            
-    else:
-        form = UserRegisterForm()
-
-    return render(request, 'accounts/register.html', {'form': form})
-
+    return render(request, 'accounts/signup.html')
 
 
 
@@ -48,27 +31,6 @@ def feedback(request):
     user registered on the register view.
     """
     return render(request, 'accounts/register_feedback.html')
-
-
-
-def login_view(request):
-    """
-    To render the login page to log user in the account.
-    """
-
-    if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-
-            user = form.get_user()
-            login(request, user)
-
-            return redirect('home')
-
-    else:
-        form = AuthenticationForm()
-
-    return render(request, 'accounts/login.html', {'form': form})
 
 
 
