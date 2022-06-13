@@ -28,29 +28,29 @@ def sign_up(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            username = form.cleaned_data.get('username')
 
             return redirect('feedback')
+
     else:
         form = UserRegisterForm()
 
    
-    return render(request, 'account/signup.html', {'form':form})
+    return render(request, 'account/signup.html', {'form': form})
 
 
 
 def login(request):
 
     """
-    To render the login page.
+    To render the login page for logging user into the account.
     """
 
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
-            form.save()
-
             user = form.get_user()
+            login(request)
 
             return redirect('home')
 
@@ -58,7 +58,7 @@ def login(request):
         form = AuthenticationForm()
 
 
-    return render(request, 'account/login.html', {'form': form})
+    return render(request, 'account/login.html')
 
 
 
