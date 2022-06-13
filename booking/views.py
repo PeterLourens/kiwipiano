@@ -21,10 +21,19 @@ def home(request):
 
 def sign_up(request):
     """
-    To render the signup page.
+    To render the register page.
+    The form is to be filled in with user information for account registration.
     """
 
-    return render(request, 'account/signup.html')
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+    else:
+        form = UserRegisterForm()
+
+   
+    return render(request, 'account/signup.html', {'form': form})
 
 
 
