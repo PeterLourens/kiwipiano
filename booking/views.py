@@ -158,6 +158,9 @@ def booking_form(request):
 
         return redirect('home')
 
+        Session = Session.objects.get(session_name=session_name)
+        choices = Session.session_type
+
 
     return render(request, 'booking_form.html', {'form': form})
 
@@ -169,12 +172,23 @@ def booking_session(request):
     To book a session and store the booking information in the database and on the user's profile.
     """
 
-    user = request.POST.get('user')
-    session = request.POST.get('session_name')
+    # user = request.POST.get('user')
+    # session = request.POST.get('session_name')
 
 
-    if request.method == 'POST':
-        booking_session = Booking()
+    # if request.method == 'POST':
+    #     booking_session = Booking()
+
+
+    # form = BookingForm(data=request.POST)
+    # if booking_form.is_valid():
+    #     form.save()
+
+    
+       
+
+
+
         
 
 

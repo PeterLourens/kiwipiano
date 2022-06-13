@@ -31,11 +31,7 @@ class Session(models.Model):
     session_status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
-        return f'Session {self.session_name} is {self.session_status} on {self.session_date} at {self.start_time}'
-
-
-
-
+        return f'{self.session_name}'
 
 
 

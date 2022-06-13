@@ -77,12 +77,12 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['session_name', 'date', 'start_time']
+        fields = ['user', 'session_name', 'date', 'start_time']
 
         widgets = {
             'date': DatePicker(),
             'start_time': TimePicker(),
-            'booked_date': DateTimePicker()
+            'booked_date': DateTimePicker(),
         }
 
     # def __init__(self):

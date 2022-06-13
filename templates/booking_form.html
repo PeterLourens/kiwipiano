@@ -26,10 +26,15 @@
             <form action="" method="POST" enctype="multipart/form-data" class="my-5">
                 {% csrf_token %}
                 <div class="form-group my-3">
+
+                    {% for key, value in choices %}
+                        <option value=""> {{ key }}, {{ value }}</option>
+                    {% endfor %}
                     <!-- {{ form.as_p }} -->
                     {{ form|crispy }}
 
                 </div>
+               
 
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
