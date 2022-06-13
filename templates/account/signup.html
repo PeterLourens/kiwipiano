@@ -11,23 +11,21 @@
 
 <main class="register-container container">
     <div class="row align-items-center justify-content-center">
-      <div class="col-md-6 bg-light">
+        <div class="col-md-6 bg-light">
 
-        <h3 class="text-center fw-bold my-3">{% trans "Sign Up" %}</h3>
+            <h3 class="text-center fw-bold my-3">{% trans "Sign Up" %}</h3>
 
-        <div class="border-top my-3 py-3 text-center">
+            <div class="border-top my-3 py-3 text-center">
 
-          <p class="pt-3">
-            {% blocktrans %}Already have an account? <br>Please
-            <a href="{{ login_url }}" class="my-3"><strong>sign in</strong></a>
-            <span>to your account.</span>
-            .{% endblocktrans %}
-          </p>
+                <p class="pt-3">Already have an account? <br>Please
+                    <a href="{% url 'login' %}" class="my-3"><strong>login</strong></a>
+                    <span>to your account.</span>
+                  
+                </p>
 
-        </div>
+          </div>
 
         
-
         <form class="signup justify-content-center align-items-center" id="signup_form" method="POST" action="{% url 'account_signup' %}">
           {% csrf_token %}
           {{ form.as_p }}
