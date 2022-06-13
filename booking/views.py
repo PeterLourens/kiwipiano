@@ -65,17 +65,6 @@ def login(request):
 
 
 
-# def login_view(request):
-#     """
-#     To render the logout page.
-#     """
-
-#     logout(request)
-
-#     return render(request, 'account/logout.html')
-
-
-
 def logout_view(request):
     """
     To render the logout page.
@@ -83,7 +72,7 @@ def logout_view(request):
 
     logout(request)
 
-    return render(request, 'account/logout.html')
+    return render(request, 'index.html')
 
 
 
