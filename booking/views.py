@@ -28,6 +28,7 @@ def sign_up(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data.get('username')
     else:
         form = UserRegisterForm()
@@ -47,10 +48,13 @@ def login(request):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
 
+            user = form.get_user()
+
             return redirect('home')
 
     else:
         form = AuthenticationForm()
+
 
     return render(request, 'account/login.html', {'form': form})
 
