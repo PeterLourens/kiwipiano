@@ -43,7 +43,16 @@ def login(request):
     To render the login page.
     """
 
-    return render(request, 'account/login.html')
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+
+            return redirect('home')
+
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'account/login.html', {'form': form})
 
 
 
