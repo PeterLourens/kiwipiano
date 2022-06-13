@@ -149,7 +149,7 @@ def booking_form(request):
     """
     To render the booking form after user logged in.
     """
-    form = BookingForm(request.POST, instance=request.user)
+    form = BookingForm(request.POST)
     if form.is_valid():
         form.save()
         booking.user =request.user
@@ -159,7 +159,7 @@ def booking_form(request):
         return redirect('home')
 
 
-    return render(request, 'account/booking_form.html', {'form': form})
+    return render(request, 'booking_form.html', {'form': form})
 
 
 
