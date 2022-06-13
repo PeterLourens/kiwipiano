@@ -26,9 +26,9 @@
           </div>
 
         
-        <form class="signup justify-content-center align-items-center" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+        <form class="signup justify-content-center align-items-center" method="POST" action="">
           {% csrf_token %}
-          <!-- {{ form.as_p }} -->
+          
           {{ form|crispy}}
         
 
