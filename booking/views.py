@@ -29,12 +29,13 @@ def sign_up(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
+
+            return redirect('feedback')
     else:
         form = UserRegisterForm()
 
    
-    return render(request, 'account/signup.html', {'form': form})
+    return render(request, 'account/signup.html', {'form':form})
 
 
 
@@ -47,6 +48,7 @@ def login(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
+            form.save()
 
             user = form.get_user()
 
@@ -57,6 +59,17 @@ def login(request):
 
 
     return render(request, 'account/login.html', {'form': form})
+
+
+
+# def login_view(request):
+#     """
+#     To render the logout page.
+#     """
+
+#     logout(request)
+
+#     return render(request, 'account/logout.html')
 
 
 
