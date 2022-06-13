@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking, Session, Profile
+from .models import Booking,  Profile
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -14,14 +14,6 @@ class BookingAdmin(SummernoteModelAdmin):
 
     def confirmed_booking(self, queryset):
         queryset.update(confirmed=True)
-
-
-
-@admin.register(Session)
-class SessionAdmin(admin.ModelAdmin):
-    list_display = ('session_name', 'session_date', 'start_time', 'session_status')
-    list_filter = ('session_date', 'session_name')
-    search_fields = ('session_status', 'session_name')
 
 
 

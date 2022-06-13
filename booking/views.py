@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from .models import Session
-from .models import Profile
+from .models import Profile, Booking
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import UserRegisterForm, UserProfileForm, ProfileUpdateForm, BookingForm
+from .forms import (
+    UserRegisterForm, 
+    UserProfileForm, 
+    ProfileUpdateForm, 
+    BookingForm
+)
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -144,55 +150,28 @@ def booking_login(request):
 
 
 
+
 @login_required
 def booking_form(request):
     """
     To render the booking form after user logged in.
     """
-    form = BookingForm(request.POST)
-    if form.is_valid():
-        form.save()
-        booking.user =request.user
 
-        messages.success(request, f'Your booking is sucssesful.')
+    if request.method == 'POST':
+        form = BookingForm(data=request.POST)
 
-        return redirect('home')
+        if form.is_valid():
+            
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            messages.success(request, f'Your booking is sucsseful!')
 
-        Session = Session.objects.get(session_name=session_name)
-        choices = Session.session_type
+            return redirect('home')
+
+    form = BookingForm()
 
 
     return render(request, 'booking_form.html', {'form': form})
-
-
-
-
-def booking_session(request):
-    """
-    To book a session and store the booking information in the database and on the user's profile.
-    """
-
-    # user = request.POST.get('user')
-    # session = request.POST.get('session_name')
-
-
-    # if request.method == 'POST':
-    #     booking_session = Booking()
-
-
-    # form = BookingForm(data=request.POST)
-    # if booking_form.is_valid():
-    #     form.save()
-
-    
-       
-
-
-
-        
-
-
-
-
 
 

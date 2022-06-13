@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
-from .models import Profile, Booking, Session
+from .models import Profile, Booking
 
 
 class UserRegisterForm(UserCreationForm):
@@ -67,7 +67,8 @@ class DateTimePicker(forms.DateTimeInput):
     """
 
     input_type = 'datetime'
-   
+
+
 
 
 class BookingForm(forms.ModelForm):
@@ -77,16 +78,15 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['user', 'session_name', 'date', 'start_time']
+        exclude = ('user',)
+    
 
         widgets = {
             'date': DatePicker(),
             'start_time': TimePicker(),
+            'end_time': TimePicker(),
             'booked_date': DateTimePicker(),
+            
         }
-
-    # def __init__(self):
-    #     self.fields['date'].widgets = forms.widgets.DateInput()
-    #     self.fields['start_time'].widgets = forms.widgets.TimeInput()
 
 
