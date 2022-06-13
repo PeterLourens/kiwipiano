@@ -1,5 +1,7 @@
 {% extends "account/base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -29,7 +31,8 @@
       <form class="login justify-content-center align-items-center" id="signup_form" method="POST"
         action="{% url 'account_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        
+        {{ form|crispy}}
 
 
         {% if redirect_field_value %}
