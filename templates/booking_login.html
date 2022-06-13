@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load account %}
+{% load account socialaccount %}
+
+{% block content %}
+
+
+<main class="container">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+            <div class="card">
+                <img src="https://res.cloudinary.com/dyfa8b6fs/image/upload/v1654940974/media/piano4_iei931.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold fs-4 my-3">Musical alert!</h5>
+                    <p class="card-text fs-6">
+                        Should you wish to book a session, <br> please login to your account or register an account
+                        first.
+                    </p>
+                </div>
+
+                <div class="card-body text-center">
+                    <a href="{% url 'sign_up' %}" class="card-link fw-bold">Register</a>
+                    <a href="{% url 'login' %}" class="card-link fw-bold">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

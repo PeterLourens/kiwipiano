@@ -140,7 +140,7 @@ def booking_login(request):
     """
 
 
-    return render(request, 'account/booking_login.html')
+    return render(request, 'booking_login.html')
 
 
 
