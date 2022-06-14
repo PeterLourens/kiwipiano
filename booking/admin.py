@@ -20,7 +20,7 @@ class BookingAdmin(SummernoteModelAdmin):
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
 
-    list_display = ('user', 'phone_number')
+    list_display = ('user','phone_number')
     list_filter = ('user',)
     search_fields = ('user', 'phone_number')
 

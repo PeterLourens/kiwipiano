@@ -98,7 +98,7 @@ def profile(request):
     To render the user profile page.
     """
    
-    return render(request, 'account/profile.html')
+    return render(request, 'profile/profile.html')
    
 
 
@@ -134,7 +134,7 @@ def update_profile(request):
       
     }
    
-    return render(request, 'account/update_profile.html', context)
+    return render(request, 'profile/update_profile.html', context)
 
 
 
@@ -146,7 +146,7 @@ def booking_login(request):
     """
 
 
-    return render(request, 'booking_login.html')
+    return render(request, 'booking/booking_login.html')
 
 
 
@@ -172,6 +172,6 @@ def booking_form(request):
     form = BookingForm()
 
 
-    return render(request, 'booking_form.html', {'form': form})
+    return render(request, 'booking/booking_form.html', {'form': form})
 
 
