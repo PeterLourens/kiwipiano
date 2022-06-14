@@ -165,7 +165,7 @@ def booking_form(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
-            messages.success(request, f'Your booking is sucsseful!')
+            messages.success(request, f'Your booking is successful!')
 
             return redirect('home')
 
