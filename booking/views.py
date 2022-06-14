@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
+from django.views.generic.list import ListView
 from .models import Profile, Booking
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import (
@@ -168,11 +169,28 @@ def booking_form(request):
             booking.save()
             messages.success(request, f'Your booking is successful!')
 
-            return redirect('home')
+            return redirect('bookings')
 
     form = BookingForm()
 
 
     return render(request, 'booking/booking_form.html', {'form': form})
+
+
+
+
+class BookingListView(ListView):
+    """
+    To display a list of bookings.
+    """
+
+    model = Booking
+    fields = '__all__'
+    bookings = Booking.objects.all()
+    template_name = 'booking/bookings.html'
+
+
+    
+
 
 
