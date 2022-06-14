@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from django.views.generic.list import ListView
+from django.views.generic.base import TemplateView
 from .models import Profile, Booking
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import (
@@ -11,6 +12,7 @@ from .forms import (
 )
 
 from django.contrib import messages
+from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
@@ -179,15 +181,25 @@ def booking_form(request):
 
 
 
-class BookingListView(ListView):
+class BookingsView(TemplateView):
     """
     To display a list of bookings.
     """
 
     model = Booking
     fields = '__all__'
-    bookings = Booking.objects.all()
+   
     template_name = 'booking/bookings.html'
+
+    #booking_list = Booking.objects.all()
+
+   
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['bookings'] = Booking.objects.filter()
+
+        return context
 
 
     
