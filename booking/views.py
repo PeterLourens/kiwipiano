@@ -73,7 +73,7 @@ def login(request):
 
 def logout_view(request):
     """
-    To render the logout page.
+    To render the home page after user logged out the account.
     """
 
     logout(request)
@@ -95,7 +95,7 @@ def feedback(request):
 @login_required
 def profile(request):
     """
-    To render the user profile page.
+    To render the user profile page with user's personal information.
     """
    
     return render(request, 'profile/profile.html')
@@ -155,6 +155,7 @@ def booking_login(request):
 def booking_form(request):
     """
     To render the booking form after user logged in.
+    User is able to book a session with choices.
     """
 
     if request.method == 'POST':
