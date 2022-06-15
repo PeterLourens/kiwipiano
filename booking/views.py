@@ -11,7 +11,8 @@ from .forms import (
     UserRegisterForm, 
     UserProfileForm, 
     ProfileUpdateForm, 
-    BookingForm
+    BookingForm,
+    
 )
 
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -235,15 +236,18 @@ class BookingFormEditView(UpdateView):
     def get_success_url(self):
         pk = self.kwargs['pk']
 
-        return reverse('booking_update', kwargs={'pk': pk})
+        return reverse('booking:booking_form', kwargs={'pk': self.object.pk})
+
+
 
    
 
-    
+# class PostUpdate(UpdateView):
+#     model = Post
 
+#     fields = ['title', 'content']
 
-    
-
-
-
-
+#     def get_success_url(self):
+#         return reverse('blog:detail', kwargs={
+#             'pk': self.object.pk,
+#         })

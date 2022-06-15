@@ -90,3 +90,22 @@ class BookingForm(forms.ModelForm):
         }
 
 
+
+class BookingUpdateForm(forms.ModelForm):
+    """
+    The booking update form is for user to update the certain information for booking.
+    """
+
+    class Meta:
+        model = Booking
+        exclude = ('user',)
+    
+
+        widgets = {
+            'date': DatePicker(),
+            'start_time': TimePicker(),
+            'end_time': TimePicker(),
+            'booked_date': DateTimePicker(),
+
+        }
+            

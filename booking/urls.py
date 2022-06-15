@@ -21,6 +21,7 @@ urlpatterns = [
     path('booking_detail/', BookingTemplateView.as_view(), name='booking_detail'),
     path('booking_success/<int:pk>/', views.BookingSuccessView.as_view(), name='booking_success'),
     path('booking_update/', views.BookingFormEditView.as_view(), name='booking_update'),
+    
    
    
    

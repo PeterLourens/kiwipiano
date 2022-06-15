@@ -22,8 +22,8 @@
                 {% csrf_token %}
                 <div class="form-group my-3">
 
-
-                    {{ form|crispy }}
+                   
+                    {{ booking_update_form|crispy }}
 
                 </div>
 
@@ -34,7 +34,7 @@
 
                 <div class="form-group my-3 text-center my-5">
 
-                    <a href="{% url 'booking_detail' %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
+                    <a href="{% url 'booking_update_form' %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
                         <button class="btn btn-primary" type="submit">Continue</button>
                     </a>
                 </div>
