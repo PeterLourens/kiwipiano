@@ -7,43 +7,38 @@
 {% block content %}
 
 
+{% for booking in bookings %}
 <main class=" container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
-
-            {% for booking in bookings %}
-
-
             <div class="row text-center">
                 <div class="col-12">
-                    <h4 class="my-5">{{ booking }}</h4>
+                    <h4 class="my-5 fw-bold">Booking details</h4>
                      <div class="row justify-content-center my-5">
-                         <div class="col-sm-12 col-lg-8 text-center">
-                            <p><span class="fw-bold">Full Name:</span> {{ user.first_name }} {{ user.Last_name}}</p>
+                        <div class="col-sm-12 col-lg-8 text-center">
+                            <p><span class="fw-bold">Username:</span> {{ booking.user }}</p>
                             <p><span class="fw-bold">Session Name:</span> {{ booking.session_name }}</p>
                             <p><span class="fw-bold">Date:</span> {{ booking.date }}</p>
-                            <p><span class="fw-bold">Start Time:</span> {{ booking.start_time }}</p>
+                            <p><span class="fw-bold">Start Time:</span> {{ booking.start_time}}</p>
                             <p><span class="fw-bold">End Time:</span> {{ booking.end_time }}</p>
                             <p><span class="fw-bold">Email:</span> {{ user.email }}</p>
                             <p><span class="fw-bold">Phone:</span> {{ user.profile.phone_number }}</p>
-                         </div>
+                        </div>
                      </div>
                 </div>
                
             </div>
 
-            {% endfor %}
-
             <div class="form-group my-3 text-center my-5">
                 <button class="btn btn-primary" type="submit">Continue</button>
+              
             </div>
-          
-
-
-
+        
         </div>
     </div>
 </main>
+
+{% endfor %}
 
 
 {% endblock %}
