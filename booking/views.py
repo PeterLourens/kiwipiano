@@ -172,7 +172,8 @@ def booking_form(request):
             booking.save()
             messages.success(request, f'Your booking is successful!')
 
-            return redirect('booking_detail')
+        
+            return redirect(f'/booking_success/{booking.id}/', kwargs={'pk': booking.id})
 
     form = BookingForm()
 
@@ -182,7 +183,7 @@ def booking_form(request):
 
 
 
-class BookingDetailView(TemplateView):
+class BookingTemplateView(TemplateView):
     """
     To display a list of bookings.
     """
@@ -192,7 +193,7 @@ class BookingDetailView(TemplateView):
    
     template_name = 'booking/booking_detail.html'
 
-    #date = Booking.objects.get(booking.date)
+
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -202,21 +203,22 @@ class BookingDetailView(TemplateView):
         return context
 
 
-    
-    
-# class BookingDetailView(DetailView):
-#     model = Booking
-#     fields = '__all__'
-   
-#     template_name = 'booking/booking_detail.html'
 
-    
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['bookings'] = Booking.objects.filter()
-       
 
-#         return context
+class BookingSuccessView(DetailView):
+    """
+    To render the booking data from the database.
+    Display the bookings user has made.
+    """
+
+    model = Booking
+    template_name = 'booking/booking_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = {'booking': kwargs['object']}
+
+        return context
+        
 
     
 
