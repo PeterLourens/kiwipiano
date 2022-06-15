@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import UpdateView
 from .models import Profile, Booking
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import (
@@ -220,8 +221,23 @@ class BookingSuccessView(DetailView):
         return context
         
 
-    
+class BookingEditView(UpdateView):
+    """
+    To render the booking form that user might want to change the booking details.
+    """
 
+    model = Booking
+    fields = '__all__'
+
+    template_name = 'booking/booking_edit.html'
+
+    def get_context_data(self, request):
+
+        return self.request.user.booking
+
+
+
+    
 
 
 
