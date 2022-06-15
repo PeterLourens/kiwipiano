@@ -5,7 +5,8 @@ from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView
 from .models import Profile, Booking
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+
+
 from .forms import (
     UserRegisterForm, 
     UserProfileForm, 
@@ -13,6 +14,7 @@ from .forms import (
     BookingForm
 )
 
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -221,20 +223,23 @@ class BookingSuccessView(DetailView):
         return context
         
 
-class BookingEditView(UpdateView):
+class BookingFormEditView(UpdateView):
     """
     To render the booking form that user might want to change the booking details.
     """
 
     model = Booking
     fields = '__all__'
+    template_name = 'booking/booking_update_form.html'
 
-    template_name = 'booking/booking_edit.html'
+    def get_success_url(self):
+        pk = self.kwargs['pk']
 
-    def get_context_data(self, request):
+        return reverse('booking_update', kwargs={'pk': pk})
 
-        return self.request.user.booking
+   
 
+    
 
 
     
