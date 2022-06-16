@@ -227,7 +227,7 @@ class BookingSuccessView(DetailView):
         return context
         
 
-class BookingEditView(UpdateView):
+class BookingUpdateView(UpdateView):
     """
     To render the booking form that user might want to change the booking details.
     """
@@ -239,6 +239,28 @@ class BookingEditView(UpdateView):
     def get_success_url(self, **kwargs):
         pk = self.kwargs['pk']
         return reverse('booking_update', kwargs={'pk': self.kwargs['pk']})
+
+
+
+class BookingUpdateSuccessView(DetailView):
+    """
+    To render the booking details after updating .
+    Display the booking updates user has made.
+    """
+
+    model = Booking
+    template_name = 'booking/booking_update_success.html'
+
+    def get_context_data(self, **kwargs):
+        context = {'booking': kwargs['object']}
+
+        return context
+        
+
+
+    # def get(self, request):
+
+    #     return render(request, 'booking/booking_update_success.html')
 
 
 
