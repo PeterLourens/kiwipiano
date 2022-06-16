@@ -5,7 +5,6 @@ from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView
 from django.views.generic.edit import DeleteView
-#from django.urls import reverse
 from .models import Profile, Booking
 
 
@@ -23,7 +22,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-#from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 
@@ -191,7 +190,7 @@ def booking_form(request):
 
 
 
-class BookingTemplateView(TemplateView):
+class BookingTemplateView(DetailView):
     """
     To display the bookings details.
     """
@@ -240,6 +239,22 @@ class BookingUpdateView(UpdateView):
     def get_success_url(self, **kwargs):
         pk = self.kwargs['pk']
         return reverse('booking_update', kwargs={'pk': self.kwargs['pk']})
+
+
+
+# class BookingUpdateView(SuccessMessageMixin, UpdateView):
+#     """
+#     To render the booking form that user might want to change the booking details.
+#     """
+
+#     model = Booking
+#     form_class = BookingForm
+#     template_name = 'booking/booking_update.html'
+#     success_message = 'Updated your booking'
+
+#     def get_success_url(self, **kwargs):
+#         pk = self.kwargs['pk']
+#         return reverse('booking_detail', kwargs={'pk': self.kwargs['pk']})
        
 
 
@@ -260,15 +275,11 @@ class BookingUpdateSuccessView(DetailView):
         
 
 
-    # def get(self, request):
-
-    #     return render(request, 'booking/booking_update_success.html')
-
-
 
 
 # class BookingDeleteView(DeleteView):
 #     model = Booking
+#     template_name = 'booking/booking_delete.html'
 #     success_url = reverse_lazy('booking_success')
 
 
