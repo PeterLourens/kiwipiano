@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
@@ -236,61 +236,11 @@ class BookingEditView(UpdateView):
     fields = '__all__'
     template_name = 'booking/booking_update.html'
 
-    def get_success_url(self):
+    def get_success_url(self, **kwargs):
         pk = self.kwargs['pk']
-
-        #return reverse('booking:booking_form', kwargs={'pk': self.object.pk})
-        return redirect('booking_update', pk=kwargs['pk'])
+        return reverse('booking_update', kwargs={'pk': self.kwargs['pk']})
 
 
-
-
-    # model = Booking
-    # fields = '__all__'
-    # template_name_suffix = 'booking_update'
-
-    # def get_redirect_url(self, *args, **kwargs):
-    #     booking = Booking.objects.filter(pk=kwargs['pk'])
-    #     booking.update()
-
-    #     return super().get_redirect_url(*arg, **kwargs)
-
-
-
-
-
-
-# def booking_update(request):
-#     """
-#     To render the update booking page.
-#     """
-
-#     if request.method == 'POST':
-#         booking_form = BookingForm(request.POST)
-#         booking_update_form = BookingUpdateForm(request.POST, request.FILES)
-
-#         if booking_form.is_valid() and booking_update_form.is_valid():
-#             booking_form.save()
-#             booking_update_form.save()
-
-#             messages.success(request, f'Your booking has been updated.')
-
-#             return redirect(f'/booking_success/{booking.id}/', kwargs={'pk': booking.id})
-
-
-#     else:
-#         booking_form = BookingForm()
-#         booking_update_form = BookingUpdateForm()
-
-
-#     context = {
-
-#         'booking_form': booking_form,
-#         'booking_update_form': booking_update_form,
-        
-#     }
-
-#     return render(request, 'booking/booking_update.html', context)
 
 
 # class BookingDeleteView(DeleteView):
@@ -298,11 +248,11 @@ class BookingEditView(UpdateView):
 #     success_url = reverse_lazy('booking_success')
 
 
-# def booking_delete(request):
-#     """
-#     To render the booking delete page, 
-#     and delete the booking in the database.
+def booking_delete(request):
+    """
+    To render the booking delete page, 
+    and delete the booking in the database.
 
-#     """
+    """
 
-#     return render(request, 'booking/booking_delete.html')
+    return render(request, 'booking/booking_delete.html')
