@@ -233,7 +233,7 @@ class BookingUpdateView(UpdateView):
     """
 
     model = Booking
-    fields = '__all__'
+    form_class = BookingForm
     template_name = 'booking/booking_update.html'
 
     def get_success_url(self, **kwargs):
