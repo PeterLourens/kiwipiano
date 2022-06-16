@@ -23,6 +23,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+#from django.contrib.messages.views import SuccessMessageMixin
 
 
 
@@ -192,7 +193,7 @@ def booking_form(request):
 
 class BookingTemplateView(TemplateView):
     """
-    To display a list of bookings.
+    To display the bookings details.
     """
 
     model = Booking
@@ -239,6 +240,7 @@ class BookingUpdateView(UpdateView):
     def get_success_url(self, **kwargs):
         pk = self.kwargs['pk']
         return reverse('booking_update', kwargs={'pk': self.kwargs['pk']})
+       
 
 
 
