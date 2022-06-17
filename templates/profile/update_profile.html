@@ -7,33 +7,24 @@
 <main class="profile-container container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
-
             {% if user.is_authenticated %}
             <div class="row text-center">
                 <div class="col-12">
-                    <h3 class="my-5">{% block title %} {{ user.profile }} {% endblock %}</h3>
-                    <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="">
+                    <h3 class="my-3">{{ user }}</h3>
+                    <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="User profile image">
                 </div>
             </div>
-
-            <form action="" method="POST" enctype="multipart/form-data" class="my-5">
+            <form action="" method="POST" enctype="multipart/form-data" class="my-3">
                 {% csrf_token %}
                 <div class="form-group my-3">
                     {{ user_profile_form|crispy }}
                     {{ profile_update_form|crispy }}
                 </div>
-
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-
-                <div class="form-group my-3 text-center my-5">
+                <div class="form-group text-center">
                     <button class="btn btn-primary" type="submit">Update Profile</button>
                 </div>
             </form>
-            
             {% endif %}
-
         </div>
     </div>
 </main>
