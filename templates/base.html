@@ -26,48 +26,7 @@
 
 <body>
 
-    <header>
-        <!--Navigation menu-->
-        <nav class="navbar navbar-expand-md navbar-bg navbar-light sticky-top">
-            <div class="container-fluid">
-                <a href="{% url 'home' %}" class="navbar-brand p-3">
-                    <span id="logo-text">Kiwi Piano Studio</span>
-                </a>
-                <!--Toggle button for mobile devices with small screens-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navbar links -->
-                <div class="collapse navbar-collapse justify-content-center align-center" id="nav-menu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link nav-text active" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-text" href="#">Contact</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link nav-text" href="{% url 'profile' %}">Profile</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link nav-text" href="{% url 'logout' %}">Logout</a>
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link nav-text" href="{% url 'sign_up' %}">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-text" href="{% url 'login' %}">Login</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    {% include 'components/header.html' %}
 
     <section class="container-fluid">
         <div class="row">
@@ -85,54 +44,7 @@
 
     {% endblock content %}
 
-
-    <footer class="container-fluid my-5">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-xs-12  col-md-4">
-                    <div>
-                        <h5>Contact Us</h5>
-                        <p><i class="fa-solid fa-location-dot"></i>: Kiwi Piano Studio, Auckland</p>
-                        <p><a href="+31 00889992222222222">+31 008899922222222</a></p>
-                        <p><a href="mailto:info@kiwipiano.com">info@kiwipiano.com</a></p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 ">
-                    <div>
-                        <div class="d-flex justify-content-evenly fs-3">
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our Facebook page (open in a new tab">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                            <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our twitter page (open in a new tab">
-                                <i class="fab fa-twitter-square"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our instagram page (open in a new tab">
-                                <i class="fab fa-instagram-square"></i>
-                            </a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our youtube channel (open in a new tab">
-                                <i class="fab fa-youtube-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>Copyright &copy; Kiwi Piano Studio 2022 <br>Created by Veronica Lourens</p>
-                    <p class="text-muted">
-                        <em><strong>Disclaimer:</strong> This site is only for education purpose.</em>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'components/footer.html' %}
 
 
     <!--Bootstrap JavaScript-->
