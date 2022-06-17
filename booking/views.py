@@ -13,8 +13,6 @@ from .forms import (
     UserProfileForm, 
     ProfileUpdateForm, 
     BookingForm,
-   # BookingUpdateForm
-    
 )
 
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -23,7 +21,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
-
 
 
 
@@ -93,7 +90,6 @@ def logout_view(request):
 
 
 
-
 def feedback(request):
     """
     To render the registration feedback view after 
@@ -108,8 +104,10 @@ def profile(request):
     """
     To render the user profile page with user's personal information.
     """
+
+    my_bookings = Booking.objects.filter(user=request.user)
    
-    return render(request, 'profile/profile.html')
+    return render(request, 'profile/profile.html', {'my_bookings': my_bookings})
    
 
 
@@ -149,16 +147,13 @@ def update_profile(request):
 
 
 
-
 def booking_login(request):
     """
     To render the booking login alert page. When user clicks the booking btn,
     it asks user to login or register an account first.
     """
 
-
     return render(request, 'booking/booking_login.html')
-
 
 
 
@@ -178,9 +173,8 @@ def booking_form(request):
             booking.user = request.user
             booking.save()
             messages.success(request, f'Your booking is successful!')
-
-        
-            return redirect(f'/booking_success/{booking.id}/', kwargs={'pk': booking.id})
+           
+            return redirect('profile')
 
     else:
         form = BookingForm()
@@ -201,7 +195,6 @@ class BookingDetailView(DetailView):
    
     template_name = 'booking/booking_detail.html'
 
-
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -209,7 +202,6 @@ class BookingDetailView(DetailView):
        
 
         return context
-
 
 
 
@@ -228,35 +220,20 @@ class BookingSuccessView(DetailView):
         return context
         
 
-class BookingUpdateView(UpdateView):
+class BookingUpdateView(SuccessMessageMixin, UpdateView):
     """
-    To render the booking form that user might want to change the booking details.
+    To render the booking details that user has made.
     """
 
     model = Booking
     form_class = BookingForm
     template_name = 'booking/booking_update.html'
+    success_message = 'Your booking has been updated!'
 
     def get_success_url(self, **kwargs):
         pk = self.kwargs['pk']
-        return reverse('booking_update', kwargs={'pk': self.kwargs['pk']})
-
-
-
-# class BookingUpdateView(SuccessMessageMixin, UpdateView):
-#     """
-#     To render the booking form that user might want to change the booking details.
-#     """
-
-#     model = Booking
-#     form_class = BookingForm
-#     template_name = 'booking/booking_update.html'
-#     success_message = 'Updated your booking'
-
-#     def get_success_url(self, **kwargs):
-#         pk = self.kwargs['pk']
-#         return reverse('booking_detail', kwargs={'pk': self.kwargs['pk']})
-       
+        
+        return reverse('booking_detail', kwargs={'pk': self.kwargs['pk']})
 
 
 
@@ -276,19 +253,18 @@ class BookingUpdateSuccessView(DetailView):
         
 
 
-
-
-# class BookingDeleteView(DeleteView):
-#     model = Booking
-#     template_name = 'booking/booking_delete.html'
-#     success_url = reverse_lazy('booking_success')
-
-
-def booking_delete(request):
+def booking_delete(request, pk):
     """
     To render the booking delete page, 
     and delete the booking in the database.
-
     """
+    booking = Booking.objects.get(pk=pk)
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('profile')
 
-    return render(request, 'booking/booking_delete.html')
+
+    return render(request, 'booking/booking_delete.html', {'booking': booking})
+
+
+

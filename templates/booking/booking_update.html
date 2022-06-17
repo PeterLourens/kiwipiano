@@ -10,38 +10,21 @@
 <main class=" container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
-
-
             <div class="row text-center">
                 <div class="col-12">
                     <p>Update your booking</p>
                 </div>
             </div>
-
             <form action="{% url 'booking_update' booking.pk %}" method="POST" enctype="multipart/form-data" class="my-5">
                 {% csrf_token %}
                 <div class="form-group my-3">
-
-                   
                     {{ form|crispy }}
-
                 </div>
 
-
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-
-                <div class="form-group my-3 text-center my-5">
-
-                    <a href="{% url 'booking_detail' %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
-                        <button class="btn btn-primary" type="submit">Continue</button>
-                    </a>
+                <div class="justify-content-center align-items-center">
+                    <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
             </form>
-
-
-
         </div>
     </div>
 </main>

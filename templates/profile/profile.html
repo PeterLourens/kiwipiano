@@ -32,8 +32,21 @@
              </div>
             {% endif %}
         </div>
+
+        
     </div>
 </main>
+
+<section>
+    {% for booking in my_bookings %}
+    <a href="{% url 'booking_detail' booking.pk %}">
+        <div class="card p-2 mb-3">
+            <p><span class="fw-bold">Date:</span> {{ booking.date }}</p>
+            <p><span class="fw-bold">Start Time:</span> {{ booking.start_time}}</p>
+        </div>
+    </a>
+    {% endfor %}
+</section>
 
 {% endblock content %}
 

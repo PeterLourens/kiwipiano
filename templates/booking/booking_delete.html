@@ -12,12 +12,14 @@
                 </div>
             </div>
             <div class=" my-3 text-center my-5">
-                <a href="{% url 'booking_delete' %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
+                <form method="POST">
+                    {% csrf_token %}
                     <button class="btn btn-primary" type="submit">YES</button>
-                </a>
-                <a href="{% url 'booking_delete' %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
-                    <button class="btn btn-primary" type="submit">NO</button>
-                </a>
+                    <a href="{% url 'booking_detail' booking.pk %}" id="btn-continue"
+                        class="btn bg-primary btn-lg my-3">
+                        NO
+                    </a>
+                </form>
             </div>
         </div>
     </div>

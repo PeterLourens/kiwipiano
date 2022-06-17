@@ -32,7 +32,7 @@
                 <a href="{% url 'booking_update' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
                     <button class="btn btn-primary" type="submit">Update Booking</button>
                 </a>
-                <a href="{% url 'booking_delete' %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
+                <a href="{% url 'booking_delete' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
                     <button class="btn btn-primary" type="submit">Delete Booking</button>
                 </a>
                 
