@@ -20,14 +20,14 @@ h3,
 h4,
 p,
 a {
-    letter-spacing: 1.3px;
+    letter-spacing: 1.2px;
 }
 
 /*--------------------------------navbar */
 #logo-text {
     font-family: Ultra;
     margin-left: 40px;
-    font-size: 30px;
+    font-size: 25px;
    
 }
 
@@ -56,7 +56,7 @@ a {
 
 /*-------------------------------profile page */
 #profile-image {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
 }
 
