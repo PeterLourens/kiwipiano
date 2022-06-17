@@ -190,7 +190,7 @@ def booking_form(request):
 
 
 
-class BookingTemplateView(DetailView):
+class BookingDetailView(DetailView):
     """
     To display the bookings details.
     """
