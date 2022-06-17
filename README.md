@@ -4,6 +4,8 @@ Kiwi Piano website targets the user who wants to learn to play piano, or wants t
 
 The website provides different user interface. User can register an account, login to the user’s account, log out from the account, edit profile or delete account, book or cancel a session. Admin user can manange the site's data. 
 
+[Kiwi Piano Studio](https://kiwipiano.herokuapp.com/) live site.
+
 ## Table of Content
 
 # UX
