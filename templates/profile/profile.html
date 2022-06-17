@@ -23,7 +23,6 @@
                     <p><span class="fw-bold">Phone:</span> {{ user.profile.phone_number }}</p>
                 </div>
             </div> 
-
              <div class="border-top my-3 py-3 text-center">
                  <p class="pt-3">
                      <a class="my-3 fw-bold" href="{% url 'update_profile' %}"><strong>Update</strong></a>
@@ -31,21 +30,34 @@
                  </p>
              </div>
             {% endif %}
-        </div>
-
-        
+        </div>   
     </div>
 </main>
 
-<section>
-    {% for booking in my_bookings %}
-    <a href="{% url 'booking_detail' booking.pk %}">
-        <div class="card p-2 mb-3">
-            <p><span class="fw-bold">Date:</span> {{ booking.date }}</p>
-            <p><span class="fw-bold">Start Time:</span> {{ booking.start_time}}</p>
+
+<section class="container">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    {% for booking in my_bookings %}
+                    <a href="{% url 'booking_detail' booking.pk %}">
+                        <div class="card p-2 mb-3">
+                            <p class="card-text fs-6">
+                                <span class=" fw-bold">Session name:</span>
+                                {{ booking.session_name}}
+                            </p>
+                            <p class="card-text fs-6">
+                                <span class=" fw-bold">Date:</span> 
+                                {{ booking.date }}
+                            </p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-    </a>
-    {% endfor %}
+    </div>
 </section>
 
 {% endblock content %}
