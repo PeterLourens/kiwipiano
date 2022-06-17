@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load account %}
+{% load account socialaccount %}
+
+{% block content %}
+
+
+<main class="container">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+            <div class="card">
+                <img src=""
+                    class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold fs-4 my-3">Your booking has been confirmed!</h5>
+                    <p class="card-text fs-6">
+                        Thank you for booking with us! <br> We look forward to seeing you soon. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

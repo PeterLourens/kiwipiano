@@ -182,7 +182,8 @@ def booking_form(request):
         
             return redirect(f'/booking_success/{booking.id}/', kwargs={'pk': booking.id})
 
-    form = BookingForm()
+    else:
+        form = BookingForm()
 
 
     return render(request, 'booking/booking_form.html', {'form': form})

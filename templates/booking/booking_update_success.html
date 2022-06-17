@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-{% load crispy_forms_tags %}
-
-
-
 {% block content %}
 
 
@@ -25,21 +21,15 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
             <div class="form-group my-3 text-center my-5">
                 <a href="{% url 'booking_update_success' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </a>
-
             </div>
-
         </div>
     </div>
 </main>
-
-
 
 
 {% endblock %}
