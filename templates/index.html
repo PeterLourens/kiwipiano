@@ -3,18 +3,16 @@
 {% block content %}
 
 
-<section class="bg-light mt-6">
+<section class="bg-light mt-3">
     <div class="container-lg pb-3">
-        <div class="text-center pt-5">
+        <div class="text-center pt-3">
             <p>"It's easy to play any musical instrument: <br> all you have to do is touch the right
                 key at the right time and the instrument will play itself." <br><br>--Johann Sebastian Bach</p>
         </div>
-
-       
-        <div class="row my-5 align-items-center justify-content-center">
+        <div class="row my-3 align-items-center justify-content-center">
             <div class="col-8 col-md-4">
                 <div class="card">
-                    <div class="card-body text-center py-3">
+                    <div class="card-body text-center py-2">
                         <h5 class="card-title fw-bold fs-5 p-2">1-on-1 lessons </h5>
                         <p class="text-muted">One hour per lesson</p>
                         <ul class="list-group">
@@ -24,19 +22,17 @@
                             <li class="list-group-item">Exams traing</li>
                             <li class="list-group-item">Competition training</li>
                         </ul>
-
                         {% if user.is_authenticated %}
-                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-primary btn-lg my-3">Book Now</a>
+                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-info btn-md my-3">Book Now</a>
                         {% else %}
-                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-lg my-3">Book Now</a>
+                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3">Book Now</a>
                         {% endif %}
                     </div>
                 </div>
             </div>
-
             <div class="col-8 col-md-4">
                 <div class="card">
-                    <div class="card-body text-center py-3">
+                    <div class="card-body text-center py-2">
                         <h5 class="card-title fw-bold fs-5 p-2">Piano recital</h5>
                         <p class="text-muted">We tailor your needs</p>
                         <ul class="list-group">
@@ -46,11 +42,10 @@
                             <li class="list-group-item">Online recital training</li>
                             <li class="list-group-item">End of year concert</li>
                         </ul>
-
                         {% if user.is_authenticated %}
-                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-primary btn-lg my-3">Book Now</a>
+                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-info btn-md my-3">Book Now</a>
                         {% else %}
-                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-lg my-3">Book Now</a>
+                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3">Book Now</a>
                         {% endif %}
                     </div>
                 </div>
