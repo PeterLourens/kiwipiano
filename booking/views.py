@@ -261,10 +261,10 @@ def booking_delete(request, pk):
     booking = Booking.objects.get(pk=pk)
     if request.method == 'POST':
         booking.delete()
+        messages.success(request, f'Your booking has been deleted! Should you have any questions, please feel free to contact me.')
         return redirect('profile')
 
 
     return render(request, 'booking/booking_delete.html', {'booking': booking})
-
 
 

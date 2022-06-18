@@ -43,7 +43,7 @@ class Booking(models.Model):
    
 
     def __str__(self):
-        return f'{self.user} on {self.date} at {self.start_time}'
+        return f'{self.session_name} on {self.date} at {self.start_time}'
 
 
 
