@@ -52,16 +52,12 @@ a {
 }
 
 .nav-item a:hover {
-    opacity: 1;
+    opacity: .6;
 }
 
 #nav-bg {
     background: rgb(13, 19, 140);
 
-}
-
-#toggler-icon {
-    color: white;
 }
 
 
