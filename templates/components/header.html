@@ -1,11 +1,14 @@
- {% load static %}
+{% load static %}
 
 <header>
     <!--Navigation menu-->
     <nav class="navbar navbar-expand-md navbar-bg navbar-light sticky-top">
-        <div class="container-fluid">
-            <a href="{% url 'home' %}" class="navbar-brand p-3">
-                <span id="logo-text">Kiwi Piano Studio</span>
+        <div class="container-fluid " id="logo-img">
+            <a href="{% url 'home' %}" class="navbar-brand">
+                <!-- <span id="logo-text">Kiwi Piano Studio</span> -->
+                <img class="img-responsive" 
+                    src="https://res.cloudinary.com/dyfa8b6fs/image/upload/v1655527427/media/images/logo1_h3oic3.jpg"
+                    alt="" width="100" height="100">
             </a>
             <!--Toggle button for mobile devices with small screens-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
