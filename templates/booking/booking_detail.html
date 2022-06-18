@@ -12,8 +12,8 @@
         <div class="col-md-6 bg-light">
             <div class="row text-center">
                 <div class="col-12">
-                    <h4 class="my-5 fw-bold">Booking details</h4>
-                     <div class="row justify-content-center my-5">
+                    <h5 class="my-3 fw-bold">Booking details</h5>
+                     <div class="row justify-content-center">
                         <div class="col-sm-12 col-lg-8 text-center">
                             <p><span class="fw-bold">Username:</span> {{ booking.user }}</p>
                             <p><span class="fw-bold">Session Name:</span> {{ booking.session_name }}</p>
@@ -25,17 +25,14 @@
                         </div>
                      </div>
                 </div>
-               
             </div>
-
-            <div class="form-group my-3 text-center my-5">
-                <a href="{% url 'booking_update' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
+            <div class="form-group my-3 text-center">
+                <a href="{% url 'booking_update' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg">
                     <button class="btn btn-primary" type="submit">Update Booking</button>
                 </a>
-                <a href="{% url 'booking_delete' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg my-3">
+                <a href="{% url 'booking_delete' booking.pk %}" id="btn-continue" class="btn bg-primary btn-lg">
                     <button class="btn btn-primary" type="submit">Delete Booking</button>
                 </a>
-                
             </div>
         </div>
     </div>

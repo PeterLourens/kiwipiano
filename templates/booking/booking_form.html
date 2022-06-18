@@ -2,8 +2,6 @@
 
 {% load crispy_forms_tags %}
 
-
-
 {% block content %}
 
 
@@ -12,18 +10,18 @@
         <div class="col-md-6 bg-light">
             <div class="row text-center">
                 <div class="col-12">
-                    <h4 class="my-5">Kiwi Piano Booking Form</h4>
+                    <h5 class="fw-bold mt-3">Kiwi Piano Booking Form</h5>
                     <img src="" alt="">
                 </div>
             </div>
-
-            <form action="" method="POST" enctype="multipart/form-data" class="my-5">
+            <form action="" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                <div class="form-group my-3">  
+                <div class="form-group">  
                     {{ form|crispy }}
                 </div>
-                
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <div class="form-group text-center my-3">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
             </form>
         </div>
     </div>

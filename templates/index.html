@@ -23,9 +23,9 @@
                             <li class="list-group-item">Competition training</li>
                         </ul>
                         {% if user.is_authenticated %}
-                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-info btn-md my-3">Book Now</a>
+                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-primary btn-md my-3 text-white">Book Now</a>
                         {% else %}
-                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3">Book Now</a>
+                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3 text-white">Book Now</a>
                         {% endif %}
                     </div>
                 </div>
@@ -43,9 +43,9 @@
                             <li class="list-group-item">End of year concert</li>
                         </ul>
                         {% if user.is_authenticated %}
-                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-info btn-md my-3">Book Now</a>
+                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-primary btn-md my-3 text-white">Book Now</a>
                         {% else %}
-                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3">Book Now</a>
+                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3 text-white">Book Now</a>
                         {% endif %}
                     </div>
                 </div>

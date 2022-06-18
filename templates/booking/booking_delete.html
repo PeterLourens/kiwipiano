@@ -6,19 +6,16 @@
 <main class=" container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-light">
-            <div class="row justify-content-center my-5">
+            <div class="row justify-content-center mt-3">
                 <div class="col-sm-12 col-lg-8 text-center">
-                    <p>Are you sure you want to delete "{{ bookings }}"?</p>
+                    <p>Are you sure you want to delete your booking of {{ booking }}?</p>
                 </div>
             </div>
-            <div class=" my-3 text-center my-5">
+            <div class="text-center my-3">
                 <form method="POST">
                     {% csrf_token %}
-                    <button class="btn btn-primary" type="submit">YES</button>
-                    <a href="{% url 'booking_detail' booking.pk %}" id="btn-continue"
-                        class="btn bg-primary btn-lg my-3">
-                        NO
-                    </a>
+                    <a><button class="btn bg-primary text-white" type="submit">YES</button></a>
+                    <a href="{% url 'booking_detail' booking.pk %}" id="btn-continue" class="btn bg-primary text-white">NO</a>
                 </form>
             </div>
         </div>
