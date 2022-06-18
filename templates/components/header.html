@@ -2,42 +2,43 @@
 
 <header>
     <!--Navigation menu-->
-    <nav class="navbar navbar-expand-md navbar-bg navbar-light sticky-top">
-        <div class="container-fluid " id="logo-img">
-            <a href="{% url 'home' %}" class="navbar-brand">
+    <nav class="navbar navbar-expand-md navbar-bg navbar-dark sticky-top">
+        <div class="container-fluid "id="nav-bg">
+            <a href="{% url 'home' %}" class="navbar-brand" id="logo-img">
                 <!-- <span id="logo-text">Kiwi Piano Studio</span> -->
                 <img class="img-responsive" 
-                    src="https://res.cloudinary.com/dyfa8b6fs/image/upload/v1655527427/media/images/logo1_h3oic3.jpg"
-                    alt="" width="100" height="100">
+                    src="https://res.cloudinary.com/dyfa8b6fs/image/upload/v1655538325/media/images/logo_hc2gjc.jpg"
+                    alt="" width="320">
             </a>
             <!--Toggle button for mobile devices with small screens-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nav-menu"
                 aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" id="toggler-icon"></span>
             </button>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse justify-content-center align-center" id="nav-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-text active" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link nav-text active text-white" data-toggle="tab" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text" href="#">Contact</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="#">Contact</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link nav-text" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'profile' %}">Profile</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-text" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link nav-text" href="{% url 'sign_up' %}">Register</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'sign_up' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text" href="{% url 'login' %}">Login</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
