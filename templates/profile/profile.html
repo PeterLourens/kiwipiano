@@ -4,14 +4,14 @@
 
 <main class="profile-container container" id="bg-image">
     <div class="row justify-content-center align-items-center">
-        <div class="col-md-8 bg-light">
+        <div class="col-md-4 bg-light">
             {% if user.is_authenticated %}
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <h5 class="my-3 fw-bold">{{ user }}'s Profile</h5>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="mt-2 fw-bold">{{ user }}'s Profile</h5>
                     <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="User profile image">
                 </div> 
-                <div class="col-md-6 mt-3">
+                <div class="card-body pl-5">
                     <p><span class="fw-bold">Username:</span> {{ user.username }}</p>
                     <p><span class="fw-bold">Email:</span> {{ user.email }}</p>
                     <p><span class="fw-bold">First Name:</span> {{ user.first_name }}</p>
@@ -19,11 +19,11 @@
                     <p><span class="fw-bold">Phone:</span> {{ user.profile.phone_number }}</p>
                 </div>
             </div>
-            <div class="border-top my-3 text-center">
-                <p class="pt-3">
+            <div class="my-3 text-center">
+                <p class="py-3">
                     <a class="fw-bold" href="{% url 'update_profile' %}">Update</a>
                     <span>or</span>
-                   
+                    
                     <a class="fw-bold" href="#">Delete</a>
                     
                     <span>your profile here.</span>
