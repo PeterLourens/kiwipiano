@@ -59,8 +59,9 @@ a {
 
 }
 
-#hero-img {
-    width: 100%;
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
