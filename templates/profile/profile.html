@@ -19,12 +19,15 @@
                     <p><span class="fw-bold">Phone:</span> {{ user.profile.phone_number }}</p>
                 </div>
             </div>
-             <div class="border-top my-3 text-center">
-                 <p class="pt-3">
-                     <a class="fw-bold" href="{% url 'update_profile' %}"><strong>Update</strong></a>
-                     <span>your profile here.</span>
-                 </p>
-             </div>
+            <div class="border-top my-3 text-center">
+                <p class="pt-3">
+                    <a class="fw-bold" href="{% url 'update_profile' %}">Update</a>
+                    <span>or</span>
+                    <a class="fw-bold" href="#">Delete</a>
+                    
+                    <span>your profile here.</span>
+                </p>
+            </div>
             {% endif %}
         </div> 
         <div class="col-md-4">

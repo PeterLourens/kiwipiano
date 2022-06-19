@@ -98,16 +98,33 @@ def feedback(request):
     return render(request, 'account/register_feedback.html')
 
 
-
 @login_required
 def profile(request):
     """
     To render the user profile page with user's personal information.
     """
-
     my_bookings = Booking.objects.filter(user=request.user)
-   
+
     return render(request, 'profile/profile.html', {'my_bookings': my_bookings})
+
+
+
+
+# @login_required
+# def profile(request):
+#     """
+#     To render the user profile page with user's personal information.
+#     """
+#     my_profile = Profile.objects.filter(user=request.user)
+#     my_bookings = Booking.objects.filter(user=request.user)
+
+#     context = {
+#         'my_profile': my_profile,
+#         'my_bookings': my_bookings
+#     }
+
+#     return render(request, 'profile/profile.html', context)
+   
    
 
 
@@ -144,6 +161,23 @@ def update_profile(request):
     }
    
     return render(request, 'profile/update_profile.html', context)
+
+
+
+def delete_profile(request, pk):
+    """
+    To render the page that user can delete their profile, 
+    and delete the data in the database.
+    """
+    profile = Profile.objects.get(pk=pk)
+    if request.method == 'POST':
+        profile.delete()
+        messages.success(request, f'Your profile has been deleted!')
+        return redirect('home')
+
+
+    return render(request, 'profile/delete_profile.html', {'profile': profile})
+
 
 
 
@@ -261,7 +295,7 @@ def booking_delete(request, pk):
     booking = Booking.objects.get(pk=pk)
     if request.method == 'POST':
         booking.delete()
-        messages.success(request, f'Your booking has been deleted! Should you have any questions, please feel free to contact me.')
+        messages.success(request, f'Your booking has been deleted!')
         return redirect('profile')
 
 
