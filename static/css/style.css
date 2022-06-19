@@ -45,10 +45,6 @@ a {
    
 }
 
-.active {
-    border-bottom: 2px solid #09f405;
-   
-}
 
 .nav-item a:hover {
     opacity: .6;
@@ -69,6 +65,14 @@ a {
 #profile-image {
     width: 80px;
     height: 80px;
+}
+
+
+/*-------------------------------booking login page */
+#card-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
 }
 
 
