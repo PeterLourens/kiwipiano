@@ -52,8 +52,14 @@ def sign_up(request):
     else:
         form = UserRegisterForm()
 
+
+    context = {
+        'form': form,
+        'title': 'Register'
+    }
+
    
-    return render(request, 'account/signup.html', {'form': form})
+    return render(request, 'account/signup.html', context)
 
 
 
@@ -75,7 +81,7 @@ def login(request):
         form = AuthenticationForm()
 
 
-    return render(request, 'account/login.html')
+    return render(request, 'account/login.html', {'title': 'Login'})
 
 
 
@@ -86,7 +92,7 @@ def logout_view(request):
 
     logout(request)
 
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'title': 'Logout'})
 
 
 
@@ -95,7 +101,7 @@ def feedback(request):
     To render the registration feedback view after 
     user registered on the register view.
     """
-    return render(request, 'account/register_feedback.html')
+    return render(request, 'account/register_feedback.html', {'title': 'Register'})
 
 
 @login_required
@@ -105,7 +111,13 @@ def profile(request):
     """
     my_bookings = Booking.objects.filter(user=request.user)
 
-    return render(request, 'profile/profile.html', {'my_bookings': my_bookings})
+    context = {
+        'my_bookings': my_bookings,
+        'title': 'Profile'
+
+    }
+
+    return render(request, 'profile/profile.html', context)
    
    
 
@@ -139,6 +151,7 @@ def update_profile(request):
     
         'user_profile_form': user_profile_form,
         'profile_update_form': profile_update_form,
+        'title': 'Profile'
       
     }
    
@@ -169,7 +182,7 @@ def booking_login(request):
     it asks user to login or register an account first.
     """
 
-    return render(request, 'booking/booking_login.html')
+    return render(request, 'booking/booking_login.html', {'title': 'Login'})
 
 
 
@@ -196,7 +209,13 @@ def booking_form(request):
         form = BookingForm()
 
 
-    return render(request, 'booking/booking_form.html', {'form': form})
+    context = {
+        'form': form,
+        'title': 'Booking'
+    }
+
+
+    return render(request, 'booking/booking_form.html', context)
 
 
 
