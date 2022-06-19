@@ -106,24 +106,6 @@ def profile(request):
     my_bookings = Booking.objects.filter(user=request.user)
 
     return render(request, 'profile/profile.html', {'my_bookings': my_bookings})
-
-
-
-
-# @login_required
-# def profile(request):
-#     """
-#     To render the user profile page with user's personal information.
-#     """
-#     my_profile = Profile.objects.filter(user=request.user)
-#     my_bookings = Booking.objects.filter(user=request.user)
-
-#     context = {
-#         'my_profile': my_profile,
-#         'my_bookings': my_bookings
-#     }
-
-#     return render(request, 'profile/profile.html', context)
    
    
 
@@ -164,19 +146,19 @@ def update_profile(request):
 
 
 
-def delete_profile(request, pk):
-    """
-    To render the page that user can delete their profile, 
-    and delete the data in the database.
-    """
-    profile = Profile.objects.get(pk=pk)
-    if request.method == 'POST':
-        profile.delete()
-        messages.success(request, f'Your profile has been deleted!')
-        return redirect('home')
+# def delete_profile(request, pk):
+#     """
+#     To render the page that user can delete their profile, 
+#     and delete the data in the database.
+#     """
+#     profile = Profile.objects.get(pk=pk)
+#     if request.method == 'POST':
+#         profile.delete()
+#         messages.success(request, f'Your profile has been deleted!')
+#         return redirect('home')
 
 
-    return render(request, 'profile/delete_profile.html', {'profile': profile})
+#     return render(request, 'profile/delete_profile.html', {'profile': profile})
 
 
 
