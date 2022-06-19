@@ -28,18 +28,31 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'profile' %}">
+                            <i class="fas fa-users"></i>
+                            Profile
+                        </a>
+                               
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'logout' %}">
+                            <i class ="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'sign_up' %}">Register</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'sign_up' %}">
+                            <i class="fas fa-file-signature"></i>
+                            Register
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'login' %}">Login</a>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'login' %}">
+                            <i class="fas fa-id-card-alt"></i>
+                            Login
+                        </a>
                            
                         
                     </li>
