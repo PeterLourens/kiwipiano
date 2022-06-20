@@ -174,7 +174,12 @@ def delete_profile(request):
     else:
         delete_profile = ProfileDeleteForm(instance=request.user)
 
-    return render(request, 'profile/delete_profile.html')
+    context = {
+        'delete_profile': delete_profile,
+        'title': 'Procfile'
+    }
+
+    return render(request, 'profile/delete_profile.html', context)
 
 
 
