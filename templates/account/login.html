@@ -16,9 +16,9 @@
   <div class="row align-items-center justify-content-center">
     <div class="col-md-6 bg-light">
 
-      <h3 class="text-center fw-bold my-3">Login</h3>
+      <h5 class="text-center fw-bold my-3">Login</h5>
 
-      <div class="border-top my-3 py-3 text-center">
+      <div class="border-top my-3 text-center">
 
         <p class="pt-3">If you have not created an account yet, <br>please
           <a href="{% url 'sign_up' %}" class="my-3"><strong>register</strong></a>
@@ -28,18 +28,12 @@
 
       </div>
 
-      <form class="login justify-content-center align-items-center" id="signup_form" method="POST"
-        action="{% url 'account_login' %}">
+      <form class="login justify-content-center align-items-center" id="signup_form" method="POST"  action="{% url 'account_login' %}">
         {% csrf_token %}
-        
+
         {{ form|crispy}}
 
-
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-
-        <div class="form-group my-3 text-center">
+        <div class="form-group mb-2 text-center">
           <button class="btn btn-primary" type=" submit">Login &raquo;</button>
 
         </div>
