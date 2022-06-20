@@ -294,18 +294,18 @@ class BookingUpdateSuccessView(DetailView):
         
 
 
-def booking_delete(request, pk):
+def booking_cancel(request, pk):
     """
-    To render the booking delete page, 
+    To render the booking cancel page, 
     and delete the booking in the database.
     """
     booking = Booking.objects.get(pk=pk)
     if request.method == 'POST':
         booking.delete()
-        messages.success(request, f'Your booking has been deleted!')
+        messages.success(request, f'Your booking has been cancelled!')
         return redirect('profile')
 
 
-    return render(request, 'booking/booking_delete.html', {'booking': booking})
+    return render(request, 'booking/booking_cancel.html', {'booking': booking})
 
 
