@@ -159,6 +159,28 @@ def update_profile(request):
 
 
 
+
+def delete_profile(request):
+    """
+    To render the page that user can delete their profile, 
+    and delete the data in the database.
+    """
+
+
+    if Profile.objects.filter(user=request.user).exists():
+       
+        Profile.objects.filter(id=1).delete()
+
+        #messages.success(request, f'Your profile has been deleted!')
+
+        # return redirect('home')
+       
+
+
+    return render(request, 'profile/delete_profile.html')
+
+
+
 # def delete_profile(request, pk):
 #     """
 #     To render the page that user can delete their profile, 
