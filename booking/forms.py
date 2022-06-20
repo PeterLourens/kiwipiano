@@ -43,6 +43,18 @@ class ProfileUpdateForm(forms.ModelForm):
 
 
 
+
+class ProfileDeleteForm(forms.ModelForm):
+    """
+    To delete the user profile in the database.
+    """
+
+    class Meta:
+        model = User
+        fields = []
+
+
+
 class DatePicker(forms.DateInput):
     """
     To use the datepicker for the booking form.

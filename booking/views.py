@@ -11,7 +11,8 @@ from .models import Profile, Booking
 from .forms import (
     UserRegisterForm, 
     UserProfileForm, 
-    ProfileUpdateForm, 
+    ProfileUpdateForm,
+    ProfileDeleteForm,
     BookingForm,
 )
 
@@ -52,13 +53,11 @@ def sign_up(request):
     else:
         form = UserRegisterForm()
 
-
     context = {
         'form': form,
         'title': 'Register'
     }
 
-   
     return render(request, 'account/signup.html', context)
 
 
@@ -121,7 +120,6 @@ def profile(request):
    
    
 
-
 def update_profile(request):
     """
     To render the update profile page.
@@ -159,42 +157,24 @@ def update_profile(request):
 
 
 
-
 def delete_profile(request):
     """
-    To render the page that user can delete their profile, 
-    and delete the data in the database.
+    To delete the user profile and associated data from the database.
+    To return to the home page after user deletes his/her profile.
     """
 
+    if request.method == 'POST':
+        delete_profile = ProfileDeleteForm(request.POST, instance=request.user)
+        user = request.user
+        user.delete()
 
-    if Profile.objects.filter(user=request.user).exists():
-       
-        Profile.objects.filter(id=1).delete()
+        messages.success(request,  f'Your profile has been deleted!')
+        return redirect('home')
 
-        #messages.success(request, f'Your profile has been deleted!')
-
-        # return redirect('home')
-       
-
+    else:
+        delete_profile = ProfileDeleteForm(instance=request.user)
 
     return render(request, 'profile/delete_profile.html')
-
-
-
-# def delete_profile(request, pk):
-#     """
-#     To render the page that user can delete their profile, 
-#     and delete the data in the database.
-#     """
-#     profile = Profile.objects.get(pk=pk)
-#     if request.method == 'POST':
-#         profile.delete()
-#         messages.success(request, f'Your profile has been deleted!')
-#         return redirect('home')
-
-
-#     return render(request, 'profile/delete_profile.html', {'profile': profile})
-
 
 
 
