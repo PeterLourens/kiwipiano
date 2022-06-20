@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -8,7 +9,7 @@
             {% if user.is_authenticated %}
             <div class="card text-center">
                 <div class="card-body">
-                    <h5 class="mt-2 fw-bold">{{ user }}'s Profile</h5>
+                    <h5 class="mt-2 fw-bold">{% block title %} {{ user.profile }} {% endblock %}</h5>
                     <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="User profile image">
                 </div> 
                 <div class="card-body pl-5">

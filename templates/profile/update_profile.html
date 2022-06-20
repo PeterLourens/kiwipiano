@@ -12,7 +12,7 @@
                 <div class="d-flex flex-row justify-content-evenly align-middle">
                     <img class="rounded-circle" id="profile-image" src="{{ user.profile.profile_image.url }}" alt="User profile image">
                     <div class="mt-4">
-                        <h5 class="fw-bold">{{ user }}'s Profile</h5>
+                        <h5 class="fw-bold">{% block title %} {{ user.profile }} {% endblock %}</h5>
                     </div>
                 </div>
             </div>
@@ -22,6 +22,9 @@
                     {{ user_profile_form|crispy }}
                     {{ profile_update_form|crispy }}
                 </div>
+                 {% if redirect_field_value %}
+                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                 {% endif %}
                 <div class="form-group text-center my-3">
                     <button class="btn btn-primary" type="submit">Update Profile</button>
                 </div>
