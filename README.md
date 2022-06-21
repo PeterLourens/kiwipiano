@@ -132,30 +132,32 @@ Combine with the project’s scope, personal learning progress, I set the Issues
 * ### Sprint 3:
   * Create a new "booking" app on Gitpod.
   * Install Django Summernote and set up Admin account.
-  * Complete the user stories [#1]() Admin CRUD-1 tasks.
+  * Complete the user stories [#1]() ```Admin CRUD-1``` tasks.
   * Create a basic template base.html to render the view. 
-  * Create home page with session list and render the view. 
+  * Target user stories [#5]() ```View the range of sessions```,  create home page with session list and render the view. 
   * Create the booking Model and connect URLs.
-  * Add Bootstrap to style the template.
+  * Add Bootstrap classes and CSS code to style the template.
 
 * ### Sprint 4:
   * Set up basic authentication using allauth.
-  * Create the landing page with hero image and content.
-  * Target the user stories Access the site, Navigate the site, View the session list, Sign up an account.
+  * Target user stories [#7]() ```User account registration```.
+  * Create profile model, user profile form.
   * Create account registration view.
-  
+  * Target user stories [#8]() ```Loing / logout```.
+  * Target the user stories [#11]() ```Receive feedback```.
+  * Target user stories [#15]() ```View and edit user profile```.
 
 * ### Sprint 5:
-  * Target the user stories 
-  * Create lesson details page.
-  
-* ### Sprint 6:
-  * Target the user stories Log in / Log out.
-  * Create login app.
+  * Target the user stories [#9]() ```Book a session```.
+  * Create booking form details page.
+  * Target the user stories [#10]() ```Cancel the booking```.
+  * Target the user stories [#12]() ```View booking history```.
 
-* ### Sprint 7:
-  * Target the user storeis book a lesson.
-  * Create the booking form page.
+* ### Sprint 6:
+  * Target the user stories [#3]() ```Access the site```.
+  * Target the user stories [#4]() ```Navigate the site```.
+  * Target the user stories [#14]() ```Contact the studiio```.
+  * Create the hero image and about section on the home page.
   
 
 ## Data Model
