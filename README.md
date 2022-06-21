@@ -193,11 +193,15 @@ The site uses white color for the background and black color for the text. The b
 
 * Colors for the site
 
-![Color Theme](media/readme-pics/colortheme.png)
+  ![Color Theme](media/readme-pics/colortheme.png)
 
-* Color contrast grid
-  
-![Color contrast grid](media/readme-pics/contrast-grid.png)
+
+  <details><summary>The color grid.</summary>
+
+    ![Color grid](media/readme-pics/contrast-grid.png)
+
+    </detials>
+
 
 [Back to top](#kiwi-piano-studio)
 
@@ -286,26 +290,42 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
 * Booking alert
     ![Booking alert](media/readme-pics/booking_alert.png)
 
+    [Back to top](#kiwi-piano-studio)
+
 * Booking form
   ![Booking form](media/readme-pics/booking_form.png)
+
+  [Back to top](#kiwi-piano-studio)
 
 * Booking success
   ![Booking seccess](media/readme-pics/booking_success1.png)
 
+  [Back to top](#kiwi-piano-studio)
+
 * Booking details
   ![Booking details](media/readme-pics/booking_details.png)
 
+  [Back to top](#kiwi-piano-studio)
+
 * Booking update form
   ![Booking update form](media/readme-pics/booking_update_form.png)
+
+  [Back to top](#kiwi-piano-studio)
  
 * Booking update success
   ![Update success](media/readme-pics/booking_update1.png)
+
+  [Back to top](#kiwi-piano-studio)
   
 * Booking cancel alert
   ![Cancel alert](media/readme-pics/booking_cancel_alert.png)
 
+  [Back to top](#kiwi-piano-studio)
+
 * Booking cancel success
   ![Cancel success](media/readme-pics/booking_cancel_success.png)
+
+  [Back to top](#kiwi-piano-studio)
 
 ## Admin Site
 
@@ -314,21 +334,28 @@ The admin / super user is able to navigate the admin panel to manage the data.
 * User list
   ![Users](media/readme-pics/admin_users.png)
 
+  [Back to top](#kiwi-piano-studio)
+
 * Delete user
   ![Delete user](media/readme-pics/admin_delete.png)
+
+  [Back to top](#kiwi-piano-studio)
 
 * Delete user success
   ![Delete user success](media/readme-pics/admin_delete_success.png)
 
+  [Back to top](#kiwi-piano-studio)
+
 * Booking list filtered by one user
   ![Booking list](media/readme-pics/admin_bookinglist.png)
+
+  [Back to top](#kiwi-piano-studio)
 
 * Booking list of all users
   ![Booking list all](media/readme-pics/admin_bookingall.png)
 
-* 
 
-
+[Back to top](#kiwi-piano-studio)
 ## Future Development
 
 # Technologies Used
@@ -359,6 +386,8 @@ The admin / super user is able to navigate the admin panel to manage the data.
 * [W3C Markup Validation Service]() - used to validate the HTML code.
 * [W3C CSS Validation Service]() - used to validate CSS code.
 * [Compressor.io]() - used to compress the images and screenshots.
+
+[Back to top](#kiwi-piano-studio)
 
 # Testing
 
@@ -399,9 +428,14 @@ Attached the database to the app and set up the Config vars.
     * ```git push heroku main```---push to Heroku.
 
 5. Deployment successful. Here is the site's URL: https://kiwipiano.herokuapp.com/
-   
-   ![Kiwi Piano](media/readme-pics/deployment-heroku.png)
 
+* <details><summary>Deployment to Heroku successful</summary>
+
+    ![Kiwi Piano](media/readme-pics/deployment-heroku.png)
+
+    </detials>
+   
+   
 [Back to top](#kiwi-piano-studio)
 
 # Credits
