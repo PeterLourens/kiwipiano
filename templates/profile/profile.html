@@ -31,27 +31,27 @@
             </div>
             {% endif %}
         </div> 
-         <div class="col-md-4">
-             <div class="card mt-3">
-                 <div class="card-body">
-                     <h5 class="text-center fw-bold">Booking List</h5>
-                     {% for booking in my_bookings %}
-                     <a href="{% url 'booking_detail' booking.pk %}">
-                         <div class="card p-2 mb-3">
-                             <p class="card-text">
-                                 <span class=" fw-bold">Session Name:</span>
-                                 {{ booking.session_name}}
-                             </p>
-                             <small class="card-text text-muted">
-                                 <span>Date:</span>
-                                 {{ booking.date }}
-                             </small>
-                         </div>
-                     </a>
-                     {% endfor %}
-                 </div>
-             </div>
-         </div>
+        <div class="col-md-4">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="text-center fw-bold">Booking List</h5>
+                    {% for booking in my_bookings %}
+                    <a href="{% url 'booking_detail' booking.pk %}">
+                        <div class="card p-2 mb-3">
+                            <p class="card-text">
+                                <span class=" fw-bold">Session Name:</span>
+                                {{ booking.session_name}}
+                            </p>
+                            <small class="card-text text-muted">
+                                <span>Date:</span>
+                                {{ booking.date }}
+                            </small>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
