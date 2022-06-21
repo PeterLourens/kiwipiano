@@ -235,7 +235,7 @@ The model name Lesson is called ```Session``` in the project.
   ![Home page](media/readme-pics/home_page.png)
 
 
-* ## Register pages
+* ## Register Page
 
   The register page contains a user registration form that asks user to fill in the user name, email address and password. User gets a confirmation after registering an account. The user data is saved in the database.
 
@@ -249,7 +249,7 @@ The model name Lesson is called ```Session``` in the project.
 
 [Back to top](#kiwi-piano-studio)
 
-* ## Login Pages
+* ## Login Page
 
   The login page contains a message and a form for user to fill in. User is redirected to the home page after logging in to the account.
 
@@ -262,7 +262,7 @@ The model name Lesson is called ```Session``` in the project.
 
 [Back to top](#kiwi-piano-studio)
 
-* ## Profile pages
+* ## Profile Page
   The profile page displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is also updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert message that ask user to confirm the delete process. There is a booking list that shows the bookings user has made.
 
   * Profile form
@@ -306,6 +306,27 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
 
 * Booking cancel success
   ![Cancel success](media/readme-pics/booking_cancel_success.png)
+
+## Admin Site
+
+The admin / super user is able to navigate the admin panel to manage the data.
+
+* User list
+  ![Users](media/readme-pics/admin_users.png)
+
+* Delete user
+  ![Delete user](media/readme-pics/admin_delete.png)
+
+* Delete user success
+  ![Delete user success](media/readme-pics/admin_delete_success.png)
+
+* Booking list filtered by one user
+  ![Booking list](media/readme-pics/admin_bookinglist.png)
+
+* Booking list of all users
+  ![Booking list all](media/readme-pics/admin_bookingall.png)
+
+* 
 
 
 ## Future Development
