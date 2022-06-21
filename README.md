@@ -230,42 +230,83 @@ The model name Lesson is called ```Session``` in the project.
 
   The home page contains navigation header, hero image, about section, session list and footer. User is able to view all the info about ```Kiwi Piano Studio```.
 
+  The tabs are displayed ```Home Register Login``` when the user isn't logged in. The tabs are changed to ```Home Profile Logout``` when the user is logged in.
+
   ![Home page](media/readme-pics/home_page.png)
 
 
 * ## Register pages
 
   The register page contains a user registration form that asks user to fill in the user name, email address and password. User gets a confirmation after registering an account. The user data is saved in the database.
-  
-  ![Register page](media/readme-pics/register_pg.png)
 
-  ![Register confirmation page](media/readme-pics/register_cf.png)
+  * Register form
+  
+    ![Register page](media/readme-pics/register_pg.png)
+
+  * Registration feedback
+
+    ![Register confirmation page](media/readme-pics/register_cf.png)
 
 [Back to top](#kiwi-piano-studio)
 
 * ## Login Pages
 
-  The login page contains a long message and a form for user to fill in. User is redirected to the home page after logging in to the account.
+  The login page contains a message and a form for user to fill in. User is redirected to the home page after logging in to the account.
 
+  * Login form
   ![Login](media/readme-pics/login.png)
+
+  * Login confirmation
 
   ![Longin confirmation](media/readme-pics/login1.png)
 
 [Back to top](#kiwi-piano-studio)
 
 * ## Profile pages
-  The profile pages displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert. There is a booking list that shows the bookings user has made.
+  The profile page displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is also updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert message that ask user to confirm the delete process. There is a booking list that shows the bookings user has made.
+
+  * Profile form
+    ![Profile](media/readme-pics/profile_update.png)
+
+  * Profile update confirmation
+
+    ![Profile update](media/readme-pics/profile_update2.png)
+
+  * Delete profile alert
+
+    ![Profile delete](media/readme-pics/profile_delete.png)
 
 
-  ![Profile](media/readme-pics/profile_update.png)
-
-  ![Profile update](media/readme-pics/profile_update2.png)
-
-  ![Profile delete](media/readme-pics/profile_delete.png)
-
-## Sign Up Confirmation Page
+  [Back to top](#kiwi-piano-studio)
 
 ## Bookings Page
+
+User gets an alert message when clicking "Book Now" button while not logged in. User is able to use the booking form to book a session that user can select a session, date, start time and end time. User gets a confirmation afterwards. User can update the booking details or cancel the booking. There is an alert when user selects cancel the booking. User is redircted to the profile page after cancelling the booking.
+
+* Booking alert
+    ![Booking alert](media/readme-pics/booking_alert.png)
+
+* Booking form
+  ![Booking form](media/readme-pics/booking_form.png)
+
+* Booking success
+  ![Booking seccess](media/readme-pics/booking_success1.png)
+
+* Booking details
+  ![Booking details](media/readme-pics/booking_details.png)
+
+* Booking update form
+  ![Booking update form](media/readme-pics/booking_update_form.png)
+ 
+* Booking update success
+  ![Update success](media/readme-pics/booking_update1.png)
+  
+* Booking cancel alert
+  ![Cancel alert](media/readme-pics/booking_cancel_alert.png)
+
+* Booking cancel success
+  ![Cancel success](media/readme-pics/booking_cancel_success.png)
+
 
 ## Future Development
 
