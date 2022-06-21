@@ -226,11 +226,42 @@ The model name Lesson is called ```Session``` in the project.
 
 # Exsiting Features
 
-## Home Page
+* ## Home Page
 
-## Sign Up Page
+  The home page contains navigation header, hero image, about section, session list and footer. User is able to view all the info about ```Kiwi Piano Studio```.
 
-## Login Page
+  ![Home page](media/readme-pics/home_page.png)
+
+
+* ## Register pages
+
+  The register page contains a user registration form that asks user to fill in the user name, email address and password. User gets a confirmation after registering an account. The user data is saved in the database.
+  
+  ![Register page](media/readme-pics/register_pg.png)
+
+  ![Register confirmation page](media/readme-pics/register_cf.png)
+
+[Back to top](#kiwi-piano-studio)
+
+* ## Login Pages
+
+  The login page contains a long message and a form for user to fill in. User is redirected to the home page after logging in to the account.
+
+  ![Login](media/readme-pics/login.png)
+
+  ![Longin confirmation](media/readme-pics/login1.png)
+
+[Back to top](#kiwi-piano-studio)
+
+* ## Profile pages
+  The profile pages displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert. There is a booking list that shows the bookings user has made.
+
+
+  ![Profile](media/readme-pics/profile_update.png)
+
+  ![Profile update](media/readme-pics/profile_update2.png)
+
+  ![Profile delete](media/readme-pics/profile_delete.png)
 
 ## Sign Up Confirmation Page
 
