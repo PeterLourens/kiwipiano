@@ -100,7 +100,7 @@ I used GitHub’s agile project management methodology for managing the work flo
 
 Combine with the project’s scope, personal learning progress, I set the Issues with ```Must have``` label just under half of the total Issues. This helps me managing the time and the workload. Learning to use Agile in the first time to create the project.
 
-
+[Back to top](#kiwi-piano-studio)
 * ### Sprint 1:
 
   * Explore Design Thinking into the project’s scope. Ask myself and families why one wants to be a member and book a session with the piano studio.
@@ -117,6 +117,8 @@ Combine with the project’s scope, personal learning progress, I set the Issues
 
   **Note**: Some features and pages would not be implemented for this project due to the limitation of my current knowledge and skills. 
 
+[Back to top](#kiwi-piano-studio)
+
 * ### Sprint 2:
       
   * Create GitHub repository, Project and Issues. Use the agile project management MoSCow techniques to prioritize the project’s approximate workload for each sprint. 
@@ -129,6 +131,8 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   
   * Create Heroku app and attach the PostgreSQL to the app. Deploy the project to Heroku via CLI and test Django and deploy the app to see the result.
 
+[Back to top](#kiwi-piano-studio)
+
 * ### Sprint 3:
   * Create a new "booking" app on Gitpod.
   * Install Django Summernote and set up Admin account.
@@ -137,6 +141,8 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   * Target user stories [#5]() ```View the range of sessions```,  create home page with session list and render the view. 
   * Create the booking Model and connect URLs.
   * Add Bootstrap classes and CSS code to style the template.
+
+[Back to top](#kiwi-piano-studio)
 
 * ### Sprint 4:
   * Set up basic authentication using allauth.
@@ -153,14 +159,14 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   * Target the user stories [#10]() ```Cancel the booking```.
   * Target the user stories [#12]() ```View booking history```.
 
+[Back to top](#kiwi-piano-studio)
+
 * ### Sprint 6:
   * Target the user stories [#3]() ```Access the site```.
   * Target the user stories [#4]() ```Navigate the site```.
   * Target the user stories [#14]() ```Contact the studiio```.
   * Create the hero image and about section on the home page.
   
-
-## Data Model
 
 ## Design
 
@@ -189,9 +195,19 @@ The site uses white color for the background and black color for the text. The b
 
 The site uses the main font-family ```Lato``` for the content and ```Open-sans``` for the fall back. The logo uses a special font ```Ultra``` that makes the logo text bold. 
 
-## Database ERD
+### Data Model
+
+The data chart helps to see how the user's experiences looks like.
+
+![Flow chart](media/readme-pics/flowchart.png)
+
+[Back to top](#kiwi-piano-studio)
+
+### Database ERD
 
 ER diagram was created using Lucidchar that maps the database structure for creating models in Django. The ERD helps me to visualize the relationships between the tables which gives me better idea on how the database works for the project development.
+
+The model name Lesson is called ```Session``` in the project.
 
 ![ERD](media/readme-pics/booking%20ERD.png)
 
