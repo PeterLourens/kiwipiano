@@ -101,6 +101,12 @@ I used GitHub’s agile project management methodology for managing the work flo
 Combine with the project’s scope, personal learning progress, I set the Issues with ```Must have``` label just under half of the total Issues. This helps me managing the time and the workload. Learning to use Agile in the first time to create the project.
 
 [Back to top](#kiwi-piano-studio)
+
+![Agile project board](media/readme-pics/agile.png)
+
+[Back to top](#kiwi-piano-studio)
+
+
 * ### Sprint 1:
 
   * Explore Design Thinking into the project’s scope. Ask myself and families why one wants to be a member and book a session with the piano studio.
