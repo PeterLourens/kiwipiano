@@ -19,13 +19,13 @@ The website provides different user interface. User can register an account, log
 * ### New and unregistered User
   * [#3]() As a **first time user** I can **access the site easily** so that **I can view the site on any media screens with different browsers.**
   * [#4]() As a **first time user** I can **navigate the site easily** so that **I know what the site is about and decide if I am interested or not.**
-  * [#5]() As a **user** I can **view the range of lessons** so that **I can choose a lesson that it is suitable for me**.
-  * [#6]() As a **user** I can **view the lesson schedule** so that **I can book a lesson available to fit into my own schedule**.
+  * [#5]() As a **user** I can **view the range of session** so that **I can choose a session that it is suitable for me**.
+  * [#6]() As a **user** I can **view the session schedule** so that **I can book a session available to fit into my own schedule**.
   * [#7]() As a **user** I can **sign up an account** so that **I can manage my activities with the studio.**
 
 * ### Registered User
-  * [#8]() As a **registered user** I can **login / logout** so that **I can book or cancel a lesson as well as managing my own account profile.**
-  * [#9]() As a **registered user** I can **book a lesson** so that **I can select a lesson suitable for me.**
+  * [#8]() As a **registered user** I can **login / logout** so that **I can book or cancel a session as well as managing my own account profile.**
+  * [#9]() As a **registered user** I can **book a session** so that **I can select a session suitable for me.**
   * [#10]() As a **registered user** I can **cancel a booking** so that **I can manage my schedule in case I am not available**.
   * [#11]() As a **user** I can **receive feedback** so that **I know whether my registration is successful or not, whether my profile is updated or not, and my booking status**.
   * [#12]() As a **register user** I can **view my booking history** so that **I have a clear view about my study**.
