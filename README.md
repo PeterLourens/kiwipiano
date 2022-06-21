@@ -399,7 +399,16 @@ The admin / super user is able to navigate the admin panel to manage the data.
 
 ## Automated Tests
 
-## Light House Test
+## Lighthouse Testing
+
+The site is tested on ```Google Chrome Lighthouse``` function on incognito window for both the mobile and the desktop.
+
+* Lighthouse report for the mobile
+  ![Mobile](media/readme-pics/lighthouse_m.png)
+
+* Lighthouse report for the desktop
+  ![Desktop](media/readme-pics/lighthouse_d.png)
+
 
 ## Manual Test
 
