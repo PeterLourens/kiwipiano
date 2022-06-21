@@ -462,3 +462,11 @@ Attached the database to the app and set up the Config vars.
 * The codes of signals.py are taken from here [Django signals](https://dev.to/earthcomfy/django-user-profile-3hik).
 
 # Acknowledgement
+
+Whilst I have tried to deviate as much as possible, there might be some similarities in the code as the project was influenced by the walk through Django project I think therefore I blog at Code Institute. Setting up Django and the packages that I followed by the walk through project.
+
+I relied upon the support from Code Institue online [tutors](), mentor [Precious Ijege](), [Slack]() community and my [families](). Special thanks to [Daniel Callaghan]() for his great help during my project development. Daniel gave me awesome tips to better understand how Django MVT works and he explained the code logic which I have learned a lot more about Django framework. Great thanks to all of those who support my learning journey.
+
+I use W3schools, YouTube and stack overflow for general references throughout the project. I watched the tutorial videos on Youtube to gain extra knowledge about Django.
+
+Kiwi Piano Studio website is intended for education purpose of completing the Portfolio Project 4 for the Diploma of Full Stack Software Development course at Code Institue.
