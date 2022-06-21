@@ -60,39 +60,43 @@ I used Balsamiq to create the project’s wireframes that displays an overview o
   * Home page
   ![Wireframe home page](media/readme-pics/wframe-home.png)
 
-    [Back to top](#kiwi-piano-studio)
-
-
-* Sign Up page
-![Sign up](media/readme-pics/wframe-signup.png)
-
   [Back to top](#kiwi-piano-studio)
+    
 
-* Sign up feedback page
+  * <details><summary>The sign up page.</summary>
+
+    ![Sign up](media/readme-pics/wframe-signup.png)
+
+    </detials>
+
+
+* <details><summary>The sign up feedback page.</summary>
   
   ![Sign up feedback page](media/readme-pics/wframe-signup-feedback.png)
 
-  [Back to top](#kiwi-piano-studio)
+  </detials>
 
-* Login page
+* <details><summary>The Login page.</summary>
   
   ![Login page](media/readme-pics/wframe-login.png)
 
-  [Back to top](#kiwi-piano-studio)
+  </detials>
 
-* Booking page
+
+* <details><summary>The booking page.</summary>
   
   ![Booking page](media/readme-pics/wframe-booking.png)
 
-  [Back to top](#kiwi-piano-studio)
+  </detials>
 
-* Booking confirmation page
+
+* <details><summary>The booking confirmation page.</summary>
   
   ![Booking confirmation page](media/readme-pics/wframe-booking-confirmation.png)
 
-  [Back to top](#kiwi-piano-studio)
+  </detials>
 
-* 
+[Back to top](#kiwi-piano-studio)  
 
 ## Agile Project Management
 
