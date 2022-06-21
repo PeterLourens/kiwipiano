@@ -130,18 +130,19 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   * Create Heroku app and attach the PostgreSQL to the app. Deploy the project to Heroku via CLI and test Django and deploy the app to see the result.
 
 * ### Sprint 3:
-  * Create a new app on Gitpod.
+  * Create a new "booking" app on Gitpod.
   * Install Django Summernote and set up Admin account.
-  * Complete the user stories #2 Admin CRUD-2 tasks.
+  * Complete the user stories [#1]() Admin CRUD-1 tasks.
   * Create a basic template base.html to render the view. 
-  * Building the Models and connect URLs.
+  * Create home page with session list and render the view. 
+  * Create the booking Model and connect URLs.
   * Add Bootstrap to style the template.
 
 * ### Sprint 4:
   * Set up basic authentication using allauth.
   * Create the landing page with hero image and content.
-  * Target the user stories Access the site, Navigate the site, View the lesson details, Sign up an account.
-  * Create sign up app.
+  * Target the user stories Access the site, Navigate the site, View the session list, Sign up an account.
+  * Create account registration view.
   
 
 * ### Sprint 5:
