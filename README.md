@@ -16,13 +16,11 @@ The website provides different user interface. User can register an account, log
 
 * ### Admin CRUD / Super User
   * [#1]() As an admin I can navigate the admin panel so that I can create, read, update and delete the data on the site.
-  * [#2]() As an admin I can use the admin privilege so that I can filter out and approve the comments that user wants to post on site
 
 * ### New and unregistered User
   * [#3]() As a first time user I can access the site easily so that I can view the site on any media screens with different browsers.
   * [#4]() As a first time user I can navigate the site easily so that I know what the site is about and decide if I am interested or not.
   * [#5]() As a user I can view the range of session so that I can choose a session that it is suitable for me.
-  * [#6]() As a user I can view the session schedule so thatI can book a session available to fit into my own schedule.
   * [#7]() As a user I can sign up an account so that I can manage my activities with the studio.
 
 * ### Registered User
@@ -31,7 +29,6 @@ The website provides different user interface. User can register an account, log
   * [#10]() As a registered user I can cancel a booking so that I can manage my schedule in case I am not available.
   * [#11]() As a user I can receive feedback so that I know whether my registration is successful or not, whether my profile is updated or not, and my booking status.
   * [#12]() As a register user I can view my booking history so that I have a clear view about my study.
-  * [#13]() As a registered user I can post a review so that I can share my opinion about my experience with the studio.
   * [#14]() As a user I can contact the studio so that I can ask any questions regarding my bookings or other things.
   * [#15]() As a registered user I can view and edit my profile so that I know my account details and I can edit and manage my own account as I wish.
 
@@ -179,7 +176,7 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   * Target the user stories [#14]() ```Contact the studiio```.
   * Create the hero image and about section on the home page.
   
-
+[Back to top](#kiwi-piano-studio)
 ## Design
 
 ### Color Scheme
@@ -240,7 +237,7 @@ The model name Lesson is called ```Session``` in the project.
 
   ![Home page](media/readme-pics/home_page.png)
 
-
+[Back to top](#kiwi-piano-studio)
 * ## Register Page
 
   The register page contains a user registration form that asks user to fill in the user name, email address and password. User gets a confirmation after registering an account. The user data is saved in the database.
@@ -369,13 +366,15 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 * A page with some successful piano learning storeis could be developed.
 * A page for the session details could be developed.
 
-
+[Back to top](#kiwi-piano-studio)
 # Technologies Used
 
 * [HTML5]()
 * [CSS]() 
 * [JavaScript]() 
-* [Python]() 
+* [Python]()
+* Django and libraries used for the Kiwi Piano Studio project.
+  ![Django and librareis](media/readme-pics/django-packages.png)
 
 * [Bootstrap]() - used to style the websie.
 * [Django]() - used to create the project.
@@ -393,7 +392,6 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 * [Lucidchart]() - used to create the database ER diagram.
 * [Font Awesome]() - used to download the icons.
 * [Google Fonts]() - used to style the text.
-* [JSHint]() - used to validate the JavaScript code.
 * [Pep8]() - used to validate the Python code.
 * [W3C Markup Validation Service]() - used to validate the HTML code.
 * [W3C CSS Validation Service]() - used to validate CSS code.
@@ -409,10 +407,13 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 * W3C HTML Validation Report
  ![W3C HTML](media/readme-pics/w3c%20HTML%20report.png)
+ [Back to top](#kiwi-piano-studio)
 * W3C CSS Validation Report
   ![W3C CSS](media/readme-pics/w3c%20CSS%20report.png)
+  [Back to top](#kiwi-piano-studio)
 * PEP8 online
   ![PEP8](media/readme-pics/pep8%20report.png)
+  [Back to top](#kiwi-piano-studio)
 
 ## Responsiveness Test
 
@@ -420,7 +421,7 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 Kiwi Piano Studio website has been tested on **Google Chrome**, **Microsoft Edge** and **Safari** browsers. The site's compatibility and the functionality are working fine with no issues.
 
-
+[Back to top](#kiwi-piano-studio)
 ## Lighthouse Testing
 
 The site is tested on ```Google Chrome Lighthouse``` function on incognito window for both the mobile and the desktop.
@@ -428,6 +429,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 * Lighthouse report for the mobile
   ![Mobile](media/readme-pics/lighthouse_m.png)
 
+[Back to top](#kiwi-piano-studio)
 * Lighthouse report for the desktop
   ![Desktop](media/readme-pics/lighthouse_d.png)
 
@@ -446,7 +448,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 
     </detials>
 
-   
+  [Back to top](#kiwi-piano-studio) 
 
 ## User Story Test
 
@@ -498,13 +500,14 @@ Attached the database to the app and set up the Config vars.
 * [Stack Overflow]() - used to search for code related errors and bugs.
 * [Slack]() - used to connect with fellow coders and get help whenever I am stuck.
 
+[Back to top](#kiwi-piano-studio)
 ## Code
 
 * The site's login / logout and profile were inspired by [Corey Schafer]() that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django. I also learned from his tutuorial what packages needed to make the application working properly.
 
 * The codes of signals.py are taken from here [Django signals](https://dev.to/earthcomfy/django-user-profile-3hik).
 
-
+[Back to top](#kiwi-piano-studio)
 # Acknowledgement
 
 Whilst I have tried to deviate as much as possible, there might be some similarities in the code as the project was influenced by the walk through Django project ```I Think Therefore I Blog``` at Code Institute. Setting up Django and the packages that I followed by the walk through project.
