@@ -359,11 +359,14 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 ## Future Features
 
-* A payment system would be developed for user to payfor the booking;
+* User story #2 Admin CRUD-2 could be developed.
+* Session schedule could be developed for user to see the session availability.
+* A user / customer review application could be developed.
+* A payment system could be developed for user to pay for the booking;
 * A contact form would be included on the site;
 * A page with some successful piano learning storeis could be developed.
-* A seperate page for the session details could be developed.
-* A user / customer review application could be developed.
+* A page for the session details could be developed.
+
 
 # Technologies Used
 
