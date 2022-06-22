@@ -400,6 +400,15 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 ## Code Validation
 
+ The site's HTML, CSS and Python codes are validated by the W3C HTML & CSS Validation Service and PEP8 ONLINE service.
+
+* W3C HTML Validation Report
+ ![W3C HTML](media/readme-pics/w3c%20HTML%20report.png)
+* W3C CSS Validation Report
+  ![W3C CSS](media/readme-pics/w3c%20CSS%20report.png)
+* PEP8 online
+  ![PEP8](media/readme-pics/pep8%20report.png)
+
 ## Responsiveness Test
 
 ## Browser Compatibility Test
