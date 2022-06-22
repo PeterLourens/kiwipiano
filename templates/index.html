@@ -2,21 +2,25 @@
 
 {% block content %}
 
+<!------hero image------->
 <div class="container-fluid hero-img-container g-0" id="hero-img">
     <div class="row">
         <img class="img-fluid img-responsive" src="https://res.cloudinary.com/dyfa8b6fs/image/upload/v1655626570/media/piano3_pawxyg.jpg" alt="A man plays piano">
     </div>
 </div>
 
+<!------accordion-------->
+
 {% include 'components/about.html' %}
+
+<!------session list---------->
 
 <section class="bg-light mt-3">
     <div class="container-lg pb-3">
         <div class="text-center pt-3">
             <p>"It's easy to play any musical instrument: <br> all you have to do is touch the right
                 key at the right time and the instrument will play itself." <br><br>
-                <span class="fst-italic">~Johann Sebastian Bach</span>
-                    
+                <span class="fst-italic">~Johann Sebastian Bach</span>     
             </p>
         </div>
         <div class="row my-3 align-items-center justify-content-center">
@@ -53,9 +57,9 @@
                             <li class="list-group-item">End of year concert</li>
                         </ul>
                         {% if user.is_authenticated %}
-                        <a href="{% url 'booking_form' %}" id="btn-buy-now" class="btn bg-primary btn-md my-3 text-white">Book Now</a>
+                        <a href="{% url 'booking_form' %}" class="btn bg-primary btn-md my-3 text-white">Book Now</a>
                         {% else %}
-                        <a href="{% url 'booking_login' %}" id="btn-buy-now" class="btn bg-success btn-md my-3 text-white">Book Now</a>
+                        <a href="{% url 'booking_login' %}" class="btn bg-success btn-md my-3 text-white">Book Now</a>
                         {% endif %}
                     </div>
                 </div>
