@@ -418,6 +418,8 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 ## Browser Compatibility Test
 
+Kiwi Piano Studio website has been tested on **Google Chrome**, **Microsoft Edge** and **Safari** browsers. The site's compatibility and the functionality are working fine with no issues.
+
 ## Automated Tests
 
 ## Lighthouse Testing
