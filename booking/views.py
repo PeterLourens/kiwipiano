@@ -9,8 +9,8 @@ from .models import Profile, Booking
 
 
 from .forms import (
-    UserRegisterForm, 
-    UserProfileForm, 
+    UserRegisterForm,
+    UserProfileForm,
     ProfileUpdateForm,
     ProfileDeleteForm,
     BookingForm,
@@ -24,29 +24,29 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-
 def home(request):
     """
     To render the home view.
     """
-   
     return render(request, 'index.html')
-
 
 
 def sign_up(request):
     """
     To render the register page.
-    The form is to be filled in with user information for account registration.
+    The form is to be filled in with user information
+    for account registration.
     """
-
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
 
-            messages.success(request, f'Welcome { username}! Your account has been created!')
+            messages.success(
+                request,
+                f'Welcome { username}! Your account has been created!'
+            )
 
             return redirect('feedback')
 
@@ -61,13 +61,10 @@ def sign_up(request):
     return render(request, 'account/signup.html', context)
 
 
-
 def login(request):
-
     """
     To render the login page for logging user into the account.
     """
-
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -75,32 +72,33 @@ def login(request):
             login(request)
 
             return redirect('home')
-
     else:
         form = AuthenticationForm()
 
-
-    return render(request, 'account/login.html', {'title': 'Login'})
-
+    context = {
+        {'title': 'Login'}
+    }
+    return render(request, 'account/login.html', context)
 
 
 def logout_view(request):
     """
     To render the home page after user logged out the account.
     """
-
     logout(request)
 
     return render(request, 'index.html', {'title': 'Logout'})
 
 
-
 def feedback(request):
     """
-    To render the registration feedback view after 
+    To render the registration feedback view after
     user registered on the register view.
     """
-    return render(request, 'account/register_feedback.html', {'title': 'Register'})
+    context = {
+        {'title': 'Register'}
+    }
+    return render(request, 'account/register_feedback.html', context)
 
 
 @login_required
@@ -117,17 +115,19 @@ def profile(request):
     }
 
     return render(request, 'profile/profile.html', context)
-   
-   
+
 
 def update_profile(request):
     """
     To render the update profile page.
     """
-
     if request.method == 'POST':
-        user_profile_form = UserProfileForm(request.POST, instance=request.user)
-        profile_update_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        user_profile_form = UserProfileForm(
+                                    request.POST,
+                                    instance=request.user)
+        profile_update_form = ProfileUpdateForm(request.POST,
+                                                request.FILES,
+                                                instance=request.user.profile)
 
         if user_profile_form.is_valid() and profile_update_form.is_valid():
             print(profile_update_form.cleaned_data)
@@ -145,16 +145,13 @@ def update_profile(request):
         user_profile_form = UserProfileForm(instance=request.user)
         profile_update_form = ProfileUpdateForm(instance=request.user.profile)
 
-   
     context = {
-    
+
         'user_profile_form': user_profile_form,
         'profile_update_form': profile_update_form
-    
     }
-   
-    return render(request, 'profile/update_profile.html', context)
 
+    return render(request, 'profile/update_profile.html', context)
 
 
 def delete_profile(request):
@@ -162,7 +159,6 @@ def delete_profile(request):
     To delete the user profile and associated data from the database.
     To return to the home page after user deletes his/her profile.
     """
-
     if request.method == 'POST':
         delete_profile = ProfileDeleteForm(request.POST, instance=request.user)
         user = request.user
@@ -182,15 +178,12 @@ def delete_profile(request):
     return render(request, 'profile/delete_profile.html', context)
 
 
-
 def booking_login(request):
     """
     To render the booking login alert page. When user clicks the booking btn,
     it asks user to login or register an account first.
     """
-
     return render(request, 'booking/booking_login.html', {'title': 'Login'})
-
 
 
 @login_required
@@ -199,52 +192,42 @@ def booking_form(request):
     To render the booking form after user logged in.
     User is able to book a session with choices.
     """
-
     if request.method == 'POST':
         form = BookingForm(data=request.POST)
 
         if form.is_valid():
-            
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
             messages.success(request, f'Your booking is successful!')
-           
+
             return redirect('profile')
 
     else:
         form = BookingForm()
-
 
     context = {
         'form': form,
         'title': 'Booking'
     }
 
-
     return render(request, 'booking/booking_form.html', context)
-
-
 
 
 class BookingDetailView(DetailView):
     """
     To display the bookings details.
     """
-
     model = Booking
     fields = '__all__'
-   
+
     template_name = 'booking/booking_detail.html'
 
-    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['bookings'] = Booking.objects.filter()
-       
 
         return context
-
 
 
 class BookingSuccessView(DetailView):
@@ -252,7 +235,6 @@ class BookingSuccessView(DetailView):
     To render the booking data from the database.
     Display the bookings user has made.
     """
-
     model = Booking
     template_name = 'booking/booking_detail.html'
 
@@ -260,13 +242,12 @@ class BookingSuccessView(DetailView):
         context = {'booking': kwargs['object']}
 
         return context
-        
+
 
 class BookingUpdateView(SuccessMessageMixin, UpdateView):
     """
     To render the booking details that user has made.
     """
-
     model = Booking
     form_class = BookingForm
     template_name = 'booking/booking_update.html'
@@ -274,9 +255,8 @@ class BookingUpdateView(SuccessMessageMixin, UpdateView):
 
     def get_success_url(self, **kwargs):
         pk = self.kwargs['pk']
-        
-        return reverse('booking_detail', kwargs={'pk': self.kwargs['pk']})
 
+        return reverse('booking_detail', kwargs={'pk': self.kwargs['pk']})
 
 
 class BookingUpdateSuccessView(DetailView):
@@ -284,7 +264,6 @@ class BookingUpdateSuccessView(DetailView):
     To render the booking details after updating .
     Display the booking updates user has made.
     """
-
     model = Booking
     template_name = 'booking/booking_update_success.html'
 
@@ -292,13 +271,11 @@ class BookingUpdateSuccessView(DetailView):
         context = {'booking': kwargs['object']}
 
         return context
-        
 
 
 def booking_cancel(request, pk):
     """
-    To render the booking cancel page, 
-    and delete the booking in the database.
+    To render the booking cancel page and delete the booking in the database.
     """
     booking = Booking.objects.get(pk=pk)
     if request.method == 'POST':
@@ -306,7 +283,4 @@ def booking_cancel(request, pk):
         messages.success(request, f'Your booking has been cancelled!')
         return redirect('profile')
 
-
     return render(request, 'booking/booking_cancel.html', {'booking': booking})
-
-
