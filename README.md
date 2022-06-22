@@ -4,7 +4,9 @@ Kiwi Piano website targets the user who wants to learn to play piano, or wants t
 
 The website provides different user interface. User can register an account, login to the user’s account, log out from the account, edit profile or delete account, book or cancel a session. Admin user can manange the site's data. 
 
-[Kiwi Piano Studio](https://kiwipiano.herokuapp.com/) live site.
+[Kiwi Piano Studio](https://kiwipiano.herokuapp.com/) deployed live site.
+
+![Kiwi Piano Studio](media/readme-pics/screen-view.png)
 
 ## Table of Content
 
@@ -433,17 +435,19 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 
 ## Resolved Known Bugs
 
-There were some bugs and warnings after checking the markup code by the W3C Markup Validation Service. To solve the problems, I deleted the "id", changed aria-controls attribute, put the space in the nav div tag, and changed the section to div on a serveral HTML files.
+  There were some bugs and warnings after checking the markup code by the W3C Markup Validation Service. To solve the problems, I deleted the "id", changed aria-controls attribute, put the space in the nav div tag, and changed the section tag to div on serveral HTML files.
 
-I deleted all the trailing spaces and blank lines in views.py file to solve all the warnings after checking the Python code using PEP8 online seriver.
+  I deleted all the trailing spaces and blank lines in views.py file to solve all the warnings after checking the Python code using PEP8 online seriver.
 
-In the end, all errors and warnings are resolved.
+  In the end, all errors and warnings are resolved.
 
-  <details><summary>Known bugs.</summary>
+  * <details><summary>Known bugs.</summary>
 
-  ![Known bugs](media/readme-pics/w3c_HTML.png)
+    ![Known bugs](media/readme-pics/w3c_HTML.png)
 
-  </detials>
+    </detials>
+
+   
 
 ## User Story Test
 
