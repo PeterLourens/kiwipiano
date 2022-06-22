@@ -503,9 +503,10 @@ Attached the database to the app and set up the Config vars.
 
 ## Code
 
-* The site's login / logout were inspired by [Corey Schafer]() that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django.
+* The site's login / logout and profile were inspired by [Corey Schafer]() that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django. I also learned from his tutuorial what packages needed to make the application working properly.
 
 * The codes of signals.py are taken from here [Django signals](https://dev.to/earthcomfy/django-user-profile-3hik).
+
 
 # Acknowledgement
 
