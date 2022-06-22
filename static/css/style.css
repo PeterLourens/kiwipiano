@@ -2,8 +2,8 @@
 
 body {
 
-    font-family: Lato, "Open Sans" sans-serif;
-    font-weight: 400;
+    font-family: Lato, "Open Sans", sans-serif;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -63,6 +63,13 @@ a {
     padding-bottom: 0;
 }
 
+/*--------------------------------hero image */
+
+.hero-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
 
 /*-------------------------------profile page */
 #profile-image {
@@ -87,14 +94,36 @@ a {
 
 
 
-/*-------------------------------------footer*/
+/*-------------------------------------footer */
+
+footer {
+    position: sticky;
+    top: 100vh;
+
+}
 
 #footer-container {
     background: rgb(13, 19, 140);
     color: white;
-    margin-top: auto;
+  
 }
 
 #social-media-link a {
     color: white;
 }
+
+
+/*--------------------------------media queries */
+
+@media (min-width:320px) and (max-width: 480px) {
+    /* navbar */
+
+    #logo-img img {
+        width: 220px;
+        border-radius: 50%;
+        padding: 6px 10px;
+
+    }
+}
+
+
