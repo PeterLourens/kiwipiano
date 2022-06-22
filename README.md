@@ -420,7 +420,6 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 Kiwi Piano Studio website has been tested on **Google Chrome**, **Microsoft Edge** and **Safari** browsers. The site's compatibility and the functionality are working fine with no issues.
 
-## Automated Tests
 
 ## Lighthouse Testing
 
@@ -439,9 +438,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 
   There were some bugs and warnings after checking the markup code by the W3C Markup Validation Service. To solve the problems, I deleted the "id", changed aria-controls attribute, put the space in the nav div tag, and changed the section tag to div on serveral HTML files.
 
-  I deleted all the trailing spaces and blank lines in views.py file to solve all the warnings after checking the Python code using PEP8 online seriver.
-
-  In the end, all errors and warnings are resolved.
+  There were 278 warnings after checking the Python code in views.py fiel using PEP8 online due to the trailing spaces and too many blank lines in between. Then I deleted all the trailing spaces and the blank lines to solve all the warnings. In the end, all errors and warnings are resolved.
 
   * <details><summary>Known bugs.</summary>
 
