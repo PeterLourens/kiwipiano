@@ -76,7 +76,7 @@ def login(request):
         form = AuthenticationForm()
 
     context = {
-        {'title': 'Login'}
+        'title': 'Login'
     }
     return render(request, 'account/login.html', context)
 
