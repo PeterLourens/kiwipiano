@@ -433,6 +433,18 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 
 ## Resolved Known Bugs
 
+There were some bugs and warnings after checking the markup code by the W3C Markup Validation Service. To solve the problems, I deleted the "id", changed aria-controls attribute, put the space in the nav div tag, and changed the section to div on a serveral HTML files.
+
+I deleted all the trailing spaces and blank lines in views.py file to solve all the warnings after checking the Python code using PEP8 online seriver.
+
+In the end, all errors and warnings are resolved.
+
+  <details><summary>Known bugs.</summary>
+
+  ![Known bugs](media/readme-pics/w3c_HTML.png)
+
+  </detials>
+
 ## User Story Test
 
 ## Bugs
