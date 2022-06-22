@@ -285,7 +285,7 @@ The model name Lesson is called ```Session``` in the project.
 
 ## Bookings Page
 
-User gets an alert message when clicking "Book Now" button while not logged in. User is able to use the booking form to book a session that user can select a session, date, start time and end time. User gets a confirmation afterwards. User can update the booking details or cancel the booking. There is an alert when user selects cancel the booking. User is redircted to the profile page after cancelling the booking.
+User gets an alert message when clicking "Book Now" button while not logged in. When user is logged in, then user is able to use the booking form to book a session. User can select a session, date, start time and end time. User gets a confirmation afterwards. User is able to update the booking details or cancel the booking. The booking detail is delete from the database when user cencel the booking. There is an alert when user selects to cancel the booking. User is redircted to the profile page after cancelling the booking.
 
 * Booking alert
     ![Booking alert](media/readme-pics/booking_alert.png)
@@ -329,7 +329,7 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
 
 ## Admin Site
 
-The admin / super user is able to navigate the admin panel to manage the data.
+The admin / super user is able to navigate the admin panel to manage the data with full CRUD functionality.
 
 * User list
   ![Users](media/readme-pics/admin_users.png)
@@ -356,7 +356,14 @@ The admin / super user is able to navigate the admin panel to manage the data.
 
 
 [Back to top](#kiwi-piano-studio)
-## Future Development
+
+## Future Features
+
+* A payment system would be developed for user to payfor the booking;
+* A contact form would be included on the site;
+* A page with some successful piano learning storeis could be developed.
+* A seperate page for the session details could be developed.
+* A user / customer review application could be developed.
 
 # Technologies Used
 
