@@ -136,7 +136,7 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   
   * Create the README.md file to document the project’s development by adding a basic structure and the completed work until this point.
   
-  * Install Django and the required packages. Create a Django project and a super user /admin account. Complete the user stories #1 Admin CRUD-1.
+  * Install Django and the required packages. Create a Django project and a super user /admin account. Complete the user stories [#1]() ``` Admin CRUD-1``` tasks.
   
   * Create Heroku app and attach the PostgreSQL to the app. Deploy the project to Heroku via CLI and test Django and deploy the app to see the result.
 
@@ -145,7 +145,6 @@ Combine with the project’s scope, personal learning progress, I set the Issues
 * ### Sprint 3:
   * Create a new "booking" app on Gitpod.
   * Install Django Summernote and set up Admin account.
-  * Complete the user stories [#1]() ```Admin CRUD-1``` tasks.
   * Create a basic template base.html to render the view. 
   * Target user stories [#5]() ```View the range of sessions```,  create home page with session list and render the view. 
   * Create the booking Model and connect URLs.
@@ -233,11 +232,19 @@ The model name Lesson is called ```Session``` in the project.
 
   The home page contains navigation header, hero image, about section, session list and footer. User is able to view all the info about ```Kiwi Piano Studio```.
 
-  The tabs are displayed ```Home Register Login``` when the user isn't logged in. The tabs are changed to ```Home Profile Logout``` when the user is logged in.
-
   ![Home page](media/readme-pics/home_page.png)
 
 [Back to top](#kiwi-piano-studio)
+
+* ## Header
+  The site's navigation tabs are displayed ```Home Register Login``` when the user isn't logged in. 
+
+  ![Header](media/readme-pics/header2.png)
+
+* The site's navigation tabs are changed to ```Home Profile Logout``` when the user is logged in.
+
+  ![Header logged in](media/readme-pics/header1.png)
+
 * ## Register Page
 
   The register page contains a user registration form that asks user to fill in the user name, email address and password. User gets a confirmation after registering an account. The user data is saved in the database.
