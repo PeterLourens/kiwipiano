@@ -96,7 +96,7 @@ def feedback(request):
     user registered on the register view.
     """
     context = {
-        {'title': 'Register'}
+        'title': 'Register'
     }
     return render(request, 'account/register_feedback.html', context)
 
