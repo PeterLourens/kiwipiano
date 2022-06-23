@@ -264,7 +264,7 @@ The model name Lesson is called ```Session``` in the project.
   The login page contains a message and a form for user to fill in. User is redirected to the home page after logging in to the account.
 
   * Login form
-  ![Login](media/readme-pics/login.png)
+  ![Login](media/readme-pics/login-page.png)
 
   * Login confirmation
 
