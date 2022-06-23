@@ -6,13 +6,13 @@
 
 * W3C HTML Validation Report
  ![W3C HTML](media/readme-pics/w3c%20HTML%20report.png)
- [Back to top](#kiwi-piano-studio)
+ [Back to top](#testing)
 * W3C CSS Validation Report
   ![W3C CSS](media/readme-pics/w3c%20CSS%20report.png)
-  [Back to top](#kiwi-piano-studio)
+  [Back to top](#testing)
 * PEP8 online
   ![PEP8](media/readme-pics/pep8%20report.png)
-  [Back to top](#kiwi-piano-studio)
+  [Back to top](#testing)
 
 ## Responsiveness Testing
 
@@ -24,7 +24,7 @@
   |Image  |  &check;    |   &check;     |   &check;    |  &check; |    &check;   |        &check;       |        &check;        |   
   |Links  |  &check;    |   &check;     |   &check;    |  &check; |    &check;   |        &check;       |        &check;        | 
 
-[Back to top](#kiwi-piano-studio)
+[Back to top](#testing)
 
   * The website has been tested and passed on my own devices. It is fully responsive on two desktops, two laptops, iPad Air and  three mobile phones. 
 
@@ -38,7 +38,7 @@
 
 Kiwi Piano Studio website has been tested on **Google Chrome**, **Microsoft Edge** and **Safari** browsers. The site's compatibility and the functionality are working fine with no issues.
 
-[Back to top](#kiwi-piano-studio)
+[Back to top](#testing)
 ## Lighthouse Testing
 
 The site is tested on ```Google Chrome Lighthouse``` function on incognito window for both the mobile and the desktop.
@@ -46,7 +46,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 * Lighthouse report for the mobile
   ![Mobile](media/readme-pics/lighthouse_m.png)
 
-[Back to top](#kiwi-piano-studio)
+[Back to top](#testing)
 * Lighthouse report for the desktop
   ![Desktop](media/readme-pics/lighthouse_d.png)
 
@@ -62,7 +62,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
   ![Known bugs](media/readme-pics/w3c_HTML.png)
 
 
-  [Back to top](#kiwi-piano-studio) 
+  [Back to top](#testing) 
 
 ## User Story Testing
 
@@ -89,6 +89,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
   |:-------:|:--------|
   | &check; |  User is able to register an account by clicking **Register**. User is able to fill in the registration form with personal information to register an account. |
 
+[Back to top](#testing)
 * ### Registered User
   | User Story |[#8]() As a registered user I can login / logout so that I can book or cancel a session as well as managing my own account profile. |
   |:-------:|:--------|
