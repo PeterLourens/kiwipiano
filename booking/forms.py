@@ -82,7 +82,6 @@ class DateTimePicker(forms.DateTimeInput):
 
 
 
-
 class BookingForm(forms.ModelForm):
     """
     The booking form is for user to fill in certain information for booking a secssion.

@@ -15,7 +15,7 @@ class Booking(models.Model):
     """
     All the lessons can only be booked once on a specific day at a specific time.
     """
-
+    
     SESSION_CHOICES = [
         ('Beginner', 'Beginner'),
         ('Intermediate', 'Intermediate'),
