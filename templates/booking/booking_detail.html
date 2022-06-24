@@ -12,16 +12,18 @@
         <div class="col-md-6 bg-light mt-3">
             <div class="row text-center">
                 <div class="col-12">
-                    <h5 class="my-3 fw-bold">Booking details</h5>
+                    <!-- <h5 class="my-3 fw-bold">Booking details</h5> -->
+                    <h5 class="my-3 fw-bold">{{ user.booking }}</h5>
                      <div class="row justify-content-center">
                         <div class="col-sm-12 col-lg-8 text-center">
                             <p><span class="fw-bold">Username:</span> {{ booking.user }}</p>
                             <p><span class="fw-bold">Session Name:</span> {{ booking.session_name }}</p>
                             <p><span class="fw-bold">Date:</span> {{ booking.date }}</p>
-                            <p><span class="fw-bold">Start Time:</span> {{ booking.start_time}}</p>
-                            <p><span class="fw-bold">End Time:</span> {{ booking.end_time }}</p>
+                            <p><span class="fw-bold">Session Time:</span> {{ booking.timeslot }}</p>
                             <p><span class="fw-bold">Email:</span> {{ user.email }}</p>
                             <p><span class="fw-bold">Phone:</span> {{ user.profile.phone_number }}</p>
+                            <p><span class="fw-bold">Message:</span> {{ booking.message }}</p>
+                           
                         </div>
                      </div>
                 </div>

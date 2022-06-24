@@ -1,8 +1,10 @@
 from django import forms
+from django.utils import timezone
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
 from .models import Profile, Booking
+
 
 
 class UserRegisterForm(UserCreationForm):
@@ -77,7 +79,6 @@ class DatePicker(forms.DateInput):
     date = forms.DateTimeField(input_formats=['%d/%m/%Y %H:%M'])
 
 
-
 class TimePicker(forms.TimeInput):
     """
     The time picker is to provide a range of time slot for user to choose.
@@ -95,9 +96,6 @@ class DateTimePicker(forms.DateTimeInput):
     input_type = 'datetime'
 
 
-# class ChoiceSelector(forms.ModelForm):
-#     input_type = 'session_name'
-
 
 SESSION_CHOICES = [
         ('BEGINNER', 'Beginner'),
@@ -114,15 +112,14 @@ SESSION_CHOICES = [
 
 class BookingForm(forms.ModelForm):
     """
-    The booking form is for user to fill in certain information for booking a secssion.
+    The booking form is for user to fill in
+    certain informationfor booking a session.
     """
     class Meta:
         model = Booking
         exclude = ('user',)
     
         widgets = {
-            # 'session_name': forms.ChoiceField(
-            #                 widget=forms.Select(attrs={'class':'bootstrap-select'})),
             'date': DatePicker(),
             'start_time': TimePicker(),
             'end_time': TimePicker(),

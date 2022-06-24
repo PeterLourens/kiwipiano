@@ -30,17 +30,29 @@ class Booking(models.Model):
         (END_OF_YEAR_CONCERT, 'End Of Year Concert')
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    TIMESLOT_LIST = [
+            (0, '09:00 - 10:00'),
+            (1, '10:00 - 11:00'),
+            (2, '11:00 - 12:00'),
+            (3, '12:00 - 13:00'),
+            (4, '13:00 - 14:00'),
+            (5, '14:00 - 15:00'),
+            (6, '15:00 - 16:00'),
+            (7, '16:00 - 17:00'),
+        ]
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     session_name = models.CharField(max_length=30, choices=SESSION_CHOICES, default=BEGINNER)
-    date = models.DateField()
-    start_time = models.TimeField(auto_now_add=False)
-    end_time = models.TimeField(auto_now_add=False)
+    date = models.DateField(auto_now_add=False, auto_now=False)
+    timeslot = models.IntegerField(choices=TIMESLOT_LIST, default=0)
     booked_date = models.DateTimeField(auto_now_add=True)
-    confirmed = models.BooleanField(default=False)
+    message = models.TextField(max_length=100, default='', blank=True)
 
     class Meta:
         ordering = ['-booked_date']
+
+    def time(self):
+        return self.TIMESLOT_LIST[self.timeslot]
    
     def __str__(self):
         return self.session_name
