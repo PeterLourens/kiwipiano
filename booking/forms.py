@@ -9,7 +9,11 @@ class UserRegisterForm(UserCreationForm):
     """ 
     The register form is to be filled in with 
     user information for account registration.
+    And automatically log user in after registration.
     """
+    def __init__(self, request, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.request = request
 
     email = forms.EmailField()
 
@@ -17,6 +21,16 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+    def save(self, commit=True):
+        user = super().save(commit=commit)
+        if commit:
+            auth_user = authenticate(
+                username = self.cleaned_data['username'],
+                password = self.cleaned_data['password1']
+            )
+            login(self.request, auth_user)
+
+        return user
 
 
 class UserProfileForm(forms.ModelForm):

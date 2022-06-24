@@ -19,7 +19,8 @@
                     <span>to your account.</span>
                 </p>
           </div>
-        <form class="signup justify-content-center align-items-center" method="POST" action="">
+        <form class="signup justify-content-center align-items-center" method="POST"
+          action="{% url 'account_signup' %}">
           {% csrf_token %}
           
           {{ form|crispy}}

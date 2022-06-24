@@ -7,7 +7,7 @@ from booking.views import(
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('signup/', views.sign_up, name='sign_up'),
+    path('signup/', views.sign_up, name='signup'),
     path('login/', views.login, name='login'),
     path('feedback/', views.feedback, name='feedback'),
     path('logout/', views.logout_view, name='logout'),

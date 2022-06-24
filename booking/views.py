@@ -33,25 +33,30 @@ def home(request):
 
 def sign_up(request):
     """
-    To render the register page.
+    To render the account registration page.
     The form is to be filled in with user information
-    for account registration.
+    for account registration. 
     """
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
 
             messages.success(
                 request,
                 f'Welcome { username}! Your account has been created!'
             )
+            new_user = authenticate(
+                username = form.cleaned_data.get('username'),
+                password = form.cleaned_data.get('password1')
+            )
 
-            return redirect('feedback')
+            login(request, new_user)
+
+            return redirect('home')
 
     else:
-        form = UserRegisterForm()
+        form = UserRegisterForm(request)
 
     context = {
         'form': form,
