@@ -81,19 +81,34 @@ class DateTimePicker(forms.DateTimeInput):
     input_type = 'datetime'
 
 
+# class ChoiceSelector(forms.ModelForm):
+#     input_type = 'session_name'
+
+
+SESSION_CHOICES = [
+        ('BEGINNER', 'Beginner'),
+        ('INTERMEDIATE', 'Intermediate'),
+        ('ADVANCED', 'Advanced'),
+        ('EXAMS_TRAINING', 'Exams Training'),
+        ('LIVE_RECITAL', 'Live Recital'),
+        ('VIRTUAL_PERFORMANCE', 'Virtual Performance'),
+        ('REPERTOIRE_RECORDING', 'Repertoire Recording'),
+        ('ONLINE_RECITAL', 'Online Recital'),
+        ('END_OF_YEAR_CONCERT', 'End Of Year Concert')
+    ]
 
 
 class BookingForm(forms.ModelForm):
     """
     The booking form is for user to fill in certain information for booking a secssion.
     """
-
     class Meta:
         model = Booking
         exclude = ('user',)
     
-
         widgets = {
+            # 'session_name': forms.ChoiceField(
+            #                 widget=forms.Select(attrs={'class':'bootstrap-select'})),
             'date': DatePicker(),
             'start_time': TimePicker(),
             'end_time': TimePicker(),
@@ -102,17 +117,17 @@ class BookingForm(forms.ModelForm):
         }
 
 
+            
+
 
 class BookingUpdateForm(forms.ModelForm):
     """
     The booking update form is for user to update the certain information for booking.
     """
-
     class Meta:
         model = Booking
         exclude = ('user',)
     
-
         widgets = {
             'date': DatePicker(),
             'start_time': TimePicker(),

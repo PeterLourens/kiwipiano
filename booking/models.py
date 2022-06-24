@@ -4,48 +4,46 @@ from django.utils import timezone
 import datetime
 
 
-
-STATUS = [(0, 'Available'), (1, 'Unavailable')]
-
-
-
-
 class Booking(models.Model):
-
     """
     All the lessons can only be booked once on a specific day at a specific time.
     """
+    BEGINNER = 'Beginner'
+    INTERMEDIATE = 'Intermediate'
+    ADVANCED = 'Advanced'
+    EXAMS_TRAINING = 'Exams Training'
+    LIVE_RECITAL = 'Live Recital'
+    VIRTUAL_PERFORMANCE = 'Virtual Performance'
+    REPERTOIRE_RECORDING = 'Repertoire Recording'
+    ONLINE_RECITAL = 'Online Recital'
+    END_OF_YEAR_CONCERT = 'End Of Year Concert'
     
     SESSION_CHOICES = [
-        ('Beginner', 'Beginner'),
-        ('Intermediate', 'Intermediate'),
-        ('Advanced', 'Advanced'),
-        ('Exams-training', 'Exams-training'),
-        ('Live-recital', 'Live-recital'),
-        ('Virtual-performance', 'Virtual-performance'),
-        ('Repertoire-recording', 'Repertoire-recording'),
-        ('Online-recital', 'Online-recital'),
-        ('End-of-year-concert', 'End-of-year-concert')
+        (BEGINNER, 'Beginner'),
+        (INTERMEDIATE, 'Intermediate'),
+        (ADVANCED, 'Advanced'),
+        (EXAMS_TRAINING, 'Exams Training'),
+        (LIVE_RECITAL, 'Live Recital'),
+        (VIRTUAL_PERFORMANCE, 'Virtual Performance'),
+        (REPERTOIRE_RECORDING, 'Repertoire Recording'),
+        (ONLINE_RECITAL, 'Online Recital'),
+        (END_OF_YEAR_CONCERT, 'End Of Year Concert')
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    session_name = models.CharField(max_length=30, choices=SESSION_CHOICES, default='Beginner')
+    session_name = models.CharField(max_length=30, choices=SESSION_CHOICES, default=BEGINNER)
     date = models.DateField()
     start_time = models.TimeField(auto_now_add=False)
     end_time = models.TimeField(auto_now_add=False)
     booked_date = models.DateTimeField(auto_now_add=True)
-    confirmed = models.BooleanField(default=True)
-
+    confirmed = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-booked_date']
    
-
     def __str__(self):
-        return f'{self.session_name} on {self.date} at {self.start_time}'
-
-
+        return self.session_name
 
 
 class Profile(models.Model):
@@ -57,9 +55,6 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=30, null=True, blank=True)
     password = models.CharField(max_length=50, null=True, blank=True)
 
-
     def __str__(self):
         return f'{self.user} profile'
-
-
 
