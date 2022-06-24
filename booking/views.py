@@ -53,7 +53,7 @@ def sign_up(request):
 
             login(request, new_user)
 
-            return redirect('home')
+            return redirect('feedback')
 
     else:
         form = UserRegisterForm(request)

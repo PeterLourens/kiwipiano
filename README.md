@@ -239,15 +239,15 @@ The model name Lesson is called ```Session``` in the project.
 * ## Header
   The site's navigation tabs are displayed ```Home Register Login``` when the user isn't logged in. 
 
-  ![Header](media/readme-pics/header2.png)
+  ![Header](media/readme-pics/header1.png)
 
-* The site's navigation tabs are changed to ```Home Profile Logout``` when the user is logged in.
+* The site's navigation tabs are changed to ```Home Account Logout``` when the user is logged in.
 
-  ![Header logged in](media/readme-pics/header1.png)
+  ![Header logged in](media/readme-pics/header2.png)
 
 * ## Register Page
 
-  The register page contains a user registration form that asks user to fill in the user name, email address and password. User gets a confirmation after registering an account. The user data is saved in the database.
+  The register page contains a user registration form that asks user to fill in the user name, email address and password. The user data is saved in the database.  User gets a confirmation after registering an account. 
 
   * Register form
   
