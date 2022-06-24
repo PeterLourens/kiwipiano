@@ -92,6 +92,12 @@ a {
     margin: 0;
 }
 
+/*-------------------------------booking_form */
+
+.form-control {
+    appearance: auto;
+}
+
 
 
 /*-------------------------------------footer */
