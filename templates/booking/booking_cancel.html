@@ -22,8 +22,8 @@
                 <div class="text-center my-3">
                     <form method="POST">
                         {% csrf_token %}
-                        <a><button class="btn bg-primary text-white" type="submit">YES</button></a>
-                        <a href="{% url 'booking_detail' booking.pk %}" class="btn bg-primary text-white">NO</a>
+                        <a><button class="btn bg-primary text-white fw-bold" type="submit">YES</button></a>
+                        <a href="{% url 'booking_detail' booking.pk %}" class="btn bg-primary text-white fw-bold">NO</a>
                     </form>
                 </div>
             </div>
