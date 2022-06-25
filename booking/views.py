@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
@@ -202,11 +203,21 @@ def booking_form(request):
 
         if form.is_valid():
             booking = form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            messages.success(request, f'Your booking is successful!')
 
-            return redirect('profile')
+            if Booking.objects.filter(
+                date=booking.date,
+                timeslot=booking.timelot).exists():
+                messages.add_message(request, ERROR, f'Not available!')
+
+                return HttpResponseRedirect('booking_form')
+
+            else:
+
+                booking.user = request.user
+                booking.save()
+                messages.success(request, f'Your booking is successful!')
+
+                return redirect('profile')  
 
     else:
         form = BookingForm()

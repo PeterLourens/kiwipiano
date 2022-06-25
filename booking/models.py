@@ -1,8 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
 from datetime import datetime, date
-from booking.utils import date_validation
+from booking.utils import date_validation, num_validation
 
 
 class Booking(models.Model):
@@ -52,11 +53,11 @@ class Booking(models.Model):
     class Meta:
         ordering = ['-booked_date']
 
-    def time(self):
+    def timelot(self):
         return self.TIMESLOT_LIST[self.timeslot]
    
     def __str__(self):
-        return self.session_name
+        return self.booking
 
 
 class Profile(models.Model):
@@ -65,8 +66,9 @@ class Profile(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.ImageField(default='default_bxixmd.jpg', upload_to='profile_image')
-    phone_number = models.CharField(max_length=30, null=True, blank=True)
+    phone_number = models.CharField(max_length=50, null=True, blank=True, validators=[num_validation])
     password = models.CharField(max_length=50, null=True, blank=True)
+
 
     def __str__(self):
         return f'{self.user} profile'
