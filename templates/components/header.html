@@ -25,13 +25,21 @@
                             Home
                         </a>        
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'booking_form' %}">
+                            <i class="fas fa-credit-card"></i>
+                            Book Now
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
                         <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'booking_login' %}">
                             <i class="fas fa-credit-card"></i>
                             Book Now
                         </a>
                     </li>
+                    {% endif %}
                   
                     {% if user.is_authenticated %}
                     {% if request.user.is_superuser %}
@@ -42,6 +50,8 @@
                         </a>
                     </li>
                     {% endif %}
+
+                   
 
                     <li class="nav-item">
                         <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'profile' %}">
