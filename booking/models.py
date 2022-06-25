@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
 from datetime import datetime, date
-from booking.utils import date_validation, num_validation
+from booking.utils import date_validation, num_validation, name_validation
 
 
 class Booking(models.Model):
@@ -57,14 +57,14 @@ class Booking(models.Model):
         return self.TIMESLOT_LIST[self.timeslot]
    
     def __str__(self):
-        return self.booking
+        return self.session_name
 
 
 class Profile(models.Model):
     """
     Create user profile page after user login to user's account.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, validators=[name_validation])
     profile_image = models.ImageField(default='default_bxixmd.jpg', upload_to='profile_image')
     phone_number = models.CharField(max_length=50, null=True, blank=True, validators=[num_validation])
     password = models.CharField(max_length=50, null=True, blank=True)
