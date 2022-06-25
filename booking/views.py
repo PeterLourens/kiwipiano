@@ -107,6 +107,17 @@ def feedback(request):
     return render(request, 'account/register_feedback.html', context)
 
 
+@login_required()
+def admin_login(request):
+    """
+    To render the page only accessable by superuser /admin.
+    Admin approves or rejects the booking.
+    """
+
+    return render(request, 'account/admin.html') 
+
+
+
 @login_required
 def profile(request):
     """
@@ -291,3 +302,4 @@ def booking_cancel(request, pk):
         return redirect('profile')
 
     return render(request, 'booking/booking_cancel.html', {'booking': booking})
+
