@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
-import datetime
+from datetime import datetime, date
+from booking.utils import date_validation
 
 
 class Booking(models.Model):
@@ -43,7 +44,7 @@ class Booking(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     session_name = models.CharField(max_length=30, choices=SESSION_CHOICES, default=BEGINNER)
-    date = models.DateField(auto_now_add=False, auto_now=False)
+    date = models.DateField(auto_now_add=False, auto_now=False, validators=[date_validation])
     timeslot = models.IntegerField(choices=TIMESLOT_LIST, default=0)
     booked_date = models.DateTimeField(auto_now_add=True)
     message = models.TextField(max_length=100, default='', blank=True)

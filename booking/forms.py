@@ -97,19 +97,6 @@ class DateTimePicker(forms.DateTimeInput):
 
 
 
-SESSION_CHOICES = [
-        ('BEGINNER', 'Beginner'),
-        ('INTERMEDIATE', 'Intermediate'),
-        ('ADVANCED', 'Advanced'),
-        ('EXAMS_TRAINING', 'Exams Training'),
-        ('LIVE_RECITAL', 'Live Recital'),
-        ('VIRTUAL_PERFORMANCE', 'Virtual Performance'),
-        ('REPERTOIRE_RECORDING', 'Repertoire Recording'),
-        ('ONLINE_RECITAL', 'Online Recital'),
-        ('END_OF_YEAR_CONCERT', 'End Of Year Concert')
-    ]
-
-
 class BookingForm(forms.ModelForm):
     """
     The booking form is for user to fill in
@@ -121,14 +108,9 @@ class BookingForm(forms.ModelForm):
     
         widgets = {
             'date': DatePicker(),
-            'start_time': TimePicker(),
-            'end_time': TimePicker(),
             'booked_date': DateTimePicker(),
             
         }
-
-
-            
 
 
 class BookingUpdateForm(forms.ModelForm):
