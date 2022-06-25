@@ -97,6 +97,17 @@ class DateTimePicker(forms.DateTimeInput):
 
 
 
+TIMESLOT_LIST = [
+            (0, '09:00 - 10:00'),
+            (1, '10:00 - 11:00'),
+            (2, '11:00 - 12:00'),
+            (3, '12:00 - 13:00'),
+            (4, '13:00 - 14:00'),
+            (5, '14:00 - 15:00'),
+            (6, '15:00 - 16:00'),
+            (7, '16:00 - 17:00'),
+        ]
+
 class BookingForm(forms.ModelForm):
     """
     The booking form is for user to fill in
@@ -111,6 +122,8 @@ class BookingForm(forms.ModelForm):
             'booked_date': DateTimePicker(),
             
         }
+
+        timeslot = forms.ChoiceField(choices=TIMESLOT_LIST)
 
 
 class BookingUpdateForm(forms.ModelForm):

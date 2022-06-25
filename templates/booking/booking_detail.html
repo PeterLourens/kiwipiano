@@ -12,8 +12,7 @@
         <div class="col-md-6 bg-light mt-3">
             <div class="row text-center">
                 <div class="col-12">
-                    <!-- <h5 class="my-3 fw-bold">Booking details</h5> -->
-                    <h5 class="my-3 fw-bold">{{ user.booking }}</h5>
+                    <h5 class="my-3 fw-bold">Booking details</h5>
                      <div class="row justify-content-center">
                         <div class="col-sm-12 col-lg-8 text-center">
                             <p><span class="fw-bold">Username:</span> {{ booking.user }}</p>
@@ -29,11 +28,11 @@
                 </div>
             </div>
             <div class="form-group my-3 text-center">
-                <a href="{% url 'booking_update' booking.pk %}" class="btn bg-primary btn-lg">
-                    <button class="btn btn-primary" type="submit">Update Booking</button>
+                <a href="{% url 'booking_update' booking.pk %}" class="btn bg-primary text-white fw-bold">
+                    Update
                 </a>
-                <a href="{% url 'booking_cancel' booking.pk %}" class="btn bg-primary btn-lg">
-                    <button class="btn btn-primary" type="submit">Cancel Booking</button>
+                <a href="{% url 'booking_cancel' booking.pk %}" class="btn bg-primary text-white fw-bold">
+                    Cancel
                 </a>
             </div>
         </div>
