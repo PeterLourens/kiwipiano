@@ -237,13 +237,18 @@ The model name Lesson is called ```Session``` in the project.
 [Back to top](#kiwi-piano-studio)
 
 * ## Header
-  The site's navigation tabs are displayed ```Home Register Login``` when the user isn't logged in. 
+  The site's navigation tabs are displayed ```Home, Book Now,Register, Login``` when the user isn't logged in. 
 
   ![Header](media/readme-pics/header1.png)
 
-* The site's navigation tabs are changed to ```Home Account Logout``` when the user is logged in.
+* The site's navigation tabs are changed to ```Home, Book Now, Account, Logout``` when the user is logged in.
 
   ![Header logged in](media/readme-pics/header2.png)
+
+* The site's navigation tabs are changed to ```Home, Book Now, Admin, Account, Logout``` when admin is logged in.
+  ![Admin logged in](media/readme-pics/admin.png)
+
+[Back to top](#kiwi-piano-studio)
 
 * ## Register Page
 
