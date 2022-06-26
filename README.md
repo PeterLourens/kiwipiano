@@ -385,11 +385,10 @@ The admin / superuser is able to login from the site and navigate the admin pane
 * [CSS]() 
 * [JavaScript]() 
 * [Python]()
-* Django and libraries used for the Kiwi Piano Studio project.
-  ![Django and librareis](media/readme-pics/django-packages.png)
-
+* [Django]() 
 * [Bootstrap]() - used to style the websie.
 * [Django]() - used to create the project.
+  ![Django and librareis](media/readme-pics/django-packages.png)
 * [Heroku]() - used to deploy and host the project's live site.
 * [Heroku]() PostgreSQL - used to connect the project to the database.
 * [Cloudinary]() - used to store project's static and media files.
@@ -416,18 +415,21 @@ The admin / superuser is able to login from the site and navigate the admin pane
 I have created a separate file that contains all the testing documentation [TESTING.md](TESTING.md)
 
 
-## Bugs
-
 # Deployment
 
 1. I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. 
    * pip3 install Django==3.2 gunicorn
    * pip3 install dj_database_url psycopg2
    * pip3 install dj3-cloudinary-storage
+  
    * pip3 freeze --local > requirements.txt
-2. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
-
-3. Logged in to Heroku account and created an app named kiwipiano.
+     
+2. Add the app name to the settings.py each time after installing a new app.
+   ![Installed apps](media/readme-pics/installed_apps.png)
+   
+3. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
+   
+4. Logged in to Heroku account and created an app named ```kiwipiano```.
 Attached the database to the app and set up the Config vars.
 
 ![ConfigVars](media/readme-pics/configvars.png)
