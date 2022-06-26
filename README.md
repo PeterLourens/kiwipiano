@@ -256,11 +256,11 @@ The model name Lesson is called ```Session``` in the project.
 
   * Register form
   
-    ![Register page](media/readme-pics/register_pg.png)
+    ![Register page](media/readme-pics/register_page.png)
 
-  * Registration feedback
+  * User is logged in automatically after registration.
 
-    ![Register confirmation page](media/readme-pics/register_cf.png)
+    ![Register confirmation page](media/readme-pics/register_sucess.png)
 
 [Back to top](#kiwi-piano-studio)
 
@@ -273,7 +273,7 @@ The model name Lesson is called ```Session``` in the project.
 
   * Login confirmation
 
-  ![Longin confirmation](media/readme-pics/login1.png)
+  ![Longin confirmation](media/readme-pics/login_success.png)
 
 [Back to top](#kiwi-piano-studio)
 
@@ -289,7 +289,7 @@ The model name Lesson is called ```Session``` in the project.
 
   * Delete profile alert
 
-    ![Profile delete](media/readme-pics/profile_delete.png)
+    ![Profile delete](media/readme-pics/profile_delete_alert.png)
 
 
   [Back to top](#kiwi-piano-studio)
@@ -309,7 +309,7 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
   [Back to top](#kiwi-piano-studio)
 
 * Booking success
-  ![Booking seccess](media/readme-pics/booking_success1.png)
+  ![Booking seccess](media/readme-pics/booking_success.png)
 
   [Back to top](#kiwi-piano-studio)
 
@@ -319,12 +319,12 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
   [Back to top](#kiwi-piano-studio)
 
 * Booking update form
-  ![Booking update form](media/readme-pics/booking_update_form.png)
+  ![Booking update form](media/readme-pics/booking_update1.png)
 
   [Back to top](#kiwi-piano-studio)
  
 * Booking update success
-  ![Update success](media/readme-pics/booking_update1.png)
+  ![Update success](media/readme-pics/booking_update.png)
 
   [Back to top](#kiwi-piano-studio)
   
@@ -334,7 +334,7 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
   [Back to top](#kiwi-piano-studio)
 
 * Booking cancel success
-  ![Cancel success](media/readme-pics/booking_cancel_success.png)
+  ![Cancel success](media/readme-pics/booking_cancel.png)
 
   [Back to top](#kiwi-piano-studio)
 
