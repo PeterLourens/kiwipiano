@@ -215,11 +215,21 @@ def booking_form(request):
         if form.is_valid():
             booking = form.save(commit=False)
 
-            booking.user = request.user
-            booking.save()
-            messages.success(request, f'Your booking is successful!')
+            if Booking.objects.filter(
+               
+                session_name=booking.session_name,
+                date=booking.date,
+                timeslot=booking.timeslot
+            ).exists():
+                messages.success(request, f'Sorry! It is not available. Please book it again on other days and other time slot.')
+                return redirect('booking_form')
 
-            return redirect('profile')  
+            else:
+                booking.user = request.user
+                booking.save()
+                messages.success(request, f'Your booking is successful!')
+
+                return redirect('profile')  
 
     else:
         form = BookingForm()

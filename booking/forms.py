@@ -39,36 +39,15 @@ class UserProfileForm(forms.ModelForm):
     """
     The profile form is for user to edit user's profile information."
     """
+    username = forms.CharField(max_length=100)
+    first_name = forms.CharField(max_length=100)
+    last_name = forms.CharField(max_length=100)
 
     email = forms.EmailField()
 
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
-
-        widgets = {
-            'username': forms.TextInput(
-                attrs={
-                    'class': 'form-control',
-                    'input': '[A-Za-z]+',
-                    'message':'This field can only be letters!',
-                }
-            ),
-            'first_name': forms.TextInput(
-                attrs={
-                    'class': 'form-control',
-                    'input': '[A-Za-z]+',
-                    'message':'This field can only be letters!',
-                }
-            ),
-            'last_name': forms.TextInput(
-                attrs={
-                    'class': 'form-control',
-                    'input': '[A-Za-z]+',
-                    'message':'This field can only be letters!',
-                }
-            ),
-        }
       
 
 class ProfileUpdateForm(forms.ModelForm):
