@@ -456,6 +456,24 @@ Attached the database to the app and set up the Config vars.
    
 [Back to top](#kiwi-piano-studio)
 
+# Clone Project
+Steps to clone the project from GitHub as following:
+
+* On my GitHub kiwipiano repository page, click the Code tab next to the green Gitpod button;
+
+* In the Clone board, click the icon on the right side of the URL under HTTPS to copy the given URL;
+  ![Clone](media/readme-pics/clone.png)
+
+* Go to my local IDE VS Studio Code and click ```Clone Git Repository```.
+  ![Clone VS Code](media/readme-pics/clone_vs.png)
+  
+* Paste the copied project's URL to the search bar, then click enter to select a local repository location for the project.
+  ![Clone URL](media/readme-pics/clone_url.png)
+
+* Select a repository to complete the clone process.
+  ![Clone repo](media/readme-pics/clone_repo.png)
+
+[Back to top](#kiwi-piano-studio)
 # Credits
 
 ## Content
