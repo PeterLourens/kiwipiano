@@ -23,6 +23,16 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+        widgets = {
+            'username': forms.TextInput(attrs={
+                'class': 'form-control',
+                'pattern': '[A-Za-z]',
+                'message': 'Please enter only letters.'
+
+            })
+        }
+
+
     def save(self, commit=True):
         user = super().save(commit=commit)
         if commit:
@@ -48,7 +58,9 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
-      
+
+
+    
 
 class ProfileUpdateForm(forms.ModelForm):
     """
