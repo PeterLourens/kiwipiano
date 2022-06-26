@@ -285,7 +285,7 @@ The model name Lesson is called ```Session``` in the project.
 
   * Profile update confirmation
 
-    ![Profile update](media/readme-pics/profile_update2.png)
+    ![Profile update](media/readme-pics/profile_update_success.png)
 
   * Delete profile alert
 
@@ -296,7 +296,7 @@ The model name Lesson is called ```Session``` in the project.
 
 ## Bookings Page
 
-User gets an alert message when clicking "Book Now" button while not logged in. When user is logged in, then user is able to use the booking form to book a session. User can select a session, date, start time and end time. User gets a confirmation afterwards. User is able to update the booking details or cancel the booking. The booking detail is delete from the database when user cencel the booking. There is an alert when user selects to cancel the booking. User is redircted to the profile page after cancelling the booking.
+User gets an alert message when clicking "Book Now" button while not logged in. When user is logged in, then user is able to use the booking form to book a session. User can select a session, date and timeslot. User gets a confirmation afterwards. User is able to update the booking details or cancel the booking. The booking detail is deleted from the database when user cancel the booking. There is an alert when user selects to cancel the booking. User is redircted to the profile page after cancelling the booking.
 
 * Booking alert
     ![Booking alert](media/readme-pics/booking_alert.png)
@@ -340,7 +340,7 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
 
 ## Admin Site
 
-The admin / super user is able to navigate the admin panel to manage the data with full CRUD functionality.
+The admin / superuser is able to login from the site and navigate the admin panel to manage the data with full CRUD functionality.
 
 * User list
   ![Users](media/readme-pics/admin_users.png)
@@ -370,9 +370,9 @@ The admin / super user is able to navigate the admin panel to manage the data wi
 
 ## Future Features
 
-* User story #2 Admin CRUD-2 could be developed.
-* Session schedule could be developed for user to see the session availability.
-* A user / customer review application could be developed.
+* User story ```#2 Admin CRUD-2``` could be developed.
+* User story ```#6 View the session schedule```could be developed for user to see the session availability.
+* User story ```#13 post a review application``` could be developed.
 * A payment system could be developed for user to pay for the booking;
 * A contact form would be included on the site;
 * A page with some successful piano learning storeis could be developed.
