@@ -427,6 +427,8 @@ I have created a separate file that contains all the testing documentation [TEST
    
 3. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
    
+  ![Heroku Postgres](media/readme-pics/heroku.png)
+   
 4. Logged in to Heroku account and created an app named ```kiwipiano```.
 Attached the database to the app and set up the Config vars.
 
