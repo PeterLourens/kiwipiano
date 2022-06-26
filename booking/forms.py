@@ -45,8 +45,31 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
-      
 
+        widgets = {
+            'username': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'input': '[A-Za-z]+',
+                    'message':'This field can only be letters!',
+                }
+            ),
+            'first_name': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'input': '[A-Za-z]+',
+                    'message':'This field can only be letters!',
+                }
+            ),
+            'last_name': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'input': '[A-Za-z]+',
+                    'message':'This field can only be letters!',
+                }
+            ),
+        }
+      
 
 class ProfileUpdateForm(forms.ModelForm):
     """
@@ -56,8 +79,6 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['profile_image', 'phone_number']
-
-
 
 
 class ProfileDeleteForm(forms.ModelForm):
@@ -70,22 +91,12 @@ class ProfileDeleteForm(forms.ModelForm):
         fields = []
 
 
-
 class DatePicker(forms.DateInput):
     """
     To use the datepicker for the booking form.
     """
     input_type = 'date'
     date = forms.DateTimeField(input_formats=['%d/%m/%Y %H:%M'])
-
-
-class TimePicker(forms.TimeInput):
-    """
-    The time picker is to provide a range of time slot for user to choose.
-    """
-
-    input_type = 'time'
-
 
 
 class DateTimePicker(forms.DateTimeInput):
@@ -95,18 +106,6 @@ class DateTimePicker(forms.DateTimeInput):
 
     input_type = 'datetime'
 
-
-
-TIMESLOT_LIST = [
-            (0, '09:00 - 10:00'),
-            (1, '10:00 - 11:00'),
-            (2, '11:00 - 12:00'),
-            (3, '12:00 - 13:00'),
-            (4, '13:00 - 14:00'),
-            (5, '14:00 - 15:00'),
-            (6, '15:00 - 16:00'),
-            (7, '16:00 - 17:00'),
-        ]
 
 class BookingForm(forms.ModelForm):
     """
@@ -120,10 +119,7 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'date': DatePicker(),
             'booked_date': DateTimePicker(),
-            
         }
-
-        timeslot = forms.ChoiceField(choices=TIMESLOT_LIST)
 
 
 class BookingUpdateForm(forms.ModelForm):
@@ -136,9 +132,6 @@ class BookingUpdateForm(forms.ModelForm):
     
         widgets = {
             'date': DatePicker(),
-            'start_time': TimePicker(),
-            'end_time': TimePicker(),
             'booked_date': DateTimePicker(),
-
         }
             

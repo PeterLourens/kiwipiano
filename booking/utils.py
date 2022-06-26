@@ -25,15 +25,12 @@ def num_validation(num):
 
 
 
-def name_validation(word):
+def name_validation(name):
     """
     To get valid input for user names.
     """
 
-    words = ['username', 'first_name', 'last_name']
-
-    for word in words:
-
-        if not word.isalpha():
-            raise forms.ValidationError('Please enter only letters!')
+    name = ['username', 'first_name', 'last_name']
+    if not name.isalpha():
+        raise forms.ValidationError('Please enter only letters!')
 
