@@ -425,6 +425,8 @@ I have created a separate file that contains all the testing documentation [TEST
 2. Logged in to Heroku account and created an app named kiwipiano.
 Attached the database to the app and set up the Config vars.
 
+![ConfigVars](media/readme-pics/configvars.png)
+
 3. Created ```env.py``` file and ```Procfile```, updated ```settings.py``` file and then made migrations to the database for all the changes.
 
 4. Commands to deploy ```kiwipiano``` project in GitPod terminal:
