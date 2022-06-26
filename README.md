@@ -420,16 +420,21 @@ I have created a separate file that contains all the testing documentation [TEST
 
 # Deployment
 
-1. I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
+1. I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. 
+   * pip3 install Django==3.2 gunicorn
+   * pip3 install dj_database_url psycopg2
+   * pip3 install dj3-cloudinary-storage
+   * pip3 freeze --local > requirements.txt
+2. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
 
-2. Logged in to Heroku account and created an app named kiwipiano.
+3. Logged in to Heroku account and created an app named kiwipiano.
 Attached the database to the app and set up the Config vars.
 
 ![ConfigVars](media/readme-pics/configvars.png)
 
-3. Created ```env.py``` file and ```Procfile```, updated ```settings.py``` file and then made migrations to the database for all the changes.
+4. Created ```env.py``` file and ```Procfile```, updated ```settings.py``` file and then made migrations to the database for all the changes.
 
-4. Commands to deploy ```kiwipiano``` project in GitPod terminal:
+5. Commands to deploy ```kiwipiano``` project in GitPod terminal:
    
     * ```heroku login -i``` ---login to my Heroku account.
     * ```heroku apps``` ---get the names of Heroku apps.
@@ -438,7 +443,7 @@ Attached the database to the app and set up the Config vars.
     * ```git push origin main``` ---push to GitHub repository.
     * ```git push heroku main```---push to Heroku.
 
-5. Deployment successful. Here is the site's URL: https://kiwipiano.herokuapp.com/
+6. Deployment successful. Here is the site's URL: https://kiwipiano.herokuapp.com/
 
 * <details><summary>Deployment to Heroku successful</summary>
 
