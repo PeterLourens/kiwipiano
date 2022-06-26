@@ -244,6 +244,7 @@ def booking_form(request):
 
 def booking_not_available(request):
     """
+    To render the booking not available page.
     """
     return render(request, 'booking/booking_not_available.html')
 

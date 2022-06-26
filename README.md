@@ -336,6 +336,9 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
 
   [Back to top](#kiwi-piano-studio)
 
+* Booking not available
+  ![Booking not available](media/readme-pics/booking_not_available.png)
+
 ## Admin Site
 
 The admin / superuser is able to login from the site and navigate the admin panel to manage the data with full CRUD functionality.
