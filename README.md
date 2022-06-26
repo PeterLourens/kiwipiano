@@ -42,8 +42,6 @@ The website provides different user interface. User can register an account, log
 
 * The site has a booking system that user can book a piano session according to user’s interests.
 
-* The site offers user a platform that user can create and post a review about their experience with the piano studio. 
-  
 * The site offers registered user to view and edit their account profile.
 
 * The site offers many different contact methods that user can make contact easily to the piano studio.

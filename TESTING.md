@@ -120,5 +120,32 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
   | &check; |  User is able to view the profile details and update the profile such as user name, first name, last name, email address, phone number and profile image. User is also able to delete the profile. |
 
 
+## Site Owner Stories Testing
+
+  | Site Owner Story |The website is accessible and responsive. It targets the user who would like to learn to play piano or other activities using the studio. |
+  |:-------:|:--------|
+  | &check; |The site is **responsive** from 320px up to 4K screens. The site works fine using **Google Chrome**, **Microsoft Edge** and **Safari** browsers.|
+
+  | Site Owner Story |The site offers different user interface that user can sign up an account, log in and log out as well as edit the user profile. |
+  |:-------:|:--------|
+  | &check; | User is able to use her/his username to login to the account and update or delete profile after logged in.     |
+
+  | Site Owner Story | The site has a booking system that user can book a piano session according to user’s interests.|
+  |:-------:|:--------|
+  | &check; | The site has a booking system where user can book a session, update or cancel the booking.|
+
+  | Site Owner Story | The site offers registered user to view and edit their account profile.|
+  |:-------:|:--------|
+  | &check; |The site offers the registered user to update or delete user profile and booking.|
+
+  | Site Owner Story | The site offers many different contact methods that user can make contact easily to the piano studio.|
+  |:-------:|:--------|
+  | &check; | The site has contact details as well as social media site for user to make contact.|
+
+  | Site Owner Story | The site has an admin functionality that admin can manage the site.|
+  |:-------:|:--------|
+  | &check; | The site has an admin site to manage the data.        |
+
+   
 
 [Back to README.md](README.md)
