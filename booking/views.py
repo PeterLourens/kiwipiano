@@ -221,8 +221,8 @@ def booking_form(request):
                 date=booking.date,
                 timeslot=booking.timeslot
             ).exists():
-                messages.success(request, f'Sorry! It is not available. Please book it again on other days and other time slot.')
-                return redirect('booking_form')
+            
+                return redirect('booking_not_available')
 
             else:
                 booking.user = request.user
@@ -240,6 +240,12 @@ def booking_form(request):
     }
 
     return render(request, 'booking/booking_form.html', context)
+
+
+def booking_not_available(request):
+    """
+    """
+    return render(request, 'booking/booking_not_available.html')
 
 
 class BookingDetailView(DetailView):
