@@ -41,8 +41,9 @@ Kiwi Piano Studio website has been tested on **Google Chrome**, **Microsoft Edge
 [Back to top](#testing)
 ## Lighthouse Testing
 
-The site is tested on ```Google Chrome Lighthouse``` function on incognito window for both the mobile and the desktop.
+The site's pages are tested on ```Google Chrome Lighthouse``` function on incognito window for both the mobile and the desktop.
 
+* ### Home page
 * Lighthouse report for the mobile
   ![Mobile](media/readme-pics/lighthouse_m.png)
 
@@ -51,6 +52,43 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
   ![Desktop](media/readme-pics/lighthouse_d.png)
 
 [Back to top](#testing)
+
+* ### Register page
+  
+* Mobile
+  ![Lighthouse report mobile](media/testing-pics/lighthouse_register_m.png)
+* Desktop
+  ![Lighthouse report desktop](media/testing-pics/lighthouse_register.png)
+
+[Back to top](#testing)
+* ### Login page
+* Mobile
+  ![Lighthouse mobile](media/testing-pics/lighthouse_login_m.png)
+* Desktop
+  ![Lighthouse mobile](media/testing-pics/lighthouse_login.png)
+
+[Back to top](#testing)
+* ### Profile page
+* Mobile
+  ![Lighthouse mobile](media/testing-pics/lighthouse_profile_m.png)
+* Desktop
+  ![Lighthouse mobile](media/testing-pics/lighthouse_profile.png)
+
+[Back to top](#testing) 
+* ### Booking alert page
+* Mobile
+  ![Lighthouse mobile](media/testing-pics/lighthouse_bookingalert_m.png)
+* Desktop
+  ![Lighthouse mobile](media/testing-pics/lighthouse_bookingalert.png)
+
+[Back to top](#testing)
+* ### Booking form page
+* Mobile
+  ![Lighthouse mobile](media/testing-pics/lighthouse_bookingform_m.png)
+* Desktop
+  ![Lighthouse mobile](media/testing-pics/lighthouse_bookingform.png)
+
+[Back to top](#testing) 
 ## Manual Testing
 
 * Site testing
