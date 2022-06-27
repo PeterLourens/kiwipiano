@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import RegexValidator
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
 from datetime import datetime, date
@@ -43,7 +44,7 @@ class Booking(models.Model):
         ('16:00 - 17:00', '16:00 - 17:00'),
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, validators=[name_validation])
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     session_name = models.CharField(max_length=30, choices=SESSION_CHOICES, default=BEGINNER)
     date = models.DateField(auto_now_add=False, auto_now=False, validators=[date_validation])
     timeslot = models.CharField(max_length=200, choices=TIMESLOT_CHOICES, default='09:00 - 10:00')
@@ -60,14 +61,19 @@ class Booking(models.Model):
         return self.session_name
 
 
+alpha_only = RegexValidator(r'^[a-zA-Z]*$', 'Only alpha[ A - Z] characters are allowed.')
+
+
 class Profile(models.Model):
     """
     Create user profile page after user register and login to user's account.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE, validators=[name_validation])
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.ImageField(default='default_bxixmd.jpg', upload_to='profile_image')
     phone_number = models.CharField(max_length=50, null=True, blank=True, validators=[num_validation])
     password = models.CharField(max_length=50, null=True, blank=True)
+    first_name_profile = models.CharField(max_length=50, null=True, blank=True, validators=[alpha_only])
+    last_name_profile = models.CharField(max_length=50, null=True, blank=True, validators=[alpha_only])
 
 
     def __str__(self):

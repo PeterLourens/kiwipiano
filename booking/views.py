@@ -139,16 +139,12 @@ def update_profile(request):
     To render the update profile page.
     """
     if request.method == 'POST':
-        user_profile_form = UserProfileForm(
-                                    request.POST,
-                                    instance=request.user)
         profile_update_form = ProfileUpdateForm(request.POST,
                                                 request.FILES,
                                                 instance=request.user.profile)
 
-        if user_profile_form.is_valid() and profile_update_form.is_valid():
+        if profile_update_form.is_valid():
             print(profile_update_form.cleaned_data)
-            user_profile_form.save()
             profile_update_form.save()
 
             messages.success(request, f'Your profile has been updated.')
@@ -159,12 +155,9 @@ def update_profile(request):
             messages.error(request, f'Please try again.')
 
     else:
-        user_profile_form = UserProfileForm(instance=request.user)
         profile_update_form = ProfileUpdateForm(instance=request.user.profile)
 
     context = {
-
-        'user_profile_form': user_profile_form,
         'profile_update_form': profile_update_form
     }
 

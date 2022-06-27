@@ -23,14 +23,7 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
-        widgets = {
-            'username': forms.TextInput(attrs={
-                'class': 'form-control',
-                'pattern': '[A-Za-z]',
-                'message': 'Please enter only letters.'
-
-            })
-        }
+       
 
 
     def save(self, commit=True):
@@ -49,16 +42,9 @@ class UserProfileForm(forms.ModelForm):
     """
     The profile form is for user to edit user's profile information."
     """
-    username = forms.CharField(max_length=100)
-    first_name = forms.CharField(max_length=100)
-    last_name = forms.CharField(max_length=100)
-
-    email = forms.EmailField()
-
     class Meta:
-        model = User
-        fields = ['username', 'first_name', 'last_name', 'email']
-
+        model = Profile
+        fields = ['phone_number', 'profile_image', 'first_name_profile', 'last_name_profile']
 
     
 
@@ -69,7 +55,7 @@ class ProfileUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['profile_image', 'phone_number']
+        fields = ['profile_image', 'phone_number', 'first_name_profile', 'last_name_profile']
 
 
 class ProfileDeleteForm(forms.ModelForm):
