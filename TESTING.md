@@ -2,41 +2,41 @@
 
 ## Code Validation
 
- The site's HTML, CSS and Python codes are validated by the W3C HTML & CSS Validation Service and PEP8 ONLINE service.
+ The site's HTML, CSS and Python codes are validated by the W3C Markup Validation Service, W3C CSS Validation Service and PEP8 ONLINE service.
 
-* W3C HTML Validation Report
- ![W3C HTML](media/readme-pics/w3c%20HTML%20report.png)
+* ### W3C HTML Validation Report
+  ![W3C HTML](media/readme-pics/w3c%20HTML%20report.png)
  [Back to top](#testing)
 
-* W3C CSS Validation Report
+* ### W3C CSS Validation Report
   ![W3C CSS](media/readme-pics/w3c%20CSS%20report.png)
   [Back to top](#testing)
 
-* PEP8 online / views.py
+* ### PEP8 online / views.py
   ![PEP8](media/readme-pics/pep8%20report.png)
   [Back to top](#testing)
 
-* PEP8 online / apps.py
+* ### PEP8 online / apps.py
   ![apps.py](media/testing-pics/pep8-apps.png)
 [Back to top](#testing)
 
-* PEP8 online / forms.py
+* ### PEP8 online / forms.py
   ![apps.py](media/testing-pics/pep8-forms.png)
 [Back to top](#testing)
 
-* PEP8 online / models.py
+* ### PEP8 online / models.py
   ![apps.py](media/testing-pics/pep8-models.png)
 [Back to top](#testing)
 
-* PEP8 online / signals.py
+* ### PEP8 online / signals.py
   ![apps.py](media/testing-pics/pep8-signals.png)
 [Back to top](#testing)
 
-* PEP8 online / urls.py
+* ### PEP8 online / urls.py
   ![apps.py](media/testing-pics/pep8-urls.png)
 [Back to top](#testing)
 
-* PEP8 online / utils.py
+* ### PEP8 online / utils.py
   ![apps.py](media/testing-pics/pep8-utils.png)
 [Back to top](#testing)
 
@@ -53,7 +53,7 @@
 
 [Back to top](#testing)
 
-  * The website has been tested and passed on my own devices. It is fully responsive on two desktops, two laptops, iPad Air and  three mobile phones. 
+  * The website has been tested and passed on my own devices. It is fully responsive on two desktops, two laptops, iPad Air and  three mobile phones while using Google Chrome, Microsoft Edge and Sarari browsers.
 
   |       |**Galaxy Note4**|**Nokia 7 Plus**|**Huawei P30 Pro**|**iPad Air**|**Lenovo E540**|**HP Elitebook 850 G5**|**DELL 2407WFP**|**Yiyama ProLite XB3288UHSU**|
   |-------|:--------------:|:--------------:|:----------------:|:----------:|:-------------:|:---------------------:|:---------------:|:--------------------------:|
@@ -118,32 +118,36 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 [Back to top](#testing) 
 ## Manual Testing
 
-* Site testing
+* ### Site testing
   
-  I manually tested the site's navigation menu links and all buttons accross the site's all pages that all work fine in terms of loading and the redirecting URLs to the the relavant pages.
+  I manually tested the site's navigation menu links and all buttons accross the site's all pages that all work fine in terms of loading and redirecting URLs to the relavant pages.
 
-* Register form testing
+* ### Register form testing
   
   I manually tested the register form's password fields. The password needs to meet certain requirements when user regsiter an account.
   ![Register form error](media/readme-pics/error_register.png)
+
 [Back to top](#testing)
-* Login for testing
+* ### Login form testing
   
   I manually testing the login form. The username and the password needs to be the same as user specified when registering an account.
   ![Longin form error](media/readme-pics/error_login.png)
+
 [Back to top](#testing)
-* User profile testing
+* ### User profile testing
   
   I manually tested the user profile input fields. The phone number can only be numbers, the first name and the last name are only allowed to have letters.
   ![Profile error](media/readme-pics/error_profile_validation.png)
+
 [Back to top](#testing)  
-* Booking form testing
+* ### Booking form testing
   
   I manually tested the booking form. The booking date can't be in the past and the booking can only be made ahead of today.
 
   ![Booking date error](media/readme-pics/erro_booking_date.png)
+
 [Back to top](#testing)
-* Admin change booking testing
+* ### Admin booking testing
   
   I manually tested that the admin can't change the booking to the past either in the database.
   ![Admin change booking error](media/readme-pics/error_admin_date.png)
@@ -154,7 +158,7 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 
   There were some bugs and warnings after checking the markup code by the W3C Markup Validation Service. To solve the problems, I deleted the "id", changed aria-controls attribute, put the space in the nav div tag, and changed the section tag to div on serveral HTML files.
 
-  There were 278 warnings after checking the Python code in views.py fiel using PEP8 online due to the trailing spaces and too many blank lines in between. Then I deleted all the trailing spaces and the blank lines to solve all the warnings. In the end, all errors and warnings are resolved.
+  There were warnings after checking the Python code files using PEP8 online due to the trailing spaces and too many blank lines in between. Then I deleted all the trailing spaces and the blank lines to solve all the warnings. In the end, all errors and warnings are resolved.
 
   ![Known bugs](media/readme-pics/w3c_HTML.png)
 
