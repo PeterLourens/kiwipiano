@@ -50,8 +50,40 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
 * Lighthouse report for the desktop
   ![Desktop](media/readme-pics/lighthouse_d.png)
 
-
+[Back to top](#testing)
 ## Manual Testing
+
+* Site testing
+  
+  I manually tested the site's navigation menu links and all buttons accross the site's all pages that all work fine in terms of loading and the redirecting URLs to the the relavant pages.
+
+* Register form testing
+  
+  I manually tested the register form's password fields. The password needs to meet certain requirements when user regsiter an account.
+  ![Register form error](media/readme-pics/error_register.png)
+[Back to top](#testing)
+* Login for testing
+  
+  I manually testing the login form. The username and the password needs to be the same as user specified when registering an account.
+  ![Longin form error](media/readme-pics/error_login.png)
+[Back to top](#testing)
+* User profile testing
+  
+  I manually tested the user profile input fields. The phone number can only be numbers, the first name and the last name are only allowed to have letters.
+  ![Profile error](media/readme-pics/error_profile_validation.png)
+[Back to top](#testing)  
+* Booking form testing
+  
+  I manually tested the booking form. The booking date can't be in the past and the booking can only be made ahead of today.
+
+  ![Booking date error](media/readme-pics/erro_booking_date.png)
+[Back to top](#testing)
+* Admin change booking testing
+  
+  I manually tested that the admin can't change the booking to the past either in the database.
+  ![Admin change booking error](media/readme-pics/error_admin_date.png)
+
+[Back to top](#testing) 
 
 ## Resolved Known Bugs
 
@@ -119,7 +151,7 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
   |:-------:|:--------|
   | &check; |  User is able to view the profile details and update the profile such as user name, first name, last name, email address, phone number and profile image. User is also able to delete the profile. |
 
-
+[Back to top](#testing)
 ## Site Owner Stories Testing
 
   | Site Owner Story |The website is accessible and responsive. It targets the user who would like to learn to play piano or other activities using the studio. |
@@ -145,6 +177,9 @@ The site is tested on ```Google Chrome Lighthouse``` function on incognito windo
   | Site Owner Story | The site has an admin functionality that admin can manage the site.|
   |:-------:|:--------|
   | &check; | The site has an admin site to manage the data.        |
+
+
+
 
    
 
