@@ -9,10 +9,8 @@ def create_profile(sender, instance, created, **kwargs):
     """
     To create user profile everytime a new user is registered.
     """
-
     if created:
         Profile.objects.create(user=instance)
-
 
 
 @receiver(post_save, sender=User)
@@ -25,5 +23,3 @@ def save_profile(sender, instance, **kwargs):
 
     except ObjectDoesNotExist:
         Profile.objects.create(user=instance)
-
-

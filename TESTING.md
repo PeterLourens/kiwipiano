@@ -7,12 +7,39 @@
 * W3C HTML Validation Report
  ![W3C HTML](media/readme-pics/w3c%20HTML%20report.png)
  [Back to top](#testing)
+
 * W3C CSS Validation Report
   ![W3C CSS](media/readme-pics/w3c%20CSS%20report.png)
   [Back to top](#testing)
-* PEP8 online
+
+* PEP8 online / views.py
   ![PEP8](media/readme-pics/pep8%20report.png)
   [Back to top](#testing)
+
+* PEP8 online / apps.py
+  ![apps.py](media/testing-pics/pep8-apps.png)
+[Back to top](#testing)
+
+* PEP8 online / forms.py
+  ![apps.py](media/testing-pics/pep8-forms.png)
+[Back to top](#testing)
+
+* PEP8 online / models.py
+  ![apps.py](media/testing-pics/pep8-models.png)
+[Back to top](#testing)
+
+* PEP8 online / signals.py
+  ![apps.py](media/testing-pics/pep8-signals.png)
+[Back to top](#testing)
+
+* PEP8 online / urls.py
+  ![apps.py](media/testing-pics/pep8-urls.png)
+[Back to top](#testing)
+
+* PEP8 online / utils.py
+  ![apps.py](media/testing-pics/pep8-utils.png)
+[Back to top](#testing)
+
 
 ## Responsiveness Testing
 

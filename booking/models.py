@@ -20,7 +20,7 @@ class Booking(models.Model):
     REPERTOIRE_RECORDING = 'Repertoire Recording'
     ONLINE_RECITAL = 'Online Recital'
     END_OF_YEAR_CONCERT = 'End Of Year Concert'
-    
+
     SESSION_CHOICES = [
         (BEGINNER, 'Beginner'),
         (INTERMEDIATE, 'Intermediate'),
@@ -45,9 +45,15 @@ class Booking(models.Model):
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    session_name = models.CharField(max_length=30, choices=SESSION_CHOICES, default=BEGINNER)
-    date = models.DateField(auto_now_add=False, auto_now=False, validators=[date_validation])
-    timeslot = models.CharField(max_length=200, choices=TIMESLOT_CHOICES, default='09:00 - 10:00')
+    session_name = models.CharField(max_length=30,
+                                    choices=SESSION_CHOICES,
+                                    default=BEGINNER)
+    date = models.DateField(auto_now_add=False,
+                            auto_now=False,
+                            validators=[date_validation])
+    timeslot = models.CharField(max_length=200,
+                                choices=TIMESLOT_CHOICES,
+                                default='09:00 - 10:00')
     booked_date = models.DateTimeField(auto_now_add=True)
     message = models.TextField(max_length=100, default='', blank=True)
 
@@ -56,26 +62,44 @@ class Booking(models.Model):
 
     def timelot(self):
         return self.TIMESLOT_CHOICES[self.timeslot]
-   
+
     def __str__(self):
         return self.session_name
 
 
-alpha_only = RegexValidator(r'^[a-zA-Z]*$', 'Only alpha[ A - Z] characters are allowed.')
+alpha_only = RegexValidator(r'^[a-zA-Z]*$',
+                            'Only alpha[ A - Z] characters are allowed.')
 
 
 class Profile(models.Model):
     """
-    Create user profile page after user register and login to user's account.
+    Create user profile page after
+    user register and login to user's account.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_image = models.ImageField(default='default_bxixmd.jpg', upload_to='profile_image')
-    phone_number = models.CharField(max_length=50, null=True, blank=True, validators=[num_validation])
+    profile_image = models.ImageField(
+        default='default_bxixmd.jpg',
+        upload_to='profile_image'
+    )
+    phone_number = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True,
+        validators=[num_validation]
+    )
     password = models.CharField(max_length=50, null=True, blank=True)
-    first_name_profile = models.CharField(max_length=50, null=True, blank=True, validators=[alpha_only])
-    last_name_profile = models.CharField(max_length=50, null=True, blank=True, validators=[alpha_only])
-
+    first_name_profile = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True,
+        validators=[alpha_only]
+    )
+    last_name_profile = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True,
+        validators=[alpha_only]
+    )
 
     def __str__(self):
         return f'{self.user} profile'
-

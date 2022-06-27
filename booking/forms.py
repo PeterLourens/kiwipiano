@@ -6,10 +6,9 @@ from django.forms import ModelForm
 from .models import Profile, Booking
 
 
-
 class UserRegisterForm(UserCreationForm):
-    """ 
-    The register form is to be filled in with 
+    """
+    The register form is to be filled in with
     user information for account registration.
     And automatically log user in after registration.
     """
@@ -23,15 +22,12 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
-       
-
-
     def save(self, commit=True):
         user = super().save(commit=commit)
         if commit:
             auth_user = authenticate(
-                username = self.cleaned_data['username'],
-                password = self.cleaned_data['password1']
+                username=self.cleaned_data['username'],
+                password=self.cleaned_data['password1']
             )
             login(self.request, auth_user)
 
@@ -44,25 +40,27 @@ class UserProfileForm(forms.ModelForm):
     """
     class Meta:
         model = Profile
-        fields = ['phone_number', 'profile_image', 'first_name_profile', 'last_name_profile']
+        fields = [
+            'phone_number',
+            'profile_image',
+            'first_name_profile',
+            'last_name_profile'
+        ]
 
-    
 
 class ProfileUpdateForm(forms.ModelForm):
     """
     To update user profile image.
     """
-
     class Meta:
         model = Profile
-        fields = ['profile_image', 'phone_number', 'first_name_profile', 'last_name_profile']
+        fields = ['profile_image', 'phone_number']
 
 
 class ProfileDeleteForm(forms.ModelForm):
     """
     To delete the user profile in the database.
     """
-
     class Meta:
         model = User
         fields = []
@@ -80,7 +78,6 @@ class DateTimePicker(forms.DateTimeInput):
     """
     The datetime picker is to display the booking date and time.
     """
-
     input_type = 'datetime'
 
 
@@ -92,7 +89,6 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         exclude = ('user',)
-    
         widgets = {
             'date': DatePicker(),
             'booked_date': DateTimePicker(),
@@ -101,14 +97,13 @@ class BookingForm(forms.ModelForm):
 
 class BookingUpdateForm(forms.ModelForm):
     """
-    The booking update form is for user to update the certain information for booking.
+    The booking update form is for user to update
+    the certain information for booking.
     """
     class Meta:
         model = Booking
         exclude = ('user',)
-    
         widgets = {
             'date': DatePicker(),
             'booked_date': DateTimePicker(),
         }
-            
