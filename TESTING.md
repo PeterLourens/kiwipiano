@@ -176,12 +176,12 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 
 ## Automated Testing
 
-Install coverage and generate coverage report.
+* Install coverage.
 ![Install coverage](media/testing-pics/coverage.png)
 
-Coverage report.
-![Coverage report](media/testing-pics/coverage_report.png)
+* Coverage report.
 
+![Coverage report](media/testing-pics/coverage_report.png)
 
 
 * ### Test URLs
@@ -282,10 +282,6 @@ Coverage report.
   | Site Owner Story | The site has an admin functionality that admin can manage the site.|
   |:-------:|:--------|
   | &check; | The site has an admin site to manage the data.        |
-
-
-
-
-   
+ 
 
 [Back to README.md](README.md)

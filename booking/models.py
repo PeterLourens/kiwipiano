@@ -44,7 +44,7 @@ class Booking(models.Model):
         ('16:00 - 17:00', '16:00 - 17:00'),
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     session_name = models.CharField(max_length=30,
                                     choices=SESSION_CHOICES,
                                     default=BEGINNER)
@@ -76,7 +76,7 @@ class Profile(models.Model):
     Create user profile page after
     user register and login to user's account.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     profile_image = models.ImageField(
         default='default_bxixmd.jpg',
         upload_to='profile_image'

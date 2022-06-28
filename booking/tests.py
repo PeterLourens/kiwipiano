@@ -5,6 +5,7 @@ from booking.views import home, sign_up, login
 from booking.views import logout_view, admin_login, feedback, profile
 from booking.views import booking_form, BookingDetailView
 from booking.models import Booking, Profile
+from booking.forms import BookingForm
 
 
 class TestUrls(SimpleTestCase):
@@ -55,15 +56,46 @@ class TestUrls(SimpleTestCase):
         self.assertEquals(resolve(url).func, booking_form)
 
 
-# class TestBookingModels(TestCase):
-#     """
-#     To test the booking models.
-#     """
-#     def test_booking_model(self):
-#         booking = Booking.objects.create(
-#             session_name='Beginner',
-#         )
+class TestModels(TestCase):
+    """
+    To test the models.
+    """
+    def test_booking_model(self):
+        """
+        To test the booking model.
+        """
+        booking = Booking.objects.create(
+            session_name='Beginner',
+            date='2022-06-28',
+            timeslot='09:00 - 10:00',
+            message='Hello'
+        )
 
-#         self.assertEquals(booking.session_name, 'Beginner')
+        self.assertEquals(booking.session_name, 'Beginner')
+        self.assertEquals(booking.date, '2022-06-28')
+        self.assertEquals(booking.timeslot, '09:00 - 10:00')
+        self.assertEquals(booking.message, 'Hello')
+
+
+
+    def test_profile_model(self):
+        """
+        To test the profile model.
+        """
+
+        profile = Profile.objects.create(
+            profile_image= 'default_bxixmd.jpg',
+            phone_number='0222222222222222222',
+            first_name_profile='Veronica',
+            last_name_profile='Lourens',
+
+        )
+
+        self.assertEquals(profile.profile_image, 'default_bxixmd.jpg')
+        self.assertEquals(profile.phone_number, '0222222222222222222')
+        self.assertEquals(profile.first_name_profile, 'Veronica')
+        self.assertEquals(profile.last_name_profile, 'Lourens')
       
+
+
 
