@@ -154,6 +154,16 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 
 [Back to top](#testing) 
 
+## Automated Testing
+
+In GitPod terminal, run the command ```python3 manage.py test```
+
+* ### Test URLs
+  
+  I have tested the URLs and all are ok.
+  ![Test urls](media/testing-pics/test_urls.png)
+* 
+
 ## Resolved Known Bugs
 
   There were some bugs and warnings after checking the markup code by the W3C Markup Validation Service. To solve the problems, I deleted the "id", changed aria-controls attribute, put the space in the nav div tag, and changed the section tag to div on serveral HTML files.
