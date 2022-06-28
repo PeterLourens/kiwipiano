@@ -55,4 +55,15 @@ class TestUrls(SimpleTestCase):
         self.assertEquals(resolve(url).func, booking_form)
 
 
-        """
+# class TestBookingModels(TestCase):
+#     """
+#     To test the booking models.
+#     """
+#     def test_booking_model(self):
+#         booking = Booking.objects.create(
+#             session_name='Beginner',
+#         )
+
+#         self.assertEquals(booking.session_name, 'Beginner')
+      
+

@@ -71,51 +71,71 @@ Kiwi Piano Studio website has been tested on **Google Chrome**, **Microsoft Edge
 The site's pages are tested on ```Google Chrome Lighthouse``` function on incognito window for both the mobile and the desktop.
 
 * ### Home page
-* Lighthouse report for the mobile
+  * Lighthouse report for the mobile
   ![Mobile](media/readme-pics/lighthouse_m.png)
 
-[Back to top](#testing)
-* Lighthouse report for the desktop
+  [Back to top](#testing)
+  * Lighthouse report for the desktop
   ![Desktop](media/readme-pics/lighthouse_d.png)
 
-[Back to top](#testing)
+  [Back to top](#testing)
 
 * ### Register page
   
-* Mobile
-  ![Lighthouse report mobile](media/testing-pics/lighthouse_register_m.png)
-* Desktop
-  ![Lighthouse report desktop](media/testing-pics/lighthouse_register.png)
+  * Mobile
+  
+    ![Lighthouse report mobile](media/testing-pics/lighthouse_register_m.png)
 
-[Back to top](#testing)
+  * Desktop
+  
+    ![Lighthouse report desktop](media/testing-pics/lighthouse_register.png)
+
+  [Back to top](#testing)
 * ### Login page
-* Mobile
+  
+  * Mobile
+  
   ![Lighthouse mobile](media/testing-pics/lighthouse_login_m.png)
-* Desktop
+
+  * Desktop
+  
   ![Lighthouse mobile](media/testing-pics/lighthouse_login.png)
 
-[Back to top](#testing)
+  [Back to top](#testing)
 * ### Profile page
-* Mobile
+  
+  * Mobile
+  
   ![Lighthouse mobile](media/testing-pics/lighthouse_profile_m.png)
-* Desktop
+
+  * Desktop
   ![Lighthouse mobile](media/testing-pics/lighthouse_profile.png)
 
 [Back to top](#testing) 
+
 * ### Booking alert page
-* Mobile
+  
+  * Mobile
+  
   ![Lighthouse mobile](media/testing-pics/lighthouse_bookingalert_m.png)
-* Desktop
+
+  * Desktop
+* 
   ![Lighthouse mobile](media/testing-pics/lighthouse_bookingalert.png)
 
-[Back to top](#testing)
+  [Back to top](#testing)
 * ### Booking form page
-* Mobile
+  
+  * Mobile
+  
   ![Lighthouse mobile](media/testing-pics/lighthouse_bookingform_m.png)
-* Desktop
+
+  * Desktop
+  
   ![Lighthouse mobile](media/testing-pics/lighthouse_bookingform.png)
 
-[Back to top](#testing) 
+  [Back to top](#testing) 
+  
 ## Manual Testing
 
 * ### Site testing
