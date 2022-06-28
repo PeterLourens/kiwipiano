@@ -54,3 +54,5 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func, booking_form)
 
+
+        """

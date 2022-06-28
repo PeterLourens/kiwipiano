@@ -156,11 +156,17 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 
 ## Automated Testing
 
-In GitPod terminal, run the command ```python3 manage.py test```
+Install coverage and generate coverage report.
+![Install coverage](media/testing-pics/coverage.png)
+
+Coverage report.
+![Coverage report](media/testing-pics/coverage_report.png)
+
+
 
 * ### Test URLs
   
-  I have tested the URLs and all are ok.
+  I have tested the URLs and all are ok. In GitPod terminal, run the command ```python3 manage.py test```
   ![Test urls](media/testing-pics/test_urls.png)
 * 
 
