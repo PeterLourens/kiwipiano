@@ -97,5 +97,30 @@ class TestModels(TestCase):
         self.assertEquals(profile.last_name_profile, 'Lourens')
       
 
+class TestViews(TestCase):
+    """
+    To test the views.
+    """
+
+    def test_home_view(self):
+        """ home view """
+        response = self.client.get('')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
 
 
+    def test_sign_up_view(self):
+        """ sign view """
+        response = self.client.get('/signup/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'account/signup.html')
+
+
+    def test_login_view(self):
+        """ login view """
+        response = self.client.get('/login/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'account/login.html')
+
+    
+   
