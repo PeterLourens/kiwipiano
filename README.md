@@ -93,6 +93,18 @@ I used Balsamiq to create the project’s wireframes that displays an overview o
 
   </detials>
 
+* <details><summary>The profile page.</summary>
+  
+  ![Booking page](media/readme-pics/wframe-profile.png)
+
+  </detials>
+
+* <details><summary>The alert page.</summary>
+  
+  ![Booking page](media/readme-pics/wframe-alert.png)
+
+  </detials>
+
 [Back to top](#kiwi-piano-studio)  
 
 ## Agile Project Management
