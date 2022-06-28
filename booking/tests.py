@@ -1,11 +1,13 @@
 from django.test import TestCase, Client
+from django.http import HttpRequest
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from booking.views import home, sign_up, login
 from booking.views import logout_view, admin_login, feedback, profile
 from booking.views import booking_form, BookingDetailView
 from booking.models import Booking, Profile
-from booking.forms import BookingForm
+from booking.forms import BookingForm, ProfileUpdateForm
+from booking.models import User
 
 
 class TestUrls(SimpleTestCase):
@@ -77,7 +79,6 @@ class TestModels(TestCase):
         self.assertEquals(booking.message, 'Hello')
 
 
-
     def test_profile_model(self):
         """
         To test the profile model.
@@ -108,13 +109,11 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
-
     def test_sign_up_view(self):
         """ sign view """
         response = self.client.get('/signup/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'account/signup.html')
-
 
     def test_login_view(self):
         """ login view """
@@ -122,5 +121,30 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'account/login.html')
 
-    
-   
+
+class TestForms(TestCase):
+    """
+    To test the forms.
+    """
+    def test_booking_form(self):
+        """ Test booking form """
+
+        form = BookingForm(
+            data={
+                'session_name': 'Beginner',
+                'date': '2022-06-28',
+                'timeslot': '09:00 - 10:00',
+                'message':  'Kiwi Piano'
+            }
+        )
+
+        self.assertIn('session_name', form.fields)
+        self.assertIn('date', form.fields)
+        self.assertIn('timeslot', form.fields)
+        self.assertIn('message', form.fields)
+
+        request = HttpRequest()
+        booking_form = BookingForm(request.POST)
+        self.assertFalse(booking_form.is_valid())
+
+
