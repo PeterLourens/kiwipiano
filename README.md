@@ -195,7 +195,7 @@ The site uses white color for the background and black color for the text. The b
 * Color source image
   <details><summary>The color theme was extracted from this image.</summary>
 
-  ![Image](media/images/piano4.jpg)
+  ![Image](https://res.cloudinary.com/dyfa8b6fs/image/upload/v1655716371/media/images/pianist1_jcvphw.jpg)
 
   </detials>
 
@@ -255,20 +255,20 @@ The model name Lesson is called ```Session``` in the project.
 
   ![Header logged in](media/readme-pics/header2.png)
 
-* The site's navigation tabs are changed to ```Home, Book Now, Admin, Account, Logout``` when admin is logged in.
+* The site's navigation tabs are changed to ```Home, Book Now, Admin, Account, Logout``` when admin is logged in. The admin tab is a dorpdown link.
   ![Admin logged in](media/readme-pics/admin.png)
 
 [Back to top](#kiwi-piano-studio)
 
 * ## Register Page
 
-  The register page contains a user registration form that asks user to fill in the user name, email address and password. The user data is saved in the database.  User gets a confirmation after registering an account. 
+  The register page contains a user registration form that asks user to fill in the user name, email address and password. The user data is saved in the database. 
 
   * Register form
   
     ![Register page](media/readme-pics/register_page.png)
 
-  * User is logged in automatically after registration.
+  * User is logged in automatically after completing the registration.
 
     ![Register confirmation page](media/readme-pics/register_sucess.png)
 
@@ -288,7 +288,7 @@ The model name Lesson is called ```Session``` in the project.
 [Back to top](#kiwi-piano-studio)
 
 * ## Profile Page
-  The profile page displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is also updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert message that ask user to confirm the delete process. There is a booking list that shows the bookings user has made.
+  The profile page displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is also updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert message that asks user to confirm the delete process. There is a booking list that shows the bookings user has made.
 
   * Profile form
     ![Profile](media/readme-pics/profile_update.png)
