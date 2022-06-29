@@ -401,7 +401,7 @@ The admin / superuser is able to login from the site and navigate the admin pane
 * [Django]() 
 * [Bootstrap]() - used to style the websie.
 * [Django]() - used to create the project.
-  ![Django and librareis](media/readme-pics/django-packages.png)
+  ![Django and librareis](media/readme-pics/requirements-txt.png)
 * [Heroku]() - used to deploy and host the project's live site.
 * [Heroku]() PostgreSQL - used to connect the project to the database.
 * [Cloudinary]() - used to store project's static and media files.
