@@ -12,9 +12,43 @@
                 <div class="col-12">
                     <h5 class="my-3 fw-bold">Admin booking management</h5>
                     <div class="row justify-content-center">
-                        <div class="col-sm-12 col-lg-8 text-center">
-                            <p><span class="fw-bold"></span> {{ booking.user }}</p>
-                            
+                        <div class="col-sm-12 col-lg-12 text-center">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Session Name</th>
+                                        <th scope="col">Pending</th>
+                                        <th scope="col">Approved</th>
+                                        <th scope="col">Denied</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for booking in booking_list %}
+                                    <tr>
+                                        <th scope="row">{{ booking.user }}</th>
+                                        <td>{{ booking }}</td>
+                                        <td>
+                                            {% if booking.approved %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
+                                                    id="flexCheckDefault" name="checkbox" checked="checked">
+                                               
+                                            </div>
+                                            {% else %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
+                                                    id="flexCheckDefault" name="checkbox">
+                                               
+                                            </div>
+                                            {% endif %}
+                                        </td>
+                                        <td>#</td>
+                                        <td>#</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
