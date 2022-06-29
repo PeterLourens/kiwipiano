@@ -28,7 +28,7 @@
                                     <tr>
                                         <th scope="row">{{ booking.user }}</th>
                                         <td>{{ booking }}</td>
-                                        <td>
+                                        <td class="justify-content-center align-center">
                                             {% if booking.approved %}
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
@@ -43,8 +43,36 @@
                                             </div>
                                             {% endif %}
                                         </td>
-                                        <td>#</td>
-                                        <td>#</td>
+                                        <td>
+                                            {% if booking.pending %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
+                                                    id="flexCheckDefault" name="checkbox" checked="checked">
+
+                                            </div>
+                                            {% else %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
+                                                    id="flexCheckDefault" name="checkbox">
+
+                                            </div>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if booking.denied %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
+                                                    id="flexCheckDefault" name="checkbox" checked="checked">
+
+                                            </div>
+                                            {% else %}
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="{{ booking.id }}"
+                                                    id="flexCheckDefault" name="checkbox">
+
+                                            </div>
+                                            {% endif %}
+                                        </td>
                                     </tr>
                                 {% endfor %}
                                 </tbody>
