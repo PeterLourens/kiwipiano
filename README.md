@@ -403,7 +403,7 @@ The admin / superuser is able to login from the site and navigate the admin pane
 * [Django]() - used to create the project.
   ![Django and librareis](media/readme-pics/requirements-txt.png)
 * [Heroku]() - used to deploy and host the project's live site.
-* [Heroku]() PostgreSQL - used to connect the project to the database.
+* [Heroku PostgreSQL]()  - used to connect the project to the database.
 * [Cloudinary]() - used to store project's static and media files.
 * [Summernote]() - used to add the editor with full feature.
   
@@ -509,9 +509,10 @@ Steps to clone the project from GitHub as following:
 [Back to top](#kiwi-piano-studio)
 ## Code
 
-* The site's login / logout and profile were inspired by [Corey Schafer]() that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django. I also learned from his tutuorial what packages needed to make the application working properly.
+* The site's login / logout and profile were inspired by [Corey Schafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=1) that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django. I also learned from his tutuorial what packages needed to make the application working properly.
 
 * The codes of signals.py are taken from here [Django signals](https://dev.to/earthcomfy/django-user-profile-3hik).
+* The Django automated testing was inspired by [CodingEntrepreneurs](https://www.youtube.com/watch?v=5E_xLmQXOZg&t=2780s) Django tutorial on [Youtube].
 
 [Back to top](#kiwi-piano-studio)
 # Acknowledgement
