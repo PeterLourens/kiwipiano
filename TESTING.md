@@ -194,7 +194,12 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
   
   I have tested the URLs and all are ok. In GitPod terminal, run the command ```python3 manage.py test```
   ![Test urls](media/testing-pics/test_urls.png)
-* 
+
+* ### Test 
+  
+  The automated tesing result is OK from the tested urls, models, views and forms.
+  ![Test result](media/testing-pics/test.png)
+  
 
 ## Resolved Known Bugs
 
