@@ -56,6 +56,9 @@ class Booking(models.Model):
                                 default='09:00 - 10:00')
     booked_date = models.DateTimeField(auto_now_add=True)
     message = models.TextField(max_length=100, default='', blank=True)
+    booking_pending = models.BooleanField('Pending', default=False)
+    booking_approved = models.BooleanField('Approved', default=False)
+    booking_denied = models.BooleanField('Denied', default=False)
 
     class Meta:
         ordering = ['-booked_date']

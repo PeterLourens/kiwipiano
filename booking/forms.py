@@ -92,7 +92,12 @@ class BookingForm(forms.ModelForm):
     """
     class Meta:
         model = Booking
-        exclude = ('user',)
+        exclude = (
+            'user',
+            'booking_pending',
+            'booking_approved',
+            'booking_denied',
+        )
         widgets = {
             'date': DatePicker(),
             'booked_date': DateTimePicker(),
