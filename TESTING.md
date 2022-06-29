@@ -187,15 +187,15 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 
 * Coverage report.
 
-![Coverage report](media/testing-pics/coverage_report.png)
+![Coverage report](media/testing-pics/coverage_report2.png)
 
 
-* ### Test URLs
+* ### URLs testing
   
   I have tested the URLs and all are ok. In GitPod terminal, run the command ```python3 manage.py test```
   ![Test urls](media/testing-pics/test_urls.png)
 
-* ### Test 
+* ### Total testing
   
   The automated tesing result is OK from the tested urls, models, views and forms.
   ![Test result](media/testing-pics/test.png)
