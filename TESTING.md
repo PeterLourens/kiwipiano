@@ -147,6 +147,12 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
   I manually tested the register form's password fields. The password needs to meet certain requirements when user regsiter an account.
   ![Register form error](media/readme-pics/error_register.png)
 
+* ### User exists
+  
+  I manually tested that it's not possible to register an account with the same username or the same email address.
+
+  ![User exists](media/readme-pics/user_exists.png)
+
 [Back to top](#testing)
 * ### Login form testing
   
