@@ -142,7 +142,6 @@ def update_profile(request):
         profile_update_form = ProfileUpdateForm(request.POST,
                                                 request.FILES,
                                                 instance=request.user.profile)
-
         if profile_update_form.is_valid():
             print(profile_update_form.cleaned_data)
             profile_update_form.save()
