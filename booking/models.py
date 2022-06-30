@@ -44,6 +44,8 @@ class Booking(models.Model):
         ('16:00 - 17:00', '16:00 - 17:00'),
     ]
 
+    STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denied'))
+
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     session_name = models.CharField(max_length=30,
                                     choices=SESSION_CHOICES,
@@ -56,9 +58,7 @@ class Booking(models.Model):
                                 default='09:00 - 10:00')
     booked_date = models.DateTimeField(auto_now_add=True)
     message = models.TextField(max_length=100, default='', blank=True)
-    booking_pending = models.BooleanField('Pending', default=False)
-    booking_approved = models.BooleanField('Approved', default=False)
-    booking_denied = models.BooleanField('Denied', default=False)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ['-booked_date']

@@ -313,6 +313,7 @@ def booking_cancel(request, pk):
     return render(request, 'booking/booking_cancel.html', {'booking': booking})
 
 
+
 def admin_management(request):
     """
     To render the admin page to manage the booking.
