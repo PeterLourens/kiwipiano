@@ -285,6 +285,9 @@ The model name Lesson is called ```Session``` in the project.
 
   ![Longin confirmation](media/readme-pics/login_success.png)
 
+  * Admin login error
+  ![Admin loging error](media/readme-pics/admin_login_error.png)
+
 [Back to top](#kiwi-piano-studio)
 
 * ## Profile Page
@@ -376,7 +379,7 @@ The admin / superuser is able to login from the site and navigate the admin pane
   [Back to top](#kiwi-piano-studio)
 
 * Booking list of all users
-  ![Booking list all](media/readme-pics/admin_bookingall.png)
+  ![Booking list all](media/readme-pics/booking_admin_update.png)
 
 
 [Back to top](#kiwi-piano-studio)
@@ -431,11 +434,11 @@ I have created a separate file that contains all the testing documentation [TEST
 # Deployment
 
 1. I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. 
-   * pip3 install Django==3.2 gunicorn
-   * pip3 install dj_database_url psycopg2
-   * pip3 install dj3-cloudinary-storage
+   * ```pip3 install Django==3.2 gunicorn```
+   * ```pip3 install dj_database_url psycopg2```
+   * ```pip3 install dj3-cloudinary-storage```
   
-   * pip3 freeze --local > requirements.txt
+   * ```pip3 freeze --local > requirements.txt```
      
 2. Add the app name to the settings.py each time after installing a new app.
    ![Installed apps](media/readme-pics/installed_apps.png)
@@ -443,7 +446,9 @@ I have created a separate file that contains all the testing documentation [TEST
 3. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
    
   ![Heroku Postgres](media/readme-pics/heroku.png)
-   
+
+[Back to top](#kiwi-piano-studio) 
+
 4. Logged in to Heroku account and created an app named ```kiwipiano```.
 Attached the database to the app and set up the Config vars.
 
