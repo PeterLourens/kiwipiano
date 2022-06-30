@@ -1,5 +1,21 @@
 # TESTING
 
+## Table of Content
+
+
+- [TESTING](#testing)
+  - [Table of Content](#table-of-content)
+  - [Code Validation](#code-validation)
+  - [Responsiveness Testing](#responsiveness-testing)
+  - [Browser Compatibility Testing](#browser-compatibility-testing)
+  - [Lighthouse Testing](#lighthouse-testing)
+  - [Manual Testing](#manual-testing)
+  - [Automated Testing](#automated-testing)
+  - [Resolved Known Bugs](#resolved-known-bugs)
+  - [User Story Testing](#user-story-testing)
+  - [Site Owner Stories Testing](#site-owner-stories-testing)
+
+
 ## Code Validation
 
  The site's HTML, CSS and Python codes are validated by the W3C Markup Validation Service, W3C CSS Validation Service and PEP8 ONLINE service.
@@ -156,7 +172,7 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 [Back to top](#testing)
 * ### Login form testing
   
-  I manually testing the login form. The username and the password needs to be the same as user specified when registering an account.
+  I manually tested the login form. The username and the password needs to be the same as user specified when registering an account.
   ![Longin form error](media/readme-pics/error_login.png)
 
 [Back to top](#testing)
