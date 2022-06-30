@@ -44,27 +44,12 @@
                     {% if user.is_authenticated %}
                     {% if request.user.is_superuser %}
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="btn dropdown-toggle nav-link nav-text text-white"
-                                href="#" role="button" id="dropdownMenuLink"
-                                data-bs-toggle="dropdown" aria-expanded="false" data-toggle="tab">
-                                <i class="fas fa-user"></i>
-                                Admin
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item btn-success" href="{% url 'admin' %}">
-                                        Admin Panel
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item btn-success" href="{% url 'admin_management' %}">
-                                        Booking
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'admin' %}">
+                            <i class="fas fa-user"></i>
+                            Admin
+                        </a>
                     </li>
+                    
                     {% endif %}
                     <li class="nav-item">
                         <a class="nav-link nav-text text-white" data-toggle="tab" href="{% url 'profile' %}">

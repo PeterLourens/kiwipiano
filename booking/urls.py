@@ -10,7 +10,6 @@ urlpatterns = [
     path('signup/', views.sign_up, name='signup'),
     path('login/', views.login, name='login'),
     path('admin/', views.admin_login, name='admin'),
-    path('admin_management/', views.admin_management, name='admin_management'),
     path('feedback/', views.feedback, name='feedback'),
     path('logout/', views.logout_view, name='logout'),
     path('profile/', views.profile, name='profile'),
@@ -23,6 +22,4 @@ urlpatterns = [
     path('booking_update/<int:pk>/', views.BookingUpdateView.as_view(), name='booking_update'),
     path('booking_cancel/<int:pk>/', views.booking_cancel, name='booking_cancel'),
 
-
 ]
-

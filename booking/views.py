@@ -117,7 +117,6 @@ def admin_login(request):
     return render(request, 'account/admin.html') 
 
 
-
 @login_required
 def profile(request):
     """
@@ -311,26 +310,4 @@ def booking_cancel(request, pk):
         return redirect('profile')
 
     return render(request, 'booking/booking_cancel.html', {'booking': booking})
-
-
-
-def admin_management(request):
-    """
-    To render the admin page to manage the booking.
-    To pend, approve or deny the booking.
-    """
-    booking_list = Booking.objects.all().order_by('-booked_date')
-    if request.user.is_superuser:
-        if request.method == 'POST':
-            messages.success(request, 'Booking status has been updated!')
-            return redirect('admin_management')
-
-        else:
-            return render(request, 'admin/admin.html', {'booking_list': booking_list})
-
-    else:
-        messages.success(request, 'Sorry! You are not authorized to view the page.')
-        return redirect('home')
-
-    return render(request, 'admin/admin.html')
     
