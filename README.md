@@ -8,33 +8,7 @@ The website provides different user interface. User can register an account, log
 
 ![Kiwi Piano Studio](media/readme-pics/screen-view.png)
 
-## Table of Content
-
-- [Kiwi Piano Studio](#kiwi-piano-studio)
-  - [Table of Content](#table-of-content)
-- [UX](#ux)
-  - [User Stories](#user-stories)
-  - [Site Owner Stories](#site-owner-stories)
-  - [Wireframes](#wireframes)
-  - [Agile Project Management](#agile-project-management)
-  - [Design](#design)
-    - [Color Scheme](#color-scheme)
-    - [Typography](#typography)
-    - [Data Model](#data-model)
-    - [Database ERD](#database-erd)
-- [Exsiting Features](#exsiting-features)
-  - [Bookings Page](#bookings-page)
-  - [Admin Site](#admin-site)
-  - [Future Features](#future-features)
-- [Technologies Used](#technologies-used)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Clone Project](#clone-project)
-- [Credits](#credits)
-  - [Content](#content)
-  - [Media](#media)
-  - [Code](#code)
-- [Acknowledgement](#acknowledgement)
+# Table of Content
 
 # UX
 
