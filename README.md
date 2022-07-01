@@ -10,6 +10,33 @@ The website provides different user interface. User can register an account, log
 
 # Table of Content
 
+- [Kiwi Piano Studio](#kiwi-piano-studio)
+- [Table of Content](#table-of-content)
+- [UX](#ux)
+  - [User Stories](#user-stories)
+  - [Site Owner Stories](#site-owner-stories)
+  - [Wireframes](#wireframes)
+  - [Agile Project Management](#agile-project-management)
+  - [Design](#design)
+    - [Color Scheme](#color-scheme)
+    - [Typography](#typography)
+    - [Data Model](#data-model)
+    - [Database ERD](#database-erd)
+- [Exsiting Features](#exsiting-features)
+  - [Bookings Page](#bookings-page)
+  - [Admin Site](#admin-site)
+  - [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Clone Project](#clone-project)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+  - [Code](#code)
+- [Acknowledgement](#acknowledgement)
+
+
 # UX
 
 ## User Stories
@@ -433,30 +460,30 @@ I have created a separate file that contains all the testing documentation [TEST
 
 # Deployment
 
-1. I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. 
+* I used Code Institute GitPod full template to set up an environment to created the project. Installed ```Django``` and required packages / libraries using commands in GitPod terminal. 
    * ```pip3 install Django==3.2 gunicorn```
    * ```pip3 install dj_database_url psycopg2```
    * ```pip3 install dj3-cloudinary-storage```
   
    * ```pip3 freeze --local > requirements.txt```
      
-2. Add the app name to the settings.py each time after installing a new app.
+* Add the app name to the settings.py each time after installing a new app.
    ![Installed apps](media/readme-pics/installed_apps.png)
    
-3. Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
+* Created a project named ```kiwipiano``` and connected the project to use ```Cloudinary``` and ```PostgreSQL```.
    
   ![Heroku Postgres](media/readme-pics/heroku.png)
 
 [Back to top](#kiwi-piano-studio) 
 
-4. Logged in to Heroku account and created an app named ```kiwipiano```.
+* Logged in to Heroku account and created an app named ```kiwipiano```.
 Attached the database to the app and set up the Config vars.
 
 ![ConfigVars](media/readme-pics/configvars.png)
 
-4. Created ```env.py``` file and ```Procfile```, updated ```settings.py``` file and then made migrations to the database for all the changes.
+* Created ```env.py``` file and ```Procfile```, updated ```settings.py``` file and then made migrations to the database for all the changes.
 
-5. Commands to deploy ```kiwipiano``` project in GitPod terminal:
+* Commands to deploy ```kiwipiano``` project in GitPod terminal:
    
     * ```heroku login -i``` ---login to my Heroku account.
     * ```heroku apps``` ---get the names of Heroku apps.
@@ -465,7 +492,7 @@ Attached the database to the app and set up the Config vars.
     * ```git push origin main``` ---push to GitHub repository.
     * ```git push heroku main```---push to Heroku.
 
-6. Deployment successful. Here is the site's URL: https://kiwipiano.herokuapp.com/
+* Deployment successful. Here is the site's URL: https://kiwipiano.herokuapp.com/
 
 * <details><summary>Deployment to Heroku successful</summary>
 
@@ -494,6 +521,7 @@ Steps to clone the project from GitHub as following:
   ![Clone repo](media/readme-pics/clone_repo.png)
 
 [Back to top](#kiwi-piano-studio)
+
 # Credits
 
 ## Content
