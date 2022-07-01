@@ -36,7 +36,6 @@ The website provides different user interface. User can register an account, log
   - [Code](#code)
 - [Acknowledgement](#acknowledgement)
 
-
 # UX
 
 ## User Stories

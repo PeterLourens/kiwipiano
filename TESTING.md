@@ -1,20 +1,43 @@
 # TESTING
 
 ## Table of Content
-
-
-- [TESTING](#testing)
-  - [Table of Content](#table-of-content)
-  - [Code Validation](#code-validation)
-  - [Responsiveness Testing](#responsiveness-testing)
-  - [Browser Compatibility Testing](#browser-compatibility-testing)
-  - [Lighthouse Testing](#lighthouse-testing)
-  - [Manual Testing](#manual-testing)
-  - [Automated Testing](#automated-testing)
-  - [Resolved Known Bugs](#resolved-known-bugs)
-  - [User Story Testing](#user-story-testing)
-  - [Site Owner Stories Testing](#site-owner-stories-testing)
-
+ 
+  * [Code Validation](#code-validation)
+    + [W3C HTML Validation Report](#w3c-html-validation-report)
+    + [W3C CSS Validation Report](#w3c-css-validation-report)
+    + [PEP8 online / views.py](#pep8-online---viewspy)
+    + [PEP8 online / apps.py](#pep8-online---appspy)
+    + [PEP8 online / forms.py](#pep8-online---formspy)
+    + [PEP8 online / models.py](#pep8-online---modelspy)
+    + [PEP8 online / signals.py](#pep8-online---signalspy)
+    + [PEP8 online / urls.py](#pep8-online---urlspy)
+    + [PEP8 online / utils.py](#pep8-online---utilspy)
+  * [Responsiveness Testing](#responsiveness-testing)
+  * [Browser Compatibility Testing](#browser-compatibility-testing)
+  * [Lighthouse Testing](#lighthouse-testing)
+    + [Home page](#home-page)
+    + [Register page](#register-page)
+    + [Login page](#login-page)
+    + [Profile page](#profile-page)
+    + [Booking alert page](#booking-alert-page)
+    + [Booking form page](#booking-form-page)
+  * [Manual Testing](#manual-testing)
+    + [Site testing](#site-testing)
+    + [Register form testing](#register-form-testing)
+    + [User exists](#user-exists)
+    + [Login form testing](#login-form-testing)
+    + [User profile testing](#user-profile-testing)
+    + [Booking form testing](#booking-form-testing)
+    + [Admin booking testing](#admin-booking-testing)
+  * [Automated Testing](#automated-testing)
+    + [URLs testing](#urls-testing)
+    + [Total testing](#total-testing)
+  * [Resolved Known Bugs](#resolved-known-bugs)
+  * [User Story Testing](#user-story-testing)
+    + [Admin CRUD / Super User](#admin-crud---super-user)
+    + [New and unregistered User](#new-and-unregistered-user)
+    + [Registered User](#registered-user)
+  * [Site Owner Stories Testing](#site-owner-stories-testing)
 
 ## Code Validation
 
