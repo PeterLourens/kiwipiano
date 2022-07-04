@@ -7,6 +7,11 @@ from datetime import datetime, date
 from booking.utils import date_validation, num_validation, name_validation
 
 
+
+alpha_only = RegexValidator(r'^[a-zA-Z]*$ ',
+                            'Only alpha[ A - Z] characters are allowed.')
+
+
 class Booking(models.Model):
     """
     To create a booking where user can book a session.
@@ -46,18 +51,35 @@ class Booking(models.Model):
 
     STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denied'))
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    session_name = models.CharField(max_length=30,
-                                    choices=SESSION_CHOICES,
-                                    default=BEGINNER)
-    date = models.DateField(auto_now_add=False,
-                            auto_now=False,
-                            validators=[date_validation])
-    timeslot = models.CharField(max_length=200,
-                                choices=TIMESLOT_CHOICES,
-                                default='09:00 - 10:00')
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
+    session_name = models.CharField(
+        max_length=30,
+        choices=SESSION_CHOICES,
+        default=BEGINNER
+    )
+    date = models.DateField(
+        auto_now_add=False,
+        auto_now=False,
+        validators=[date_validation]
+    )
+    timeslot = models.CharField(
+        max_length=200,
+        choices=TIMESLOT_CHOICES,
+        default='09:00 - 10:00'
+    )
     booked_date = models.DateTimeField(auto_now_add=True)
-    message = models.TextField(max_length=100, default='', blank=True)
+    message = models.TextField(
+        max_length=100,
+        default='',
+        blank=True,
+        validators=[alpha_only]
+    )
+
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
@@ -70,8 +92,6 @@ class Booking(models.Model):
         return self.session_name
 
 
-alpha_only = RegexValidator(r'^[a-zA-Z]*$',
-                            'Only alpha[ A - Z] characters are allowed.')
 
 
 class Profile(models.Model):
@@ -79,7 +99,13 @@ class Profile(models.Model):
     Create user profile page after
     user register and login to user's account.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
+
     profile_image = models.ImageField(
         default='default_bxixmd.jpg',
         upload_to='profile_image'

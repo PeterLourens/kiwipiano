@@ -94,9 +94,8 @@ class BookingForm(forms.ModelForm):
         model = Booking
         exclude = (
             'user',
-            'booking_pending',
-            'booking_approved',
-            'booking_denied',
+            'status',
+           
         )
         widgets = {
             'date': DatePicker(),
@@ -111,7 +110,11 @@ class BookingUpdateForm(forms.ModelForm):
     """
     class Meta:
         model = Booking
-        exclude = ('user',)
+        exclude = (
+            'user',
+            'status',
+           
+        )
         widgets = {
             'date': DatePicker(),
             'booked_date': DateTimePicker(),
