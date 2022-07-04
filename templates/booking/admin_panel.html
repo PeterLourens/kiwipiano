@@ -10,7 +10,7 @@
                     <div class="col-sm-12 col-lg-8 text-center">
                         {% if bookings %}
                         <h5 class="card-title fw-bold">Bookings need to be approved.</h5>
-                            {% for booking in bookings %}
+                        {% for booking in bookings %}
                             <div class="card">
                                 <p class="card-text">
                                     <span class="fw-bold">Session Name:</span>
@@ -21,7 +21,10 @@
                                     {{ booking.date }}
                                 </small>
                             </div>
-                            {% endfor %}
+                            <div class="approve_deny">
+                                <a href="{% url 'approve_booking' booking.id %}">Approved.</a>
+                            </div>
+                        {% endfor %}
                         
                         {% else %}
                         <h5 class="card-title fw-bold">There are no bookings.</h5>

@@ -348,4 +348,16 @@ class AdminPanelView(UserPassesTestMixin, ListView):
             return True
 
 
+def approve_booking(request, id):
+    """
+    Admin approves the booking.
+    """
+    if request.user.is_superuser:
+        booking = Booking.objects.get(id=id)
+        booking.status = 1
+        booking.save()
+        return redirect('admin_panel')
+
+    else:
+        return redirect('home')
 
