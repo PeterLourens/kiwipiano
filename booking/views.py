@@ -116,15 +116,6 @@ def feedback(request):
     return render(request, 'account/register_feedback.html', context)
 
 
-@login_required()
-def admin_login(request):
-    """
-    To render the page only accessable by superuser /admin.
-    Admin approves or rejects the booking.
-    """
-
-    return render(request, 'account/admin.html') 
-
 
 @login_required
 def profile(request):
@@ -227,7 +218,10 @@ def booking_form(request):
             else:
                 booking.user = request.user
                 booking.save()
-                messages.success(request, f'Your booking is successful!')
+                messages.success(
+                    request,
+                    f'We have received your booking! You will receive an email confirmation once your booking has been handled!' 
+)
 
                 return redirect('profile')  
 
@@ -240,6 +234,15 @@ def booking_form(request):
     }
 
     return render(request, 'booking/booking_form.html', context)
+
+
+
+def booking_feedback(request):
+    """
+    To render the booking feedback page after user makes a booking.
+    """
+
+    return render(request, 'booking/booking_feedback.html')
 
 
 def booking_not_available(request):
@@ -319,4 +322,35 @@ def booking_cancel(request, pk):
         return redirect('profile')
 
     return render(request, 'booking/booking_cancel.html', {'booking': booking})
+
+
+# @login_required()
+# def admin_management(request):
+#     """
+#     To render the admin page to manage the booking.
+#     To pend, approve or deny the booking.
+#     """
+#     booking_list = Booking.objects.all().order_by('-booked_date')
+#     if request.user.is_superuser:
+#         if request.method == 'POST':
+#             messages.success(request, 'Booking status has been updated!')
+#             return redirect('admin_management')
+
+#         else:
+#             return render(request, 'admin/admin.html', {'booking_list': booking_list})
+
+#     else:
+#         messages.success(request, 'Sorry! You are not authorized to view the page.')
+#         return redirect('home')
+
+#     return render(request, 'admin/admin.html')
     
+
+@login_required()
+def admin_login(request):
+    """
+    To render the page only accessable by superuser /admin.
+    Admin approves or rejects the booking.
+    """
+
+    return render(request, 'account/admin.html')

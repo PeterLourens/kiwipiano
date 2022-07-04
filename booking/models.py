@@ -8,8 +8,8 @@ from booking.utils import date_validation, num_validation, name_validation
 
 
 
-alpha_only = RegexValidator(r'^[a-zA-Z]*$ ',
-                            'Only alpha[ A - Z] characters are allowed.')
+alpha_only = RegexValidator(r'^[a-zA-Z]*$',
+                            'Only alpha[a-zA-Z] characters are allowed.')
 
 
 class Booking(models.Model):
@@ -76,8 +76,7 @@ class Booking(models.Model):
     message = models.TextField(
         max_length=100,
         default='',
-        blank=True,
-        validators=[alpha_only]
+        blank=True
     )
 
     status = models.IntegerField(choices=STATUS, default=0)
@@ -132,3 +131,4 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user} profile'
+

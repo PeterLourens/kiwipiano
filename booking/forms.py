@@ -60,6 +60,12 @@ class ProfileUpdateForm(forms.ModelForm):
                 'last_name_profile'
         ]
 
+    def __init__(self, *args, **kwargs):
+        super(ProfileUpdateForm, self).__init__(*args, **kwargs)
+
+        for key in self.fields:
+           self.fields[key].required = True
+
 
 class ProfileDeleteForm(forms.ModelForm):
     """
