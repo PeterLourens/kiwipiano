@@ -3,7 +3,6 @@ from . import views
 from booking.views import(
     BookingDetailView,
     BookingUpdateView,
-    AdminPanelView
 )
 
 urlpatterns = [
@@ -22,8 +21,5 @@ urlpatterns = [
     path('booking_detail/<int:pk>/', BookingDetailView.as_view(), name='booking_detail'),
     path('booking_update/<int:pk>/', views.BookingUpdateView.as_view(), name='booking_update'),
     path('booking_cancel/<int:pk>/', views.booking_cancel, name='booking_cancel'),
-    path('admin_panel/', AdminPanelView.as_view(), name='admin_panel'),
-    path('admin_panel/approve/<int:id>/', views.approve_booking, name='approve_booking'),
-    
 
 ]

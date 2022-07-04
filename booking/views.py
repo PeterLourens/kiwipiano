@@ -333,31 +333,3 @@ def admin_login(request):
     """
     return render(request, 'account/admin.html')
 
-
-class AdminPanelView(UserPassesTestMixin, ListView):
-    """
-    To manage the booking status.
-    """
-    context_object_name = 'bookings'
-    template_name = 'booking/admin_panel.html'
-    def get_queryset(self):
-        return Booking.objects.filter(status=0)
-
-    def test_func(self):
-        if self.request.user.is_superuser:
-            return True
-
-
-def approve_booking(request, id):
-    """
-    Admin approves the booking.
-    """
-    if request.user.is_superuser:
-        booking = Booking.objects.get(id=id)
-        booking.status = 1
-        booking.save()
-        return redirect('admin_panel')
-
-    else:
-        return redirect('home')
-
