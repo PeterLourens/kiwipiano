@@ -91,9 +91,18 @@ def logout_view(request):
     """
     To render the home page after user logged out the account.
     """
-    logout(request)
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            logout(request)(request)
 
-    return render(request, 'index.html', {'title': 'Logout'})
+            return redirect('home')
+    else:
+        form = AuthenticationForm()
+
+        return render(request, 'account/logout.html', {'title': 'Logout'})
+
 
 
 def feedback(request):
