@@ -23,6 +23,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 def home(request):
@@ -324,33 +325,27 @@ def booking_cancel(request, pk):
     return render(request, 'booking/booking_cancel.html', {'booking': booking})
 
 
-# @login_required()
-# def admin_management(request):
-#     """
-#     To render the admin page to manage the booking.
-#     To pend, approve or deny the booking.
-#     """
-#     booking_list = Booking.objects.all().order_by('-booked_date')
-#     if request.user.is_superuser:
-#         if request.method == 'POST':
-#             messages.success(request, 'Booking status has been updated!')
-#             return redirect('admin_management')
-
-#         else:
-#             return render(request, 'admin/admin.html', {'booking_list': booking_list})
-
-#     else:
-#         messages.success(request, 'Sorry! You are not authorized to view the page.')
-#         return redirect('home')
-
-#     return render(request, 'admin/admin.html')
-    
-
 @login_required()
 def admin_login(request):
     """
     To render the page only accessable by superuser /admin.
     Admin approves or rejects the booking.
     """
-
     return render(request, 'account/admin.html')
+
+
+class AdminPanelView(UserPassesTestMixin, ListView):
+    """
+    To manage the booking status.
+    """
+    context_object_name = 'bookings'
+    template_name = 'booking/admin_panel.html'
+    def get_queryset(self):
+        return Booking.objects.filter(status=0)
+
+    def test_func(self):
+        if self.request.user.is_superuser:
+            return True
+
+
+
