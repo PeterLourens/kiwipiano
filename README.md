@@ -315,6 +315,16 @@ The model name Lesson is called ```Session``` in the project.
   * Admin login error
   ![Admin loging error](media/readme-pics/admin_login_error.png)
 
+* ## Logout page
+  
+  * User gets a logout alert when clicking logout button.
+
+  ![Logout alert](media/readme-pics/logout1.png)
+
+  * Logout successfuly.
+  ![Logout success](media/readme-pics/logout2.png)
+  
+
 [Back to top](#kiwi-piano-studio)
 
 * ## Profile Page
