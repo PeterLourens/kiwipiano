@@ -2,9 +2,9 @@
 
 Kiwi Piano website targets the user who wants to learn to play piano, or wants to play music piece on a grand piano, or wants to make a recording, or wants to practice for music competition, or wants to perform a piano virtual recital, or simply enjoys a play in a small concert-like environment. 
 
-The website provides different user interface. User can register an account, login to the user’s account, log out from the account, edit profile or delete account, book or cancel a session. Admin user can manange the site's data. 
+The website provides different user interface. User can register an account, login to the user’s account, log out from the account, edit profile or delete account, book or cancel a session as well as update booking details. Admin user can manange the site's data. 
 
-[Kiwi Piano Studio](https://kiwipiano.herokuapp.com/) deployed live site.
+Deployed live site: [Kiwi Piano Studio](https://kiwipiano.herokuapp.com/) 
 
 ![Kiwi Piano Studio](media/readme-pics/screen-view.png)
 
@@ -220,6 +220,8 @@ Combine with the project’s scope, personal learning progress, I set the Issues
 The site uses white color for the background and black color for the text. The bright colors are used for the buttons and links.
 
 * Color source image
+
+  I have permission to use this cool photo for my project.
   <details><summary>The color theme was extracted from this image.</summary>
 
   ![Image](https://res.cloudinary.com/dyfa8b6fs/image/upload/v1655716371/media/images/pianist1_jcvphw.jpg)
@@ -282,7 +284,7 @@ The model name Lesson is called ```Session``` in the project.
 
   ![Header logged in](media/readme-pics/header2.png)
 
-* The site's navigation tabs are changed to ```Home, Book Now, Admin, Account, Logout``` when admin is logged in. The admin tab is a dorpdown link.
+* The site's navigation tabs are changed to ```Home, Book Now, Admin, Account, Logout``` when admin is logged in.
   ![Admin logged in](media/readme-pics/admin.png)
 
 [Back to top](#kiwi-piano-studio)
@@ -313,11 +315,13 @@ The model name Lesson is called ```Session``` in the project.
   ![Longin confirmation](media/readme-pics/login_success.png)
 
   * Admin login error
+
+  It shows error when a user tries to access the admin page.
   ![Admin loging error](media/readme-pics/admin_login_error.png)
 
 * ## Logout page
   
-  * User gets a logout alert when clicking logout button.
+  * User gets a logout alert when clicking logout button. User is returned back to the account page if user selects NO, and user is logged out when user slecets YES.
 
   ![Logout alert](media/readme-pics/logout1.png)
 
@@ -557,7 +561,7 @@ Steps to clone the project from GitHub as following:
 * The site's login / logout and profile were inspired by [Corey Schafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=1) that I watched his Django Tutorials on [Youtube]() to learn more about how to build apps using Django. I also learned from his tutuorial what packages needed to make the application working properly.
 
 * The codes of signals.py are taken from here [Django signals](https://dev.to/earthcomfy/django-user-profile-3hik).
-* The Django automated testing was inspired by [CodingEntrepreneurs](https://www.youtube.com/watch?v=5E_xLmQXOZg&t=2780s) Django tutorial on [Youtube].
+* The Django automated testing was inspired by [CodingEntrepreneurs](https://www.youtube.com/watch?v=5E_xLmQXOZg&t=2780s) Django tutorial on [Youtube]().
 
 [Back to top](#kiwi-piano-studio)
 # Acknowledgement
