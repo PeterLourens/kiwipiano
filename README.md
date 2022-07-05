@@ -194,7 +194,7 @@ Combine with the project’s scope, personal learning progress, I set the Issues
   * Target user stories [#7]() ```User account registration```.
   * Create profile model, user profile form.
   * Create account registration view.
-  * Target user stories [#8]() ```Loing / logout```.
+  * Target user stories [#8]() ```Login / logout```.
   * Target the user stories [#11]() ```Receive feedback```.
   * Target user stories [#15]() ```View and edit user profile```.
 
@@ -316,7 +316,7 @@ The model name Lesson is called ```Session``` in the project.
 
   * Admin login error
 
-  It shows error when a user tries to access the admin page.
+  There is a prompt message when a user tries to access the admin page.
   ![Admin loging error](media/readme-pics/admin_login_error.png)
 
 * ## Logout page
