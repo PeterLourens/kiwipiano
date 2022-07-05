@@ -202,7 +202,17 @@ The site's pages are tested on ```Google Chrome Lighthouse``` function on incogn
 * ### User profile testing
   
   I manually tested the user profile input fields. The phone number can only be numbers, the first name and the last name are only allowed to have letters.
-  ![Profile error](media/readme-pics/error_profile_validation.png)
+
+  * Input space
+  ![Input space](media/testing-pics/profile_space.png)
+
+  * Input numbers
+  ![Input numbers](media/testing-pics/profile_num.png)
+
+  * Input specail characters
+  ![Input characters](media/testing-pics/profile_charctrs.png)
+
+
 
 [Back to top](#testing)  
 * ### Booking form testing
