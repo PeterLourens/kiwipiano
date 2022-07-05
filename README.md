@@ -10,8 +10,8 @@ The website provides different user interface. User can register an account, log
 
 # Table of Content
 
-- [Kiwi Piano Studio](#kiwi-piano-studio)
-- [Table of Content](#table-of-content)
+
+
 - [UX](#ux)
   - [User Stories](#user-stories)
   - [Site Owner Stories](#site-owner-stories)
@@ -389,6 +389,8 @@ User gets an alert message when clicking "Book Now" button while not logged in. 
   [Back to top](#kiwi-piano-studio)
 
 * Booking not available
+  
+  User gets an alert message when booking a session that it's already booked by other user.
   ![Booking not available](media/readme-pics/booking_not_available.png)
 
 ## Admin Site
