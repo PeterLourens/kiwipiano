@@ -5,10 +5,7 @@ from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView
-from django.views.generic.edit import DeleteView
 from .models import Profile, Booking
-
-
 from .forms import (
     UserRegisterForm,
     UserProfileForm,
@@ -16,14 +13,12 @@ from .forms import (
     ProfileDeleteForm,
     BookingForm,
 )
-
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 def home(request):
@@ -44,10 +39,6 @@ def sign_up(request):
         if form.is_valid():
             form.save()
 
-            messages.success(
-                request,
-                f'Welcome { username}! Your account has been created!'
-            )
             new_user = authenticate(
                 username = form.cleaned_data.get('username'),
                 password = form.cleaned_data.get('password1')
@@ -55,7 +46,7 @@ def sign_up(request):
 
             login(request, new_user)
 
-            return redirect('feedback')
+            return redirect('home')
 
     else:
         form = UserRegisterForm(request)
@@ -103,19 +94,6 @@ def logout_view(request):
         form = AuthenticationForm()
 
         return render(request, 'account/logout.html', {'title': 'Logout'})
-
-
-
-def feedback(request):
-    """
-    To render the registration feedback view after
-    user registered on the register view.
-    """
-    context = {
-        'title': 'Register'
-    }
-    return render(request, 'account/register_feedback.html', context)
-
 
 
 @login_required
@@ -221,10 +199,9 @@ def booking_form(request):
                 booking.save()
                 messages.success(
                     request,
-                    f'We have received your booking! You will receive an email confirmation once your booking has been handled!' 
-)
+                    f'We have received your booking! Your booking is awaiting for approval!')
 
-                return redirect('profile')  
+                return redirect('profile')
 
     else:
         form = BookingForm()
@@ -332,4 +309,3 @@ def admin_login(request):
     Admin approves or rejects the booking.
     """
     return render(request, 'account/admin.html')
-
