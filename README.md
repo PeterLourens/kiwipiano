@@ -10,31 +10,45 @@ Deployed live site: [Kiwi Piano Studio](https://kiwipiano.herokuapp.com/)
 
 # Table of Content
 
-
-
 - [UX](#ux)
-  - [User Stories](#user-stories)
-  - [Site Owner Stories](#site-owner-stories)
-  - [Wireframes](#wireframes)
-  - [Agile Project Management](#agile-project-management)
-  - [Design](#design)
-    - [Color Scheme](#color-scheme)
-    - [Typography](#typography)
-    - [Data Model](#data-model)
-    - [Database ERD](#database-erd)
+  * [User Stories](#user-stories)
+    + [Admin CRUD / Super User](#admin-crud---super-user)
+    + [New and unregistered User](#new-and-unregistered-user)
+    + [Registered User](#registered-user)
+  * [Site Owner Stories](#site-owner-stories)
+  * [Wireframes](#wireframes)
+  * [Agile Project Management](#agile-project-management)
+    + [Sprint 1:](#sprint-1-)
+    + [Sprint 2:](#sprint-2-)
+    + [Sprint 3:](#sprint-3-)
+    + [Sprint 4:](#sprint-4-)
+    + [Sprint 5:](#sprint-5-)
+    + [Sprint 6:](#sprint-6-)
+  * [Design](#design)
+    + [Color Scheme](#color-scheme)
+    + [Typography](#typography)
+    + [Data Model](#data-model)
+    + [Database ERD](#database-erd)
 - [Exsiting Features](#exsiting-features)
-  - [Bookings Page](#bookings-page)
-  - [Admin Site](#admin-site)
-  - [Future Features](#future-features)
+  * [Home Page](#home-page)
+  * [Header](#header)
+  * [Register Page](#register-page)
+  * [Login Page](#login-page)
+  * [Logout page](#logout-page)
+  * [Profile Page](#profile-page)
+  * [Bookings Page](#bookings-page)
+  * [Admin Site](#admin-site)
+  * [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Clone Project](#clone-project)
 - [Credits](#credits)
-  - [Content](#content)
-  - [Media](#media)
-  - [Code](#code)
+  * [Content](#content)
+  * [Media](#media)
+  * [Code](#code)
 - [Acknowledgement](#acknowledgement)
+
 
 
 # UX
@@ -267,7 +281,7 @@ The model name Lesson is called ```Session``` in the project.
 
 # Exsiting Features
 
-* ## Home Page
+ ## Home Page
 
   The home page contains navigation header, hero image, about section, session list and footer. User is able to view all the info about ```Kiwi Piano Studio```.
 
@@ -275,7 +289,7 @@ The model name Lesson is called ```Session``` in the project.
 
 [Back to top](#kiwi-piano-studio)
 
-* ## Header
+ ## Header
   The site's navigation tabs are displayed ```Home, Book Now,Register, Login``` when the user isn't logged in. 
 
   ![Header](media/readme-pics/header1.png)
@@ -289,7 +303,7 @@ The model name Lesson is called ```Session``` in the project.
 
 [Back to top](#kiwi-piano-studio)
 
-* ## Register Page
+ ## Register Page
 
   The register page contains a user registration form that asks user to fill in the user name, email address and password. The user data is saved in the database. 
 
@@ -303,7 +317,7 @@ The model name Lesson is called ```Session``` in the project.
 
 [Back to top](#kiwi-piano-studio)
 
-* ## Login Page
+ ## Login Page
 
   The login page contains a message and a form for user to fill in. User is redirected to the home page after logging in to the account.
 
@@ -319,7 +333,7 @@ The model name Lesson is called ```Session``` in the project.
   There is a prompt message when a user tries to access the admin page.
   ![Admin loging error](media/readme-pics/admin_login_error.png)
 
-* ## Logout page
+ ## Logout page
   
   * User gets a logout alert when clicking logout button. User is returned back to the account page if user selects NO, and user is logged out when user slecets YES.
 
@@ -331,7 +345,7 @@ The model name Lesson is called ```Session``` in the project.
 
 [Back to top](#kiwi-piano-studio)
 
-* ## Profile Page
+ ## Profile Page
   The profile page displays user's personal information such as username, email, first name, last name, user's profile image, phone number. User is able to update all of the personal details. The updated data is also updated in the database in the same time. User is able to delete the account with all the data from the database. User is redirected to the page where it gives user an alert message that asks user to confirm the delete process. There is a booking list that shows the bookings user has made.
 
   * Profile form
