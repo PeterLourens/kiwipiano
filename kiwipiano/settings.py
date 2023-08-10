@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['kiwipiano.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['kiwipiano.veronica.lourens.cloud', 'localhost']
 
 
 # Application definition
@@ -112,8 +112,19 @@ WSGI_APPLICATION = 'kiwipiano.wsgi.application'
 
 
 
+#DATABASES = {
+#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#}
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kp',
+        'USER': 'kp',
+        'PASSWORD': 'kp',
+        'HOST': 'db.lourens.cloud',
+        'PORT': '5432',
+    }
 }
 
 
