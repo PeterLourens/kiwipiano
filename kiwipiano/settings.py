@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['kiwipiano.veronica.lourens.cloud', 'localhost']
+ALLOWED_HOSTS = ['.veronica.lourens.cloud', 'localhost']
 
 
 # Application definition
